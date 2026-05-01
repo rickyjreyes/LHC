@@ -1,0 +1,44 @@
+{
+  "mode": "raw_q2",
+  "selected_events": 1504,
+  "selection_note": "raw_q2 has no B0 mass cut, no K*(892) cut, and no charmonium veto. It is combinatorial-dominated and is NOT the B0 -> K*0 mu+ mu- physics channel. Used here only because it is the only selection with enough stats for an LFT in this test sample.",
+  "wct_band": [
+    8.0,
+    20.0
+  ],
+  "snr_min": 3.0,
+  "prominence_min": 1.0,
+  "nominal_lft_global_peak": {
+    "k_peak": 15.56718777539391,
+    "amp_peak": 14.473975157745805,
+    "median_amp": 6.001420355575452,
+    "robust_sigma": 2.554901056411108,
+    "snr_like": 3.3161968370203057,
+    "prominence": 13.416302390740539,
+    "in_band": true,
+    "band": [
+      8.0,
+      20.0
+    ]
+  },
+  "nominal_linear_fft_global_peak": null,
+  "event_resampling_bootstrap": {
+    "n_trials": 200,
+    "n_passed_significance": 71,
+    "fraction_passed_significance": 0.355,
+    "n_in_band": 57,
+    "fraction_in_band_overall": 0.285,
+    "fraction_in_band_given_passed": 0.8028169014084507,
+    "k_peak_mean": 19.631859773086145,
+    "k_peak_std": 6.6974238669076005,
+    "k_peak_p05": 15.56718777539391,
+    "k_peak_p95": 33.52932751623304
+  },
+  "residual_shuffle_null": {
+    "n_trials": 200,
+    "n_passed_significance": 21,
+    "false_positive_rate_significance": 0.105,
+    "n_in_band": 7,
+    "false_positive_rate_in_band": 0.035
+  }
+}

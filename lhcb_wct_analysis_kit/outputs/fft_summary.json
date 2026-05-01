@@ -14,10 +14,10 @@
   "k_q2_max": 9.973310011396169,
   "linear_fft_peak": null,
   "missing_branches": {
-    "data\\job0.root": [
+    "data/job0.root": [
       "Kst_M"
     ],
-    "data\\job1.root": [
+    "data/job1.root": [
       "Kst_M"
     ]
   },

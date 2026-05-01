@@ -22,8 +22,8 @@
     "k_std": 0.0,
     "k_p05": 4.789903930890434,
     "k_p95": 4.789903930890434,
-    "snr_like_mean": 18.71400253541734,
-    "snr_like_median": 18.71399989707905
+    "snr_like_mean": 18.714002535388417,
+    "snr_like_median": 18.71399989707825
   },
   "null_residual_shuffle": {
     "n_trials": 200,

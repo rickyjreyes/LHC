@@ -16,13 +16,13 @@
   "wct_band_peak": null,
   "global_peak": null,
   "missing_branches": {
-    "data\\job0.root": [
+    "data/job0.root": [
       "Kst_M",
       "cosThetaL",
       "cosThetaK",
       "phi"
     ],
-    "data\\job1.root": [
+    "data/job1.root": [
       "Kst_M",
       "cosThetaL",
       "cosThetaK",

@@ -16,7 +16,7 @@ iter,passed,in_band,k_peak,snr_like
 14,False,False,,
 15,False,False,,
 16,False,False,,
-17,True,False,34.72680349895565,3.809811532856181
+17,True,False,34.72680349895565,3.8098115328561843
 18,False,False,,
 19,False,False,,
 20,False,False,,
@@ -49,7 +49,7 @@ iter,passed,in_band,k_peak,snr_like
 47,False,False,,
 48,False,False,,
 49,False,False,,
-50,True,False,25.146995637174783,3.9558182031380777
+50,True,False,25.146995637174783,3.955818203138079
 51,False,False,,
 52,False,False,,
 53,False,False,,
@@ -110,7 +110,7 @@ iter,passed,in_band,k_peak,snr_like
 108,False,False,,
 109,False,False,,
 110,False,False,,
-111,True,False,29.93689956806521,3.1997661329286857
+111,True,False,29.93689956806521,3.199766132928677
 112,False,False,,
 113,False,False,,
 114,False,False,,
@@ -162,11 +162,11 @@ iter,passed,in_band,k_peak,snr_like
 160,False,False,,
 161,False,False,,
 162,False,False,,
-163,True,False,27.54194760262,3.680618444585263
+163,True,False,27.54194760262,3.680618444585268
 164,False,False,,
 165,False,False,,
 166,False,False,,
-167,True,True,15.56718777539391,3.694792118065381
+167,True,True,15.56718777539391,3.6947921180653798
 168,False,False,,
 169,False,False,,
 170,False,False,,
@@ -177,7 +177,7 @@ iter,passed,in_band,k_peak,snr_like
 175,False,False,,
 176,False,False,,
 177,False,False,,
-178,True,True,8.38233187905826,3.0188560057855223
+178,True,True,8.38233187905826,3.018856005785526
 179,False,False,,
 180,False,False,,
 181,False,False,,
