@@ -1,0 +1,5 @@
+mode,n_selected,diagnostic_only,lft_wct_band_k,lft_wct_band_snr,lft_global_k,lft_global_snr,lft_global_in_band,fft_k_q2,fft_snr
+raw_q2,1504,False,,,15.56718777539391,3.3161968370203034,True,,
+loose,42,True,,,,,,,
+medium,27,True,,,,,,,
+tight,5,True,,,,,,,

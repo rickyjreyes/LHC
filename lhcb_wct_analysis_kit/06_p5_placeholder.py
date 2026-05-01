@@ -1,31 +1,42 @@
 # Conservative P5 angular diagnostic.
 # This is not a publication-grade P5 likelihood fit.
+# P5_READY = False until cosThetaL, cosThetaK, phi exist as branches
+# (or are reconstructed from four-vectors). Per spec, this script remains
+# a no-op when angles are absent.
 
 import pandas as pd
 import matplotlib.pyplot as plt
 
 from config import *
-from lhcb_utils import load_dataframe, add_q2, basic_selection
+from lhcb_utils import load_dataframe, add_q2, add_kst_mass, basic_selection
 
 REQUESTED = [
     "B0_M",
     "muplus_PX", "muplus_PY", "muplus_PZ", "muplus_PE",
     "muminus_PX", "muminus_PY", "muminus_PZ", "muminus_PE",
+    "Kplus_PX", "Kplus_PY", "Kplus_PZ", "Kplus_PE",
+    "piminus_PX", "piminus_PY", "piminus_PZ", "piminus_PE",
     "Kst_M",
     "cosThetaL", "cosThetaK", "phi",
 ]
 
 def main():
     df, tree, missing = load_dataframe(FILES_GLOB, TREE_NAME, REQUESTED)
-    df = add_q2(df)
-    df = basic_selection(df)
 
+    # Bail early if angles are missing - no need to run selection.
     needed = ["cosThetaL", "cosThetaK", "phi"]
     missing_angles = [x for x in needed if x not in df.columns]
     if missing_angles:
+        print("P5_READY = False")
         print("Missing angle branches:", missing_angles)
-        print("P5 fit not ready. Use 04_angle_branch_report.py or compute angles from 4-vectors.")
+        print("Reconstruct angles from four-vectors before running P5 fit, "
+              "or see 04_angle_branch_report.py for available angle-like branches.")
         return
+
+    df = add_q2(df)
+    if "Kst_M" not in df.columns:
+        df = add_kst_mass(df)
+    df = basic_selection(df, require_kst=True, verbose=False)
 
     OUT_DIR.mkdir(exist_ok=True)
 

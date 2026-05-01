@@ -1,9 +1,35 @@
 {
   "n_bootstrap": 200,
-  "k_mean": 12.9206058677591,
-  "k_std": 3.788071823949958,
-  "k_p05": 8.764684590904986,
-  "k_p95": 18.990149946960805,
-  "snr_like_mean": 1.4648799920861881,
-  "snr_like_median": 1.3930473102113434
+  "n_selected_events": 5,
+  "diagnostic_only": true,
+  "wct_band": [
+    8.0,
+    20.0
+  ],
+  "snr_min": 3.0,
+  "prominence_min": 1.0,
+  "band_restricted_argmax": {
+    "note": "Legacy. Argmax restricted to WCT band BEFORE selection. Carries no stability information; included only for comparison to old runs.",
+    "n_returned": 0
+  },
+  "global_search_significance_gated": {
+    "note": "Honest stability test. Searches full k range, requires local-max + (amp-med)/robust_sigma >= snr_min.",
+    "n_passed_significance": 3,
+    "fraction_passed_significance": 0.015,
+    "fraction_in_band_given_passed": 0.0,
+    "fraction_in_band_overall": 0.0,
+    "k_mean": 4.789903930890434,
+    "k_std": 0.0,
+    "k_p05": 4.789903930890434,
+    "k_p95": 4.789903930890434,
+    "snr_like_mean": 18.71400253541734,
+    "snr_like_median": 18.71399989707905
+  },
+  "null_residual_shuffle": {
+    "n_trials": 200,
+    "n_significant": 6,
+    "n_in_band": 2,
+    "false_positive_rate_significance": 0.03,
+    "false_positive_rate_in_band": 0.01
+  }
 }

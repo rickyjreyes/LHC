@@ -1,0 +1,73 @@
+{
+  "modes": [
+    {
+      "mode": "raw_q2",
+      "n_selected": 1504,
+      "diagnostic_only": false,
+      "lft_wct_band_k": null,
+      "lft_wct_band_snr": null,
+      "lft_global_k": 15.56718777539391,
+      "lft_global_snr": 3.3161968370203034,
+      "lft_global_in_band": true,
+      "fft_k_q2": null,
+      "fft_snr": null
+    },
+    {
+      "mode": "loose",
+      "n_selected": 42,
+      "diagnostic_only": true,
+      "lft_wct_band_k": null,
+      "lft_wct_band_snr": null,
+      "lft_global_k": null,
+      "lft_global_snr": null,
+      "lft_global_in_band": null,
+      "fft_k_q2": null,
+      "fft_snr": null
+    },
+    {
+      "mode": "medium",
+      "n_selected": 27,
+      "diagnostic_only": true,
+      "lft_wct_band_k": null,
+      "lft_wct_band_snr": null,
+      "lft_global_k": null,
+      "lft_global_snr": null,
+      "lft_global_in_band": null,
+      "fft_k_q2": null,
+      "fft_snr": null
+    },
+    {
+      "mode": "tight",
+      "n_selected": 5,
+      "diagnostic_only": true,
+      "lft_wct_band_k": null,
+      "lft_wct_band_snr": null,
+      "lft_global_k": null,
+      "lft_global_snr": null,
+      "lft_global_in_band": null,
+      "fft_k_q2": null,
+      "fft_snr": null
+    }
+  ],
+  "n_modes_attempted": 4,
+  "lft_band_persistence_count": 0,
+  "fft_persistence_count": 0,
+  "co_occurrence_modes": [],
+  "co_occurrence_count": 0,
+  "lft_band_k_std_across_modes": null,
+  "interpretation": [
+    "No LFT WCT-band peak in any cut mode."
+  ],
+  "settings": {
+    "wct_band": [
+      8.0,
+      20.0
+    ],
+    "wct_k_target": 12.0,
+    "snr_min": 3.0,
+    "prominence_min": 1.0,
+    "min_events_for_lft": 100,
+    "n_lft_bins": 60,
+    "n_fft_bins": 60
+  }
+}

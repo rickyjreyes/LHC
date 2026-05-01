@@ -1,0 +1,66 @@
+{
+  "tree": "B0_KstMuMu/DecayTree",
+  "veto_mode": "mask",
+  "baseline_mode": "kde",
+  "kst_mode": "tight",
+  "loaded_events": 1573,
+  "selected_events": 5,
+  "diagnostic_only": true,
+  "min_events_for_lft": 100,
+  "wct_band": [
+    8.0,
+    20.0
+  ],
+  "snr_min": 3.0,
+  "prominence_min": 1.0,
+  "wct_band_peak": null,
+  "global_peak": null,
+  "missing_branches": {
+    "data\\job0.root": [
+      "Kst_M",
+      "cosThetaL",
+      "cosThetaK",
+      "phi"
+    ],
+    "data\\job1.root": [
+      "Kst_M",
+      "cosThetaL",
+      "cosThetaK",
+      "phi"
+    ]
+  },
+  "cutflow": [
+    [
+      "raw",
+      1573
+    ],
+    [
+      "finite_q2",
+      1573
+    ],
+    [
+      "q2_range",
+      1504
+    ],
+    [
+      "B0_M",
+      42
+    ],
+    [
+      "Kst_M",
+      27
+    ],
+    [
+      "J/psi_veto",
+      7
+    ],
+    [
+      "psi2S_veto",
+      5
+    ],
+    [
+      "final",
+      5
+    ]
+  ]
+}

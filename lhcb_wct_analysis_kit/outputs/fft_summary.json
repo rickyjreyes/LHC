@@ -1,0 +1,59 @@
+{
+  "tree": "B0_KstMuMu/DecayTree",
+  "baseline_mode": "kde",
+  "kst_mode": "tight",
+  "veto_mode": "mask",
+  "n_fft_bins": 60,
+  "loaded_events": 1573,
+  "selected_events": 5,
+  "diagnostic_only": true,
+  "min_events_for_fft": 100,
+  "snr_min": 3.0,
+  "prominence_min": 1.0,
+  "k_q2_units": "1/GeV^2",
+  "k_q2_max": 9.973310011396169,
+  "linear_fft_peak": null,
+  "missing_branches": {
+    "data\\job0.root": [
+      "Kst_M"
+    ],
+    "data\\job1.root": [
+      "Kst_M"
+    ]
+  },
+  "cutflow": [
+    [
+      "raw",
+      1573
+    ],
+    [
+      "finite_q2",
+      1573
+    ],
+    [
+      "q2_range",
+      1504
+    ],
+    [
+      "B0_M",
+      42
+    ],
+    [
+      "Kst_M",
+      27
+    ],
+    [
+      "J/psi_veto",
+      7
+    ],
+    [
+      "psi2S_veto",
+      5
+    ],
+    [
+      "final",
+      5
+    ]
+  ],
+  "interpretation_note": "Compare to lft_summary.json. If the LFT shows a WCT-band peak and this FFT shows no significant peak, the structure is log-periodic and WCT-consistent. If both show significant peaks, the structure is more likely a binning / cut / selection artifact."
+}
