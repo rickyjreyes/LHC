@@ -1,0 +1,79 @@
+{
+  "test": "cross_region_scaling_stability",
+  "input_wells_csv": "outputs_wct_well_first_koide\\well_first_wells.csv",
+  "top_wells_grid": [
+    6,
+    8,
+    10,
+    12,
+    15,
+    18
+  ],
+  "pair_directions": [
+    [
+      "B_low_sideband_Kst_signal",
+      "signal_B_signal_Kst"
+    ],
+    [
+      "B_high_sideband_Kst_signal",
+      "signal_B_signal_Kst"
+    ],
+    [
+      "B_low_sideband_Kst_signal",
+      "B_high_sideband_Kst_signal"
+    ]
+  ],
+  "koide_Q": 0.6666666666666666,
+  "per_pair_summary": {
+    "B_low_sideband_Kst_signal->signal_B_signal_Kst": {
+      "n": 6,
+      "scale_a_median": 1.2264768044700998,
+      "scale_a_min": 1.0034092398369232,
+      "scale_a_max": 1.2282873602374818,
+      "scale_a_relrange": 0.18335293385162493,
+      "p_scale_median": 0.018074717490301907,
+      "p_scale_min": 0.004902597402597402,
+      "p_scale_max": 0.5275,
+      "n_pass_p05": 5,
+      "n_pass_p01": 3
+    },
+    "B_high_sideband_Kst_signal->signal_B_signal_Kst": {
+      "n": 6,
+      "scale_a_median": 0.8746641293362933,
+      "scale_a_min": 0.6185976219530009,
+      "scale_a_max": 0.990043529361532,
+      "scale_a_relrange": 0.4246726199808709,
+      "p_scale_median": 0.05643037518037518,
+      "p_scale_min": 0.05512265512265512,
+      "p_scale_max": 0.1225,
+      "n_pass_p05": 0,
+      "n_pass_p01": 0
+    },
+    "B_low_sideband_Kst_signal->B_high_sideband_Kst_signal": {
+      "n": 6,
+      "scale_a_median": 1.42844690733765,
+      "scale_a_min": 1.239458342287486,
+      "scale_a_max": 1.620076083606958,
+      "scale_a_relrange": 0.26645564449355014,
+      "p_scale_median": 0.03326219911041339,
+      "p_scale_min": 0.03279220779220779,
+      "p_scale_max": 0.365,
+      "n_pass_p05": 5,
+      "n_pass_p01": 0
+    }
+  },
+  "verdict": {
+    "label": "BLOW_SIGNAL_SCALE_COUPLING_UNSTABLE",
+    "reason": "B_low->signal scale factor varies with top_wells beyond the 5% relative-range threshold; the original p=0.0059 result depends on triplet selection."
+  },
+  "files": {
+    "stability_csv": "outputs_wct_cross_region_stability\\stability_table.csv",
+    "scale_plot_png": "outputs_wct_cross_region_stability\\scale_a_vs_top_wells.png",
+    "p_scale_plot_png": "outputs_wct_cross_region_stability\\p_scale_vs_top_wells.png"
+  },
+  "notes": [
+    "Triplet-pair null is the same as 21_: enumerate all (tripletA, tripletB) pairs at the current top_wells, p = fraction at least as good as observed.",
+    "Best triplet on each side: argmin koide_error over the C(N,3) triplets in the top N wells, same as 21_.",
+    "Top wells are taken in well_rank order from the upstream wells CSV (no re-ranking)."
+  ]
+}

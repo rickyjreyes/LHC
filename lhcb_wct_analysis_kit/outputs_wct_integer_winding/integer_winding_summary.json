@@ -1,0 +1,192 @@
+{
+  "test": "wct_integer_active_domain_winding_scan",
+  "active_intervals_q2": [
+    [
+      0.1,
+      8.0
+    ],
+    [
+      11.0,
+      12.5
+    ],
+    [
+      14.5,
+      19.0
+    ]
+  ],
+  "delta_ell_active": 4.780150335923678,
+  "n_range": [
+    10,
+    22
+  ],
+  "k1_fixed": 7.61054,
+  "reference_k2": 19.5296,
+  "reference_nearest_integer_n": 15,
+  "reference_nearest_integer_k": 19.716488600662828,
+  "kde_bandwidth_scales": [
+    0.5,
+    0.75,
+    1.0,
+    1.25,
+    1.5
+  ],
+  "null_n": 5000,
+  "best_n_by_bandwidth": [
+    {
+      "KDE_BANDWIDTH_SCALE": 0.5,
+      "n": 10,
+      "k2": 13.14432573377522,
+      "deltaD": 58.0735465315542,
+      "p_vs_integer_scanmax_null": 0.0001999600079984003,
+      "A2": 0.0836071924650761,
+      "A2_bound_active": false
+    },
+    {
+      "KDE_BANDWIDTH_SCALE": 0.75,
+      "n": 10,
+      "k2": 13.14432573377522,
+      "deltaD": 97.47265373607149,
+      "p_vs_integer_scanmax_null": 0.0001999600079984003,
+      "A2": 0.1,
+      "A2_bound_active": true
+    },
+    {
+      "KDE_BANDWIDTH_SCALE": 1.0,
+      "n": 20,
+      "k2": 26.28865146755044,
+      "deltaD": 135.5123713507652,
+      "p_vs_integer_scanmax_null": 0.0001999600079984003,
+      "A2": 0.1,
+      "A2_bound_active": true
+    },
+    {
+      "KDE_BANDWIDTH_SCALE": 1.25,
+      "n": 20,
+      "k2": 26.28865146755044,
+      "deltaD": 162.96979061301283,
+      "p_vs_integer_scanmax_null": 0.0001999600079984003,
+      "A2": 0.1,
+      "A2_bound_active": true
+    },
+    {
+      "KDE_BANDWIDTH_SCALE": 1.5,
+      "n": 20,
+      "k2": 26.28865146755044,
+      "deltaD": 176.87800736397003,
+      "p_vs_integer_scanmax_null": 0.0001999600079984003,
+      "A2": 0.1,
+      "A2_bound_active": true
+    }
+  ],
+  "nearest_reference_n_by_bandwidth": [
+    {
+      "KDE_BANDWIDTH_SCALE": 0.5,
+      "n": 15,
+      "k2": 19.716488600662828,
+      "deltaD": 22.862594328134207,
+      "p_vs_integer_scanmax_null": 0.0005998800239952009,
+      "p_vs_fixed_n_null": 0.0001999600079984003,
+      "A2": 0.05811284781339722,
+      "A2_bound_active": false
+    },
+    {
+      "KDE_BANDWIDTH_SCALE": 0.75,
+      "n": 15,
+      "k2": 19.716488600662828,
+      "deltaD": 37.7054977411924,
+      "p_vs_integer_scanmax_null": 0.0001999600079984003,
+      "p_vs_fixed_n_null": 0.0001999600079984003,
+      "A2": 0.0749819981585497,
+      "A2_bound_active": false
+    },
+    {
+      "KDE_BANDWIDTH_SCALE": 1.0,
+      "n": 15,
+      "k2": 19.716488600662828,
+      "deltaD": 58.25363341553543,
+      "p_vs_integer_scanmax_null": 0.0001999600079984003,
+      "p_vs_fixed_n_null": 0.0001999600079984003,
+      "A2": 0.09316780953735238,
+      "A2_bound_active": false
+    },
+    {
+      "KDE_BANDWIDTH_SCALE": 1.25,
+      "n": 15,
+      "k2": 19.716488600662828,
+      "deltaD": 83.24346511392707,
+      "p_vs_integer_scanmax_null": 0.0001999600079984003,
+      "p_vs_fixed_n_null": 0.0001999600079984003,
+      "A2": 0.1,
+      "A2_bound_active": true
+    },
+    {
+      "KDE_BANDWIDTH_SCALE": 1.5,
+      "n": 15,
+      "k2": 19.716488600662828,
+      "deltaD": 106.35164140214556,
+      "p_vs_integer_scanmax_null": 0.0001999600079984003,
+      "p_vs_fixed_n_null": 0.0001999600079984003,
+      "A2": 0.1,
+      "A2_bound_active": true
+    }
+  ],
+  "n15_by_bandwidth": [
+    {
+      "KDE_BANDWIDTH_SCALE": 0.5,
+      "n": 15,
+      "k2": 19.716488600662828,
+      "deltaD": 22.862594328134207,
+      "p_vs_integer_scanmax_null": 0.0005998800239952009,
+      "p_vs_fixed_n_null": 0.0001999600079984003,
+      "A2": 0.05811284781339722,
+      "A2_bound_active": false
+    },
+    {
+      "KDE_BANDWIDTH_SCALE": 0.75,
+      "n": 15,
+      "k2": 19.716488600662828,
+      "deltaD": 37.7054977411924,
+      "p_vs_integer_scanmax_null": 0.0001999600079984003,
+      "p_vs_fixed_n_null": 0.0001999600079984003,
+      "A2": 0.0749819981585497,
+      "A2_bound_active": false
+    },
+    {
+      "KDE_BANDWIDTH_SCALE": 1.0,
+      "n": 15,
+      "k2": 19.716488600662828,
+      "deltaD": 58.25363341553543,
+      "p_vs_integer_scanmax_null": 0.0001999600079984003,
+      "p_vs_fixed_n_null": 0.0001999600079984003,
+      "A2": 0.09316780953735238,
+      "A2_bound_active": false
+    },
+    {
+      "KDE_BANDWIDTH_SCALE": 1.25,
+      "n": 15,
+      "k2": 19.716488600662828,
+      "deltaD": 83.24346511392707,
+      "p_vs_integer_scanmax_null": 0.0001999600079984003,
+      "p_vs_fixed_n_null": 0.0001999600079984003,
+      "A2": 0.1,
+      "A2_bound_active": true
+    },
+    {
+      "KDE_BANDWIDTH_SCALE": 1.5,
+      "n": 15,
+      "k2": 19.716488600662828,
+      "deltaD": 106.35164140214556,
+      "p_vs_integer_scanmax_null": 0.0001999600079984003,
+      "p_vs_fixed_n_null": 0.0001999600079984003,
+      "A2": 0.1,
+      "A2_bound_active": true
+    }
+  ],
+  "files": {
+    "summary_csv": "outputs_wct_integer_winding\\integer_winding_summary.csv",
+    "null_csv": "outputs_wct_integer_winding\\integer_winding_null.csv",
+    "score_png": "outputs_wct_integer_winding\\integer_winding_scores.png",
+    "best_png": "outputs_wct_integer_winding\\integer_winding_best_by_bandwidth.png"
+  },
+  "interpretation_note": "This is a discrete winding diagnostic. A pass means an integer active-domain winding improves the yield model under the same KDE/polar Poisson machinery. It is not a sideband/control-channel discovery test."
+}

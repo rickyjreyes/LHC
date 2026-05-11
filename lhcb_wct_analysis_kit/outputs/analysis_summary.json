@@ -1,27 +1,51 @@
 {
   "tree": "B0_KstMuMu/DecayTree",
-  "loaded_events": 1573,
-  "selected_events": 12,
+  "loaded_events": 18062794,
+  "selected_events": 118114,
   "peak_2_30": {
-    "k_peak": 2.9215615303016627,
-    "amp_peak": 74.13397876735073,
-    "median_amp": 25.94838801859251,
-    "snr_like": 2.8569781951091655
+    "k_peak": 4.382342295452493,
+    "amp_peak": 11.089630807444792,
+    "median_amp": 3.9255026640760495,
+    "snr_like": 2.825021852342819
   },
   "peak_wct_band": {
-    "k_peak": 11.68624612120665,
-    "amp_peak": 25.94838801859251,
-    "median_amp": 14.704561940669688,
-    "snr_like": 1.764648829614216
+    "k_peak": 8.764684590904986,
+    "amp_peak": 9.9445429150886,
+    "median_amp": 4.435519663198188,
+    "snr_like": 2.2420243106121607
   },
   "missing": {
-    "data\\job0.root": [
+    "data\\00382466_00000001_1.dvntuple.root": [
       "Kst_M",
       "cosThetaL",
       "cosThetaK",
       "phi"
     ],
-    "data\\job1.root": [
+    "data\\00382466_00000002_1.dvntuple.root": [
+      "Kst_M",
+      "cosThetaL",
+      "cosThetaK",
+      "phi"
+    ],
+    "data\\00382466_00000003_1.dvntuple.root": [
+      "Kst_M",
+      "cosThetaL",
+      "cosThetaK",
+      "phi"
+    ],
+    "data\\00382467_00000001_1.dvntuple.root": [
+      "Kst_M",
+      "cosThetaL",
+      "cosThetaK",
+      "phi"
+    ],
+    "data\\00382467_00000002_1.dvntuple.root": [
+      "Kst_M",
+      "cosThetaL",
+      "cosThetaK",
+      "phi"
+    ],
+    "data\\00382467_00000003_1.dvntuple.root": [
       "Kst_M",
       "cosThetaL",
       "cosThetaK",

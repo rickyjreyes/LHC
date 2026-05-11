@@ -1,0 +1,31 @@
+COMMAND: C:\Users\Ricky.Reyes.CST\AppData\Local\anaconda3\envs\cupy-env\python.exe C:\Users\Ricky.Reyes.CST\Desktop\RESEARCH\LHC\lhcb_wct_analysis_kit\11_angular_logcos_scan.py
+START: Mon May 11 11:09:42 2026
+
+[gpu] CuPy available: True
+[gpu] USE_CUPY: True
+[gpu] using GPU: True
+[gpu] NULL_BATCH: 512
+[load] outputs_angles\angles.parquet
+[select] events after signal selection and veto: 19,220
+[moments] usable bins: 43
+[save] outputs_angular_logcos\angular_moments.csv
+
+================================================================================
+[moment] moment_cosThetaL
+================================================================================
+Traceback (most recent call last):
+  File "C:\Users\Ricky.Reyes.CST\Desktop\RESEARCH\LHC\lhcb_wct_analysis_kit\11_angular_logcos_scan.py", line 813, in <module>
+    main()
+  File "C:\Users\Ricky.Reyes.CST\Desktop\RESEARCH\LHC\lhcb_wct_analysis_kit\11_angular_logcos_scan.py", line 711, in main
+    results[col] = run_moment(moments, col, rng)
+                   ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Ricky.Reyes.CST\Desktop\RESEARCH\LHC\lhcb_wct_analysis_kit\11_angular_logcos_scan.py", line 620, in run_moment
+    print(
+  File "C:\Users\Ricky.Reyes.CST\AppData\Local\anaconda3\envs\cupy-env\Lib\encodings\cp1252.py", line 19, in encode
+    return codecs.charmap_encode(input,self.errors,encoding_table)[0]
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+UnicodeEncodeError: 'charmap' codec can't encode characters in position 32-33: character maps to <undefined>
+
+END: Mon May 11 11:09:50 2026
+RETURN_CODE: 1
+SECONDS: 7.47

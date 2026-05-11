@@ -1,0 +1,108 @@
+COMMAND: C:\Users\Ricky.Reyes.CST\AppData\Local\anaconda3\envs\cupy-env\python.exe C:\Users\Ricky.Reyes.CST\Desktop\RESEARCH\LHC\lhcb_wct_analysis_kit\27_control_channel_blind_test.py
+START: Mon May 11 11:47:46 2026
+
+====================================================================================================
+BLIND CONTROL-CHANNEL TEST
+====================================================================================================
+[config] control_mode = jpsi_peak
+[config] control_test_type = jpsi_peak_reconstruction_sanity_check
+[config] active intervals: [(8.0, 11.0)]
+[config] Delta ell active = 0.3184537311
+[config] k(10), k(15), k(20) = 197.302926, 295.954390, 394.605853
+[config] k_scan_range = [6.0, 32.0]
+[warn] n=10 maps to k=197.303, outside scan range [6.0, 32.0]. Integer-winding tests are not valid in this mode.
+[warn] n=15 maps to k=295.954, outside scan range [6.0, 32.0]. Integer-winding tests are not valid in this mode.
+[warn] n=20 maps to k=394.606, outside scan range [6.0, 32.0]. Integer-winding tests are not valid in this mode.
+[config] integer_targets_valid_in_scan = False
+[config] target a rare-decay = 1.228287431
+[config] target sqrt(3/2) = 1.224744871
+====================================================================================================
+[load] data_control\00334566_00000001_1.dvntuple.root
+[warn] No K* mass branch found in data_control\00334566_00000001_1.dvntuple.root; using dummy Kst_M=900.0 for non-K* control channel.
+[q2] derived from muon four-vectors
+[info] loaded q2-range events: 1,335,748
+
+====================================================================================================
+[region] signal_Bplus_jpsiK_control
+  B window: (5220.0, 5350.0)
+  K* window: (795.9, 995.9)
+  N active: 595,767
+====================================================================================================
+[base] signal_Bplus_jpsiK_control D_base=0.000000, A1=0.000000
+  scanned 250/1301
+  scanned 500/1301
+  scanned 750/1301
+  scanned 1000/1301
+  scanned 1250/1301
+
+[top wells]
+  none
+
+[best triplets]
+  none
+
+====================================================================================================
+[region] B_low_sideband_jpsiK_control
+  B window: (5050.0, 5180.0)
+  K* window: (795.9, 995.9)
+  N active: 143,854
+====================================================================================================
+[base] B_low_sideband_jpsiK_control D_base=0.000000, A1=0.000000
+  scanned 250/1301
+  scanned 500/1301
+  scanned 750/1301
+  scanned 1000/1301
+  scanned 1250/1301
+
+[top wells]
+  none
+
+[best triplets]
+  none
+
+====================================================================================================
+[region] B_high_sideband_jpsiK_control
+  B window: (5380.0, 5600.0)
+  K* window: (795.9, 995.9)
+  N active: 49,052
+====================================================================================================
+[base] B_high_sideband_jpsiK_control D_base=0.000000, A1=0.000000
+  scanned 250/1301
+  scanned 500/1301
+  scanned 750/1301
+  scanned 1000/1301
+  scanned 1250/1301
+
+[top wells]
+  none
+
+[best triplets]
+  none
+
+====================================================================================================
+CONTROL-CHANNEL BLIND VERDICT
+====================================================================================================
+{
+  "control_mode": "jpsi_peak",
+  "control_test_type": "jpsi_peak_reconstruction_sanity_check",
+  "integer_targets_valid_in_scan": false,
+  "package_reproduction_verdict_is_valid": false,
+  "n15_pass_count": 0,
+  "koide_pass_count": 0,
+  "integer_10_15_20_pass_count": 0,
+  "scale_pass": false,
+  "reproduced_score_out_of_4": 0,
+  "control_reproduces_rare_decay_package": false,
+  "interpretation": "This mode is a reconstruction / peak-shape sanity check, not a valid active-domain package verdict. The rare-decay integer targets do not lie in the scanned k range, so n=15, (10,15,20), and scale-package pass/fail should be read as not applicable."
+}
+
+Saved:
+  outputs_control_blind\control_well_first_scan_curve.csv
+  outputs_control_blind\control_wells.csv
+  outputs_control_blind\control_triplets.csv
+  outputs_control_blind\control_summary.json
+  outputs_control_blind\control_blind_verdict.json
+
+END: Mon May 11 11:47:56 2026
+RETURN_CODE: 0
+SECONDS: 9.40

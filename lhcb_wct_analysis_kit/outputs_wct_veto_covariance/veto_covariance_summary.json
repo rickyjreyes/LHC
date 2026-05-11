@@ -1,0 +1,183 @@
+{
+  "test": "veto_window_covariance_active_domain_invariance",
+  "purpose": "Test whether well/triplet structure is stable in n-space under veto-window changes.",
+  "Q2_range": [
+    0.1,
+    19.0
+  ],
+  "K_SCAN": [
+    6.0,
+    36.0,
+    1501
+  ],
+  "A_MAX": 0.05,
+  "K1_FIXED": 7.61054,
+  "veto_schemes": [
+    {
+      "label": "tight",
+      "jpsi": [
+        8.5,
+        10.5
+      ],
+      "psi2s": [
+        12.8,
+        14.2
+      ],
+      "active_intervals": [
+        [
+          0.1,
+          8.5
+        ],
+        [
+          10.5,
+          12.8
+        ],
+        [
+          14.2,
+          19.0
+        ]
+      ],
+      "delta_ell_A": 4.931918184811636
+    },
+    {
+      "label": "baseline_wide",
+      "jpsi": [
+        8.0,
+        11.0
+      ],
+      "psi2s": [
+        12.5,
+        14.5
+      ],
+      "active_intervals": [
+        [
+          0.1,
+          8.0
+        ],
+        [
+          11.0,
+          12.5
+        ],
+        [
+          14.5,
+          19.0
+        ]
+      ],
+      "delta_ell_A": 4.780150335923678
+    },
+    {
+      "label": "wider",
+      "jpsi": [
+        7.5,
+        11.5
+      ],
+      "psi2s": [
+        12.25,
+        14.75
+      ],
+      "active_intervals": [
+        [
+          0.1,
+          7.5
+        ],
+        [
+          11.5,
+          12.25
+        ],
+        [
+          14.75,
+          19.0
+        ]
+      ],
+      "delta_ell_A": 4.633862911538453
+    },
+    {
+      "label": "very_wide",
+      "jpsi": [
+        7.0,
+        12.0
+      ],
+      "psi2s": [
+        12.0,
+        15.0
+      ],
+      "active_intervals": [
+        [
+          0.1,
+          7.0
+        ],
+        [
+          15.0,
+          19.0
+        ]
+      ],
+      "delta_ell_A": 4.48488402011359
+    },
+    {
+      "label": "shift_low",
+      "jpsi": [
+        7.8,
+        10.8
+      ],
+      "psi2s": [
+        12.3,
+        14.3
+      ],
+      "active_intervals": [
+        [
+          0.1,
+          7.8
+        ],
+        [
+          10.8,
+          12.3
+        ],
+        [
+          14.3,
+          19.0
+        ]
+      ],
+      "delta_ell_A": 4.770941396838369
+    },
+    {
+      "label": "shift_high",
+      "jpsi": [
+        8.2,
+        11.2
+      ],
+      "psi2s": [
+        12.7,
+        14.7
+      ],
+      "active_intervals": [
+        [
+          0.1,
+          8.2
+        ],
+        [
+          11.2,
+          12.7
+        ],
+        [
+          14.7,
+          19.0
+        ]
+      ],
+      "delta_ell_A": 4.7889989478095005
+    }
+  ],
+  "files": {
+    "wells_csv": "outputs_wct_veto_covariance\\veto_covariance_wells.csv",
+    "triplets_csv": "outputs_wct_veto_covariance\\veto_covariance_triplets.csv",
+    "scan_summary_csv": "outputs_wct_veto_covariance\\veto_covariance_scan_summary.csv",
+    "best_summary_csv": "outputs_wct_veto_covariance\\veto_covariance_best_triplets.csv",
+    "stability_csv": "outputs_wct_veto_covariance\\veto_covariance_stability.csv",
+    "summary_json": "outputs_wct_veto_covariance\\veto_covariance_summary.json"
+  },
+  "interpretation": {
+    "stable_n_unstable_k": "WCT-supporting active-domain covariance.",
+    "stable_k_unstable_n": "raw-frequency artifact or fixed detector/window frequency.",
+    "unstable_both": "weakens WCT-specific interpretation.",
+    "stable_Q_not_integer": "ratio geometry survives, but integer winding does not."
+  }
+}

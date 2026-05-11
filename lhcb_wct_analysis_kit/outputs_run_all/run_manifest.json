@@ -1,0 +1,128 @@
+{
+  "created_at": "Mon May 11 11:47:56 2026",
+  "command": "run_all.py --fast --continue-on-error",
+  "args": {
+    "fast": true,
+    "full": false,
+    "controls": false,
+    "control_mode": null,
+    "only": null,
+    "skip": null,
+    "from_key": null,
+    "group": null,
+    "dry_run": false,
+    "continue_on_error": true,
+    "ignore_dependencies": false
+  },
+  "results": [
+    {
+      "key": "00",
+      "script": "00_inspect_root.py",
+      "label": "Inspect first ROOT file and tree layout",
+      "group": "intake",
+      "return_code": 0,
+      "seconds": 3.152,
+      "log": "outputs_run_all\\00_00_inspect_root.log",
+      "outputs_hint": []
+    },
+    {
+      "key": "01",
+      "script": "01_check_branches.py",
+      "label": "Check q2, angular, and useful branch readiness",
+      "group": "intake",
+      "return_code": 0,
+      "seconds": 3.206,
+      "log": "outputs_run_all\\01_01_check_branches.log",
+      "outputs_hint": []
+    },
+    {
+      "key": "04",
+      "script": "04_angle_branch_report.py",
+      "label": "Search for direct angular branch candidates",
+      "group": "intake",
+      "return_code": 0,
+      "seconds": 3.374,
+      "log": "outputs_run_all\\04_04_angle_branch_report.log",
+      "outputs_hint": []
+    },
+    {
+      "key": "19",
+      "script": "19_koide_well.py",
+      "label": "Well-first Koide raw-well scan",
+      "group": "well_first",
+      "return_code": 0,
+      "seconds": 25.516,
+      "log": "outputs_run_all\\19_19_koide_well.log",
+      "outputs_hint": [
+        "outputs_wct_well_first_koide/well_first_wells.csv"
+      ]
+    },
+    {
+      "key": "20",
+      "script": "20_koide_proof.py",
+      "label": "Well-first Koide geometry proof / null test",
+      "group": "well_first",
+      "return_code": 0,
+      "seconds": 14.258,
+      "log": "outputs_run_all\\20_20_koide_proof.log",
+      "outputs_hint": [
+        "outputs_wct_well_proof"
+      ]
+    },
+    {
+      "key": "21",
+      "script": "21_cross_region_scaling_phase_test.py",
+      "label": "Cross-region scaling and phase-coherence test (paper Sec. 15)",
+      "group": "well_first",
+      "return_code": 0,
+      "seconds": 24.545,
+      "log": "outputs_run_all\\21_21_cross_region_scaling_phase_test.log",
+      "outputs_hint": [
+        "outputs_wct_cross_region_scaling"
+      ]
+    },
+    {
+      "key": "22",
+      "script": "22_cross_regional_stability_test.py",
+      "label": "Cross-region scaling stability sweep (paper Fig. 5)",
+      "group": "well_first",
+      "return_code": 0,
+      "seconds": 2.478,
+      "log": "outputs_run_all\\22_22_cross_regional_stability_test.log",
+      "outputs_hint": [
+        "outputs_wct_cross_region_stability"
+      ]
+    },
+    {
+      "key": "25",
+      "script": "25_veto_window_covariance_test.py",
+      "label": "Veto-window covariance / active-domain invariance test (paper Sec. 16)",
+      "group": "covariance",
+      "return_code": 0,
+      "seconds": 69.616,
+      "log": "outputs_run_all\\25_25_veto_window_covariance_test.log",
+      "outputs_hint": [
+        "outputs_wct_veto_covariance"
+      ]
+    },
+    {
+      "key": "27",
+      "script": "27_control_channel_blind_test.py",
+      "label": "Blind control-channel / reconstruction-control test (paper Sec. 20.1)",
+      "group": "control",
+      "return_code": 0,
+      "seconds": 9.402,
+      "log": "outputs_run_all\\27_27_control_channel_blind_test.log",
+      "outputs_hint": [
+        "outputs_control_blind"
+      ]
+    }
+  ],
+  "skipped": [],
+  "failed": [],
+  "summary": {
+    "ran": 9,
+    "skipped": 0,
+    "failed": 0
+  }
+}

@@ -1,0 +1,343 @@
+{
+  "script": "30_charm_trimmed_control.py",
+  "purpose": "Remove charm windows before any spectral test; no charm fitting or subtraction.",
+  "files": [
+    "data\\00382466_00000001_1.dvntuple.root",
+    "data\\00382466_00000002_1.dvntuple.root",
+    "data\\00382466_00000003_1.dvntuple.root",
+    "data\\00382467_00000001_1.dvntuple.root",
+    "data\\00382467_00000002_1.dvntuple.root",
+    "data\\00382467_00000003_1.dvntuple.root"
+  ],
+  "provenance": [
+    {
+      "file": "data\\00382466_00000001_1.dvntuple.root",
+      "tree": "B0_KstMuMu/DecayTree;1",
+      "q2_source": "derived_from_muon_four_vectors",
+      "B_mass_branch": "B0_M",
+      "Kst_mass_branch": "Kst_892_0_M",
+      "n_loaded_q2_range": 3353167
+    },
+    {
+      "file": "data\\00382466_00000002_1.dvntuple.root",
+      "tree": "B0_KstMuMu/DecayTree;1",
+      "q2_source": "derived_from_muon_four_vectors",
+      "B_mass_branch": "B0_M",
+      "Kst_mass_branch": "Kst_892_0_M",
+      "n_loaded_q2_range": 3350433
+    },
+    {
+      "file": "data\\00382466_00000003_1.dvntuple.root",
+      "tree": "B0_KstMuMu/DecayTree;1",
+      "q2_source": "derived_from_muon_four_vectors",
+      "B_mass_branch": "B0_M",
+      "Kst_mass_branch": "Kst_892_0_M",
+      "n_loaded_q2_range": 2194256
+    },
+    {
+      "file": "data\\00382467_00000001_1.dvntuple.root",
+      "tree": "B0_KstMuMu/DecayTree;1",
+      "q2_source": "derived_from_muon_four_vectors",
+      "B_mass_branch": "B0_M",
+      "Kst_mass_branch": "Kst_892_0_M",
+      "n_loaded_q2_range": 3353228
+    },
+    {
+      "file": "data\\00382467_00000002_1.dvntuple.root",
+      "tree": "B0_KstMuMu/DecayTree;1",
+      "q2_source": "derived_from_muon_four_vectors",
+      "B_mass_branch": "B0_M",
+      "Kst_mass_branch": "Kst_892_0_M",
+      "n_loaded_q2_range": 3344384
+    },
+    {
+      "file": "data\\00382467_00000003_1.dvntuple.root",
+      "tree": "B0_KstMuMu/DecayTree;1",
+      "q2_source": "derived_from_muon_four_vectors",
+      "B_mass_branch": "B0_M",
+      "Kst_mass_branch": "Kst_892_0_M",
+      "n_loaded_q2_range": 1815786
+    }
+  ],
+  "config": {
+    "Q2_MIN": 0.1,
+    "Q2_MAX": 19.0,
+    "CHARM_WINDOWS_REMOVED": {
+      "Jpsi": [
+        8.0,
+        11.0
+      ],
+      "psi2S": [
+        12.5,
+        14.5
+      ]
+    },
+    "ACTIVE_INTERVALS": [
+      [
+        0.1,
+        8.0
+      ],
+      [
+        11.0,
+        12.5
+      ],
+      [
+        14.5,
+        19.0
+      ]
+    ],
+    "DELTA_ELL_ACTIVE": 4.780150335923678,
+    "B_SIGNAL": [
+      5230.0,
+      5330.0
+    ],
+    "B_LOW_SB": [
+      5000.0,
+      5180.0
+    ],
+    "B_HIGH_SB": [
+      5380.0,
+      5600.0
+    ],
+    "KST_SIGNAL": [
+      795.9,
+      995.9
+    ],
+    "K1_FIXED": 7.61054,
+    "K_REF": 19.5296,
+    "k_targets": {
+      "n10": 13.14432573377522,
+      "n15": 19.716488600662828,
+      "n20": 26.28865146755044
+    },
+    "N_BINS": 240,
+    "K_SCAN_MIN": 6.0,
+    "K_SCAN_MAX": 32.0,
+    "N_K_SCAN": 1301,
+    "n_null": 500,
+    "seed": 314159
+  },
+  "region_results": [
+    {
+      "region": "signal_B_signal_Kst",
+      "count_sum": 15630.0,
+      "scan": {
+        "best_k": 7.76,
+        "best_n": 5.903688144352786,
+        "best_delta_chi2": 352.8910426902785,
+        "p_best_scanmax": 0.001996007984031936,
+        "kref_delta_chi2": 10.664837297614213,
+        "p_kref_fixed": 0.007984031936127744,
+        "n15_delta_chi2": 6.524788616414298,
+        "p_n15_fixed": 0.033932135728542916
+      },
+      "comb": {
+        "comb_101520_delta_chi2": 75.79787598369148,
+        "p_comb_101520": 0.001996007984031936,
+        "folded_449_delta_chi2": 61.315129908776726,
+        "p_folded_449": 0.001996007984031936
+      },
+      "best_triplet": {
+        "region": "signal_B_signal_Kst",
+        "k1": 10.4,
+        "k2": 15.64,
+        "k3": 20.740000000000002,
+        "n1": 7.9121593687202285,
+        "n2": 11.89867043526773,
+        "n3": 15.77867166415938,
+        "delta1": 17.801570889758295,
+        "delta2": 79.32101464661537,
+        "delta3": 20.03482627174526,
+        "Q_low": 0.6649616368286444,
+        "Q_high": 0.6630434782608695,
+        "Q_mean": 0.664002557544757,
+        "koide_error": 0.004004325283046917,
+        "integer_error_10_15_20": 5.638877236620434,
+        "score": 15.559822942866457
+      },
+      "interpretation_flags": {
+        "best_scan_survives_0p05": true,
+        "kref_survives_0p05": true,
+        "n15_survives_0p05": true,
+        "comb_101520_survives_0p05": true,
+        "folded_449_survives_0p05": true
+      },
+      "outputs": {
+        "scan_csv": "outputs_charm_trimmed_control\\charm_trimmed_scan_signal_B_signal_Kst.csv",
+        "wells_csv": "outputs_charm_trimmed_control\\charm_trimmed_wells_signal_B_signal_Kst.csv",
+        "triplets_csv": "outputs_charm_trimmed_control\\charm_trimmed_triplets_signal_B_signal_Kst.csv",
+        "integer_csv": "outputs_charm_trimmed_control\\charm_trimmed_integer_signal_B_signal_Kst.csv",
+        "comb_csv": "outputs_charm_trimmed_control\\charm_trimmed_comb_signal_B_signal_Kst.csv"
+      },
+      "event_count_active": 15863,
+      "bins_csv": "outputs_charm_trimmed_control\\charm_trimmed_bins_signal_B_signal_Kst.csv"
+    },
+    {
+      "region": "B_low_sideband_Kst_signal",
+      "count_sum": 29000.0,
+      "scan": {
+        "best_k": 8.06,
+        "best_n": 6.1319235107581775,
+        "best_delta_chi2": 956.2404703571628,
+        "p_best_scanmax": 0.001996007984031936,
+        "kref_delta_chi2": 196.17270753479534,
+        "p_kref_fixed": 0.001996007984031936,
+        "n15_delta_chi2": 161.36147601706034,
+        "p_n15_fixed": 0.001996007984031936
+      },
+      "comb": {
+        "comb_101520_delta_chi2": 226.23542170888686,
+        "p_comb_101520": 0.001996007984031936,
+        "folded_449_delta_chi2": 510.7145734026635,
+        "p_folded_449": 0.001996007984031936
+      },
+      "best_triplet": {
+        "region": "B_low_sideband_Kst_signal",
+        "k1": 9.82,
+        "k2": 14.42,
+        "k3": 19.52,
+        "n1": 7.470904327003139,
+        "n2": 10.97051327855247,
+        "n3": 14.850514507444121,
+        "delta1": 176.62899328432468,
+        "delta2": 160.14326592941143,
+        "delta3": 196.07037223783846,
+        "Q_low": 0.680998613037448,
+        "Q_high": 0.6768377253814147,
+        "Q_mean": 0.6789181692094314,
+        "koide_error": 0.017574274441746016,
+        "integer_error_10_15_20": 7.010726709802406,
+        "score": 55.642877848098394
+      },
+      "interpretation_flags": {
+        "best_scan_survives_0p05": true,
+        "kref_survives_0p05": true,
+        "n15_survives_0p05": true,
+        "comb_101520_survives_0p05": true,
+        "folded_449_survives_0p05": true
+      },
+      "outputs": {
+        "scan_csv": "outputs_charm_trimmed_control\\charm_trimmed_scan_B_low_sideband_Kst_signal.csv",
+        "wells_csv": "outputs_charm_trimmed_control\\charm_trimmed_wells_B_low_sideband_Kst_signal.csv",
+        "triplets_csv": "outputs_charm_trimmed_control\\charm_trimmed_triplets_B_low_sideband_Kst_signal.csv",
+        "integer_csv": "outputs_charm_trimmed_control\\charm_trimmed_integer_B_low_sideband_Kst_signal.csv",
+        "comb_csv": "outputs_charm_trimmed_control\\charm_trimmed_comb_B_low_sideband_Kst_signal.csv"
+      },
+      "event_count_active": 29533,
+      "bins_csv": "outputs_charm_trimmed_control\\charm_trimmed_bins_B_low_sideband_Kst_signal.csv"
+    },
+    {
+      "region": "B_high_sideband_Kst_signal",
+      "count_sum": 25850.0,
+      "scan": {
+        "best_k": 7.74,
+        "best_n": 5.8884724532590935,
+        "best_delta_chi2": 1044.7837903605396,
+        "p_best_scanmax": 0.001996007984031936,
+        "kref_delta_chi2": 66.70147990730038,
+        "p_kref_fixed": 0.001996007984031936,
+        "n15_delta_chi2": 42.74681757201324,
+        "p_n15_fixed": 0.001996007984031936
+      },
+      "comb": {
+        "comb_101520_delta_chi2": 378.8891565160411,
+        "p_comb_101520": 0.001996007984031936,
+        "folded_449_delta_chi2": 232.00573949802492,
+        "p_folded_449": 0.001996007984031936
+      },
+      "best_triplet": {
+        "region": "B_high_sideband_Kst_signal",
+        "k1": 7.74,
+        "k2": 11.620000000000001,
+        "k3": 15.56,
+        "n1": 5.8884724532590935,
+        "n2": 8.840316525435487,
+        "n3": 11.837807670892957,
+        "delta1": 1044.7837903605396,
+        "delta2": 150.05756086775727,
+        "delta3": 196.66254929883144,
+        "Q_low": 0.6660929432013769,
+        "Q_high": 0.6695352839931152,
+        "Q_mean": 0.6678141135972461,
+        "koide_error": 0.002925427144918363,
+        "integer_error_10_15_20": 11.021240533250616,
+        "score": 121.15481223816353
+      },
+      "interpretation_flags": {
+        "best_scan_survives_0p05": true,
+        "kref_survives_0p05": true,
+        "n15_survives_0p05": true,
+        "comb_101520_survives_0p05": true,
+        "folded_449_survives_0p05": true
+      },
+      "outputs": {
+        "scan_csv": "outputs_charm_trimmed_control\\charm_trimmed_scan_B_high_sideband_Kst_signal.csv",
+        "wells_csv": "outputs_charm_trimmed_control\\charm_trimmed_wells_B_high_sideband_Kst_signal.csv",
+        "triplets_csv": "outputs_charm_trimmed_control\\charm_trimmed_triplets_B_high_sideband_Kst_signal.csv",
+        "integer_csv": "outputs_charm_trimmed_control\\charm_trimmed_integer_B_high_sideband_Kst_signal.csv",
+        "comb_csv": "outputs_charm_trimmed_control\\charm_trimmed_comb_B_high_sideband_Kst_signal.csv"
+      },
+      "event_count_active": 26244,
+      "bins_csv": "outputs_charm_trimmed_control\\charm_trimmed_bins_B_high_sideband_Kst_signal.csv"
+    }
+  ],
+  "sideband_subtracted_result": {
+    "region": "sideband_subtracted_charm_trimmed",
+    "count_sum": -3.410605131648481e-13,
+    "scan": {
+      "best_k": 13.120000000000001,
+      "best_n": 9.981493357462444,
+      "best_delta_chi2": 1100.8473284053362,
+      "p_best_scanmax": 0.001996007984031936,
+      "kref_delta_chi2": 280.12869473565297,
+      "p_kref_fixed": 0.001996007984031936,
+      "n15_delta_chi2": 307.01520592259476,
+      "p_n15_fixed": 0.001996007984031936
+    },
+    "comb": {
+      "comb_101520_delta_chi2": 1501.9765952132075,
+      "p_comb_101520": 0.001996007984031936,
+      "folded_449_delta_chi2": 901.106251389836,
+      "p_folded_449": 0.001996007984031936
+    },
+    "best_triplet": {
+      "region": "sideband_subtracted_charm_trimmed",
+      "k1": 15.44,
+      "k2": 23.12,
+      "k3": 31.080000000000002,
+      "n1": 11.746513524330801,
+      "n2": 17.589338904308818,
+      "n3": 23.645183959598533,
+      "delta1": 537.9973398787406,
+      "delta2": 73.73272397170877,
+      "delta3": 251.06569578498966,
+      "Q_low": 0.6678200692041522,
+      "Q_high": 0.6721453287197232,
+      "Q_mean": 0.6699826989619377,
+      "koide_error": 0.005598756585625081,
+      "integer_error_10_15_20": 4.800244947015936,
+      "score": 122.90379522406725
+    },
+    "interpretation_flags": {
+      "best_scan_survives_0p05": true,
+      "kref_survives_0p05": true,
+      "n15_survives_0p05": true,
+      "comb_101520_survives_0p05": true,
+      "folded_449_survives_0p05": true
+    },
+    "outputs": {
+      "scan_csv": "outputs_charm_trimmed_control\\charm_trimmed_sideband_scan_sideband_subtracted_charm_trimmed.csv",
+      "wells_csv": "outputs_charm_trimmed_control\\charm_trimmed_sideband_wells_sideband_subtracted_charm_trimmed.csv",
+      "triplets_csv": "outputs_charm_trimmed_control\\charm_trimmed_sideband_triplets_sideband_subtracted_charm_trimmed.csv",
+      "integer_csv": "outputs_charm_trimmed_control\\charm_trimmed_sideband_integer_sideband_subtracted_charm_trimmed.csv",
+      "comb_csv": "outputs_charm_trimmed_control\\charm_trimmed_sideband_comb_sideband_subtracted_charm_trimmed.csv"
+    },
+    "alpha": 0.28495897903372835,
+    "signal_sum": 15630.0,
+    "side_sum": 54850.0,
+    "residual_sum": -3.410605131648481e-13,
+    "rms_z_residual": 1.2070094305068317,
+    "bins_csv": "outputs_charm_trimmed_control\\charm_trimmed_sideband_bins.csv"
+  },
+  "interpretation": "Corrected charm-removal control: charm regions are cut before testing. No fitted charm yield is subtracted, so the test cannot overcount resonance leakage. Per-region results test the charm-trimmed candidate spectra; sideband-subtracted result tests survival after removing shared sideband-like structure on the same support."
+}
