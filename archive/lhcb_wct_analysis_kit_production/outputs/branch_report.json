@@ -1,0 +1,41 @@
+{
+  "file": "data\\job0.root",
+  "tree": "B0_KstMuMu/DecayTree;1",
+  "q2_ready": true,
+  "p5_ready": false,
+  "q2_branches": {
+    "muplus_PX": "muplus_PX",
+    "muplus_PY": "muplus_PY",
+    "muplus_PZ": "muplus_PZ",
+    "muplus_PE": "muplus_PE",
+    "muminus_PX": "muminus_PX",
+    "muminus_PY": "muminus_PY",
+    "muminus_PZ": "muminus_PZ",
+    "muminus_PE": "muminus_PE",
+    "B0_M": "B0_M"
+  },
+  "p5_branches": {
+    "cosThetaL": null,
+    "cosThetaK": null,
+    "phi": null
+  },
+  "extra_branches": {
+    "Kplus_PX": "Kplus_PX",
+    "Kplus_PY": "Kplus_PY",
+    "Kplus_PZ": "Kplus_PZ",
+    "Kplus_PE": "Kplus_PE",
+    "piminus_PX": "piminus_PX",
+    "piminus_PY": "piminus_PY",
+    "piminus_PZ": "piminus_PZ",
+    "piminus_PE": "piminus_PE",
+    "Kst_M": null,
+    "B0_PX": "B0_PX",
+    "B0_PY": "B0_PY",
+    "B0_PZ": "B0_PZ",
+    "B0_PE": "B0_PE",
+    "eventNumber": "eventNumber",
+    "runNumber": "runNumber",
+    "nCandidate": "nCandidate",
+    "totCandidates": "totCandidates"
+  }
+}

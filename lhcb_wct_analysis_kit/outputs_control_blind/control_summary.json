@@ -1,0 +1,54 @@
+{
+  "script": "27_control_channel_blind_test.py",
+  "purpose": "Blind control-channel / reconstruction-control test of log-winding / Koide package.",
+  "control_mode": "jpsi_peak",
+  "control_test_type": "jpsi_peak_reconstruction_sanity_check",
+  "integer_targets_valid_in_scan": false,
+  "files": [
+    "data_control\\00334566_00000001_1.dvntuple.root"
+  ],
+  "provenance": [
+    {
+      "file": "data_control\\00334566_00000001_1.dvntuple.root",
+      "tree": "Btree/DecayTree;1",
+      "q2_source": "derived_from_muon_four_vectors",
+      "B_mass_branch": "Bplus_M",
+      "Kst_mass_branch": null,
+      "n_loaded_q2_range": 1335748
+    }
+  ],
+  "region_counts": {
+    "signal_Bplus_jpsiK_control": 595767,
+    "B_low_sideband_jpsiK_control": 143854,
+    "B_high_sideband_jpsiK_control": 49052
+  },
+  "active_intervals": [
+    [
+      8.0,
+      11.0
+    ]
+  ],
+  "delta_ell_active": 0.3184537311185346,
+  "k1_fixed": 7.61054,
+  "k_scan": [
+    6.0,
+    32.0,
+    1301
+  ],
+  "k_targets": {
+    "n10": 197.302926397206,
+    "n15": 295.954389595809,
+    "n20": 394.605852794412
+  },
+  "targets": {
+    "koide_Q": 0.6666666666666666,
+    "a_rare_decay": 1.22828743138222,
+    "a_geom_sqrt_3_over_2": 1.224744871391589
+  },
+  "outputs": {
+    "scan_csv": "outputs_control_blind\\control_well_first_scan_curve.csv",
+    "wells_csv": "outputs_control_blind\\control_wells.csv",
+    "triplets_csv": "outputs_control_blind\\control_triplets.csv",
+    "verdict_json": "outputs_control_blind\\control_blind_verdict.json"
+  }
+}

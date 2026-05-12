@@ -1,0 +1,385 @@
+{
+  "test": "locked_branch_amplitude_cap_ladder",
+  "purpose": "Check whether locked-branch rankings persist as amplitude cap is lowered.",
+  "active_intervals": [
+    [
+      0.1,
+      8.0
+    ],
+    [
+      11.0,
+      12.5
+    ],
+    [
+      14.5,
+      19.0
+    ]
+  ],
+  "delta_ell_active": 4.780150335923678,
+  "k1_fixed": 7.61054,
+  "A_MAX_GRID": [
+    0.1,
+    0.075,
+    0.05,
+    0.025
+  ],
+  "NULL_N": 1000,
+  "branches": [
+    {
+      "label": "koide_exact_10_15_20",
+      "class": "true_sideband_Q_2over3",
+      "n": [
+        10.0,
+        15.0,
+        20.0
+      ],
+      "k": [
+        13.14432573377522,
+        19.716488600662828,
+        26.28865146755044
+      ]
+    },
+    {
+      "label": "folded_trig_Q_4over9",
+      "class": "folded_subcentral_Q_4over9",
+      "n": [
+        6.6666666667,
+        15.0,
+        13.3333333333
+      ],
+      "k": [
+        8.762883822560628,
+        19.716488600662828,
+        17.525767644989813
+      ]
+    },
+    {
+      "label": "well_first_Blow",
+      "class": "raw_well_triplet",
+      "n": [
+        9.81412076,
+        14.56141638,
+        19.01961387
+      ],
+      "k": [
+        12.90000000600456,
+        19.140000004385,
+        25.00000000379091
+      ]
+    },
+    {
+      "label": "well_first_signal",
+      "class": "raw_well_triplet",
+      "n": [
+        12.14212149,
+        17.63498598,
+        23.50824274
+      ],
+      "k": [
+        15.95999999636321,
+        23.180000003167923,
+        30.900000000321644
+      ]
+    },
+    {
+      "label": "scaled_Blow_to_signal",
+      "class": "scaled_raw_well_triplet",
+      "n": [
+        12.054560481352269,
+        17.88560368670903,
+        23.361551313118497
+      ],
+      "k": [
+        15.84490695443884,
+        23.509420080331445,
+        30.707184010593373
+      ]
+    }
+  ],
+  "region_cap_summary": [
+    {
+      "A_MAX": 0.1,
+      "region": "B_low_sideband_Kst_signal",
+      "N_events": 29000,
+      "D_base": 4049.998314317293,
+      "best_branch": "folded_trig_Q_4over9",
+      "best_deltaD": 1088.4689278297228,
+      "best_deltaD_per_event": 0.0375334113044732,
+      "best_p": 0.000999000999000999,
+      "n_bound_active_branches": 5,
+      "n_total_branches": 5,
+      "all_bound_active": true
+    },
+    {
+      "A_MAX": 0.075,
+      "region": "B_low_sideband_Kst_signal",
+      "N_events": 29000,
+      "D_base": 4049.9983143185987,
+      "best_branch": "well_first_Blow",
+      "best_deltaD": 975.4475220682984,
+      "best_deltaD_per_event": 0.03363612145063098,
+      "best_p": 0.000999000999000999,
+      "n_bound_active_branches": 5,
+      "n_total_branches": 5,
+      "all_bound_active": true
+    },
+    {
+      "A_MAX": 0.05,
+      "region": "B_low_sideband_Kst_signal",
+      "N_events": 29000,
+      "D_base": 4054.1798966393258,
+      "best_branch": "well_first_Blow",
+      "best_deltaD": 761.2116546406023,
+      "best_deltaD_per_event": 0.026248677746227665,
+      "best_p": 0.000999000999000999,
+      "n_bound_active_branches": 5,
+      "n_total_branches": 5,
+      "all_bound_active": true
+    },
+    {
+      "A_MAX": 0.025,
+      "region": "B_low_sideband_Kst_signal",
+      "N_events": 29000,
+      "D_base": 4085.063416693653,
+      "best_branch": "well_first_Blow",
+      "best_deltaD": 439.0895915494866,
+      "best_deltaD_per_event": 0.015141020398258159,
+      "best_p": 0.000999000999000999,
+      "n_bound_active_branches": 5,
+      "n_total_branches": 5,
+      "all_bound_active": true
+    },
+    {
+      "A_MAX": 0.1,
+      "region": "signal_B_signal_Kst",
+      "N_events": 15630,
+      "D_base": 1936.8238633170417,
+      "best_branch": "folded_trig_Q_4over9",
+      "best_deltaD": 457.44165295999755,
+      "best_deltaD_per_event": 0.029266900381317823,
+      "best_p": 0.000999000999000999,
+      "n_bound_active_branches": 5,
+      "n_total_branches": 5,
+      "all_bound_active": true
+    },
+    {
+      "A_MAX": 0.075,
+      "region": "signal_B_signal_Kst",
+      "N_events": 15630,
+      "D_base": 1942.5096571670801,
+      "best_branch": "folded_trig_Q_4over9",
+      "best_deltaD": 393.084633164101,
+      "best_deltaD_per_event": 0.02514936872451062,
+      "best_p": 0.000999000999000999,
+      "n_bound_active_branches": 5,
+      "n_total_branches": 5,
+      "all_bound_active": true
+    },
+    {
+      "A_MAX": 0.05,
+      "region": "signal_B_signal_Kst",
+      "N_events": 15630,
+      "D_base": 1956.6514605059988,
+      "best_branch": "well_first_signal",
+      "best_deltaD": 311.98375195303834,
+      "best_deltaD_per_event": 0.019960572741717104,
+      "best_p": 0.000999000999000999,
+      "n_bound_active_branches": 5,
+      "n_total_branches": 5,
+      "all_bound_active": true
+    },
+    {
+      "A_MAX": 0.025,
+      "region": "signal_B_signal_Kst",
+      "N_events": 15630,
+      "D_base": 1979.3038377027306,
+      "best_branch": "well_first_signal",
+      "best_deltaD": 184.8754334648886,
+      "best_deltaD_per_event": 0.011828242704087562,
+      "best_p": 0.000999000999000999,
+      "n_bound_active_branches": 5,
+      "n_total_branches": 5,
+      "all_bound_active": true
+    },
+    {
+      "A_MAX": 0.1,
+      "region": "B_high_sideband_Kst_signal",
+      "N_events": 25850,
+      "D_base": 2612.339799783642,
+      "best_branch": "scaled_Blow_to_signal",
+      "best_deltaD": 535.0492670543617,
+      "best_deltaD_per_event": 0.020698230833824438,
+      "best_p": 0.000999000999000999,
+      "n_bound_active_branches": 5,
+      "n_total_branches": 5,
+      "all_bound_active": true
+    },
+    {
+      "A_MAX": 0.075,
+      "region": "B_high_sideband_Kst_signal",
+      "N_events": 25850,
+      "D_base": 2612.339799784408,
+      "best_branch": "scaled_Blow_to_signal",
+      "best_deltaD": 494.08821729995634,
+      "best_deltaD_per_event": 0.019113664112183997,
+      "best_p": 0.000999000999000999,
+      "n_bound_active_branches": 5,
+      "n_total_branches": 5,
+      "all_bound_active": true
+    },
+    {
+      "A_MAX": 0.05,
+      "region": "B_high_sideband_Kst_signal",
+      "N_events": 25850,
+      "D_base": 2616.8646091082096,
+      "best_branch": "scaled_Blow_to_signal",
+      "best_deltaD": 393.3931789887447,
+      "best_deltaD_per_event": 0.015218304796469814,
+      "best_p": 0.000999000999000999,
+      "n_bound_active_branches": 5,
+      "n_total_branches": 5,
+      "all_bound_active": true
+    },
+    {
+      "A_MAX": 0.025,
+      "region": "B_high_sideband_Kst_signal",
+      "N_events": 25850,
+      "D_base": 2634.7184591627624,
+      "best_branch": "koide_exact_10_15_20",
+      "best_deltaD": 238.61353958093468,
+      "best_deltaD_per_event": 0.009230697856129,
+      "best_p": 0.000999000999000999,
+      "n_bound_active_branches": 5,
+      "n_total_branches": 5,
+      "all_bound_active": true
+    }
+  ],
+  "stability": {
+    "B_high_sideband_Kst_signal": {
+      "best_branch_sequence": [
+        {
+          "A_MAX": 0.1,
+          "best_branch": "scaled_Blow_to_signal",
+          "best_deltaD": 535.0492670543617,
+          "all_bound_active": true,
+          "n_bound_active_branches": 5
+        },
+        {
+          "A_MAX": 0.075,
+          "best_branch": "scaled_Blow_to_signal",
+          "best_deltaD": 494.08821729995634,
+          "all_bound_active": true,
+          "n_bound_active_branches": 5
+        },
+        {
+          "A_MAX": 0.05,
+          "best_branch": "scaled_Blow_to_signal",
+          "best_deltaD": 393.3931789887447,
+          "all_bound_active": true,
+          "n_bound_active_branches": 5
+        },
+        {
+          "A_MAX": 0.025,
+          "best_branch": "koide_exact_10_15_20",
+          "best_deltaD": 238.61353958093468,
+          "all_bound_active": true,
+          "n_bound_active_branches": 5
+        }
+      ],
+      "unique_best_branches": [
+        "koide_exact_10_15_20",
+        "scaled_Blow_to_signal"
+      ],
+      "all_caps_same_best": false,
+      "all_caps_all_bound_active": true
+    },
+    "B_low_sideband_Kst_signal": {
+      "best_branch_sequence": [
+        {
+          "A_MAX": 0.1,
+          "best_branch": "folded_trig_Q_4over9",
+          "best_deltaD": 1088.4689278297228,
+          "all_bound_active": true,
+          "n_bound_active_branches": 5
+        },
+        {
+          "A_MAX": 0.075,
+          "best_branch": "well_first_Blow",
+          "best_deltaD": 975.4475220682984,
+          "all_bound_active": true,
+          "n_bound_active_branches": 5
+        },
+        {
+          "A_MAX": 0.05,
+          "best_branch": "well_first_Blow",
+          "best_deltaD": 761.2116546406023,
+          "all_bound_active": true,
+          "n_bound_active_branches": 5
+        },
+        {
+          "A_MAX": 0.025,
+          "best_branch": "well_first_Blow",
+          "best_deltaD": 439.0895915494866,
+          "all_bound_active": true,
+          "n_bound_active_branches": 5
+        }
+      ],
+      "unique_best_branches": [
+        "folded_trig_Q_4over9",
+        "well_first_Blow"
+      ],
+      "all_caps_same_best": false,
+      "all_caps_all_bound_active": true
+    },
+    "signal_B_signal_Kst": {
+      "best_branch_sequence": [
+        {
+          "A_MAX": 0.1,
+          "best_branch": "folded_trig_Q_4over9",
+          "best_deltaD": 457.44165295999755,
+          "all_bound_active": true,
+          "n_bound_active_branches": 5
+        },
+        {
+          "A_MAX": 0.075,
+          "best_branch": "folded_trig_Q_4over9",
+          "best_deltaD": 393.084633164101,
+          "all_bound_active": true,
+          "n_bound_active_branches": 5
+        },
+        {
+          "A_MAX": 0.05,
+          "best_branch": "well_first_signal",
+          "best_deltaD": 311.98375195303834,
+          "all_bound_active": true,
+          "n_bound_active_branches": 5
+        },
+        {
+          "A_MAX": 0.025,
+          "best_branch": "well_first_signal",
+          "best_deltaD": 184.8754334648886,
+          "all_bound_active": true,
+          "n_bound_active_branches": 5
+        }
+      ],
+      "unique_best_branches": [
+        "folded_trig_Q_4over9",
+        "well_first_signal"
+      ],
+      "all_caps_same_best": false,
+      "all_caps_all_bound_active": true
+    }
+  },
+  "files": {
+    "comparison_csv": "outputs_wct_locked_branch_amplitude_ladder\\locked_branch_amplitude_ladder_comparison.csv",
+    "summary_csv": "outputs_wct_locked_branch_amplitude_ladder\\locked_branch_amplitude_ladder_summary.csv",
+    "rank_table_csv": "outputs_wct_locked_branch_amplitude_ladder\\locked_branch_rank_table.csv",
+    "summary_json": "outputs_wct_locked_branch_amplitude_ladder\\locked_branch_amplitude_ladder_summary.json"
+  },
+  "interpretation": {
+    "rankings_persist_and_not_bound": "Branch preference is more interpretable.",
+    "rankings_persist_but_bound": "Strong structure, but amplitude cap still controls absolute deviance.",
+    "rankings_change": "Previous branch ranking may be cap-sensitive.",
+    "all_bound_active_at_low_caps": "Bounded linear branch model underfits the residual; consider regularized amplitudes."
+  }
+}

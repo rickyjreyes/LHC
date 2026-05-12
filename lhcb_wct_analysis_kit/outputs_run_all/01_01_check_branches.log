@@ -1,0 +1,54 @@
+COMMAND: C:\Users\Ricky.Reyes.CST\AppData\Local\anaconda3\envs\cupy-env\python.exe C:\Users\Ricky.Reyes.CST\Desktop\RESEARCH\LHC\lhcb_wct_analysis_kit\01_check_branches.py
+START: Mon May 11 11:45:23 2026
+
+File: data\00382466_00000001_1.dvntuple.root
+Tree: B0_KstMuMu/DecayTree;1
+Branch count: 435
+
+=== Required for q2 scan ===
+OK      muplus_PX -> muplus_PX
+OK      muplus_PY -> muplus_PY
+OK      muplus_PZ -> muplus_PZ
+OK      muplus_PE -> muplus_PE
+OK      muminus_PX -> muminus_PX
+OK      muminus_PY -> muminus_PY
+OK      muminus_PZ -> muminus_PZ
+OK      muminus_PE -> muminus_PE
+OK      B0_M -> B0_M
+
+=== Required for P5 angular analysis ===
+MISSING cosThetaL
+MISSING cosThetaK
+MISSING phi
+
+=== Useful extras ===
+OK      Kplus_PX -> Kplus_PX
+OK      Kplus_PY -> Kplus_PY
+OK      Kplus_PZ -> Kplus_PZ
+OK      Kplus_PE -> Kplus_PE
+OK      piminus_PX -> piminus_PX
+OK      piminus_PY -> piminus_PY
+OK      piminus_PZ -> piminus_PZ
+OK      piminus_PE -> piminus_PE
+MISSING Kst_M
+OK      B0_PX -> B0_PX
+OK      B0_PY -> B0_PY
+OK      B0_PZ -> B0_PZ
+OK      B0_PE -> B0_PE
+OK      eventNumber -> eventNumber
+OK      runNumber -> runNumber
+OK      nCandidate -> nCandidate
+OK      totCandidates -> totCandidates
+
+=== Verdict ===
+q2 WCT scan: READY
+P5 angular analysis: NOT READY unless angles are computed from 4-vectors
+
+Saved: outputs\branch_report.json
+
+Use this TREE_NAME in config.py if needed:
+B0_KstMuMu/DecayTree;1
+
+END: Mon May 11 11:45:27 2026
+RETURN_CODE: 0
+SECONDS: 3.21

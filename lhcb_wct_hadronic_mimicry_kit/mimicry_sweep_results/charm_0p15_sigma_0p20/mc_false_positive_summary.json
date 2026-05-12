@@ -1,0 +1,12 @@
+{
+  "n_mc": 200,
+  "false_positive_rate_vs_const": 0.77,
+  "false_positive_rate_vs_charm": 0.015,
+  "false_positive_rate_vs_charm_and_k": 0.0,
+  "k_window_hit_rate": 0.025,
+  "wct_preferred_over_charm_by_aic_rate": 0.105,
+  "wct_preferred_over_charm_by_bic_rate": 0.04,
+  "target_delta": 9.0,
+  "target_k": 11.7,
+  "k_window": 1.0
+}

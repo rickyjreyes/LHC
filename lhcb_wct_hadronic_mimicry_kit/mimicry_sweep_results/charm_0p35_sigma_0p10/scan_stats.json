@@ -1,0 +1,11 @@
+{
+  "delta_chi2_vs_const": 188.68765039644194,
+  "delta_chi2_vs_charm": -37.54722637470345,
+  "p_local_rough_vs_const": 0.0,
+  "p_local_rough_vs_charm": 1.0,
+  "best_k": 2.0,
+  "wct_aic_minus_charm_aic": 41.54722637470345,
+  "wct_bic_minus_charm_bic": 43.09240381918301,
+  "wct_preferred_over_charm_by_aic": false,
+  "wct_preferred_over_charm_by_bic": false
+}

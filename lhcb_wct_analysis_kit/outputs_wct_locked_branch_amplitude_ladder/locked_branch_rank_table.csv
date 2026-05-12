@@ -1,0 +1,13 @@
+A_MAX,region,folded_trig_Q_4over9,koide_exact_10_15_20,scaled_Blow_to_signal,well_first_Blow,well_first_signal
+0.025,B_high_sideband_Kst_signal,5,1,3,4,2
+0.025,B_low_sideband_Kst_signal,3,2,5,1,4
+0.025,signal_B_signal_Kst,2,4,5,3,1
+0.05,B_high_sideband_Kst_signal,5,2,1,4,3
+0.05,B_low_sideband_Kst_signal,2,3,5,1,4
+0.05,signal_B_signal_Kst,2,4,5,3,1
+0.075,B_high_sideband_Kst_signal,5,2,1,4,3
+0.075,B_low_sideband_Kst_signal,2,3,5,1,4
+0.075,signal_B_signal_Kst,1,5,4,3,2
+0.1,B_high_sideband_Kst_signal,5,2,1,3,4
+0.1,B_low_sideband_Kst_signal,1,3,4,2,5
+0.1,signal_B_signal_Kst,1,5,3,4,2

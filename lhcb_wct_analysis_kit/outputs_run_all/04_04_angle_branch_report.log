@@ -1,0 +1,32 @@
+COMMAND: C:\Users\Ricky.Reyes.CST\AppData\Local\anaconda3\envs\cupy-env\python.exe C:\Users\Ricky.Reyes.CST\Desktop\RESEARCH\LHC\lhcb_wct_analysis_kit\04_angle_branch_report.py
+START: Mon May 11 11:45:27 2026
+
+Tree: B0_KstMuMu/DecayTree;1
+
+Possible angle branches:
+
+Terms ['costheta']:
+  Kst_892_0_CosTheta
+  Kplus_CosTheta
+  piminus_CosTheta
+  muplus_CosTheta
+  muminus_CosTheta
+
+Terms ['theta']:
+  Kst_892_0_CosTheta
+  Kplus_CosTheta
+  piminus_CosTheta
+  muplus_CosTheta
+  muminus_CosTheta
+
+Terms ['phi']:
+
+Terms ['angle']:
+
+Terms ['hel']:
+
+Saved: outputs\angle_branch_candidates.json
+
+END: Mon May 11 11:45:30 2026
+RETURN_CODE: 0
+SECONDS: 3.37

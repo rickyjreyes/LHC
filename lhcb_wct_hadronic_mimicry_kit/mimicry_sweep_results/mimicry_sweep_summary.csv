@@ -1,0 +1,16 @@
+charm_scale,sigma,n_mc,best_k_single,delta_chi2_vs_charm_single,false_positive_rate_vs_charm,false_positive_rate_vs_charm_and_k,wct_preferred_over_charm_by_aic_rate,wct_preferred_over_charm_by_bic_rate,result_dir
+0.15,0.1,200,2.0,-8.229040272479995,0.0,0.0,0.015,0.005,mimicry_sweep_results\charm_0p15_sigma_0p10
+0.15,0.15,200,2.0,-3.897558116872043,0.0,0.0,0.05,0.025,mimicry_sweep_results\charm_0p15_sigma_0p15
+0.15,0.2,200,2.0,-2.346971751886235,0.015,0.0,0.105,0.04,mimicry_sweep_results\charm_0p15_sigma_0p20
+0.25,0.1,200,2.0,-20.242799909568127,0.0,0.0,0.005,0.0,mimicry_sweep_results\charm_0p25_sigma_0p10
+0.25,0.15,200,2.0,-9.359784211696041,0.0,0.0,0.015,0.005,mimicry_sweep_results\charm_0p25_sigma_0p15
+0.25,0.2,200,2.0,-5.4834571337843006,0.0,0.0,0.03,0.01,mimicry_sweep_results\charm_0p25_sigma_0p20
+0.35,0.1,200,2.0,-37.54722637470345,0.0,0.0,0.0,0.0,mimicry_sweep_results\charm_0p35_sigma_0p10
+0.35,0.15,200,2.0,-17.153594484503344,0.0,0.0,0.005,0.005,mimicry_sweep_results\charm_0p35_sigma_0p15
+0.35,0.2,200,2.0,-9.931506123833906,0.0,0.0,0.015,0.005,mimicry_sweep_results\charm_0p35_sigma_0p20
+0.5,0.1,200,2.0,-73.46139580855198,0.0,0.0,0.0,0.0,mimicry_sweep_results\charm_0p50_sigma_0p10
+0.5,0.15,200,2.0,-33.25504652176939,0.0,0.0,0.0,0.0,mimicry_sweep_results\charm_0p50_sigma_0p15
+0.5,0.2,200,2.0,-19.071707619335037,0.0,0.0,0.005,0.0,mimicry_sweep_results\charm_0p50_sigma_0p20
+0.75,0.1,200,2.0,-159.91285195191313,0.0,0.0,0.0,0.0,mimicry_sweep_results\charm_0p75_sigma_0p10
+0.75,0.15,200,2.0,-71.89644104212064,0.0,0.0,0.0,0.0,mimicry_sweep_results\charm_0p75_sigma_0p15
+0.75,0.2,200,2.0,-40.93366299352624,0.0,0.0,0.0,0.0,mimicry_sweep_results\charm_0p75_sigma_0p20

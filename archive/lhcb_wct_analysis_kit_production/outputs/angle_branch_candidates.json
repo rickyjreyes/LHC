@@ -1,0 +1,19 @@
+{
+  "costheta": [
+    "Kst_892_0_CosTheta",
+    "Kplus_CosTheta",
+    "piminus_CosTheta",
+    "muplus_CosTheta",
+    "muminus_CosTheta"
+  ],
+  "theta": [
+    "Kst_892_0_CosTheta",
+    "Kplus_CosTheta",
+    "piminus_CosTheta",
+    "muplus_CosTheta",
+    "muminus_CosTheta"
+  ],
+  "phi": [],
+  "angle": [],
+  "hel": []
+}

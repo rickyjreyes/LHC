@@ -1,0 +1,135 @@
+{
+  "test": "wct_vs_smqft_like_likelihood_test",
+  "null_H0": "SM/QFT-like repaired KDE baseline plus low-k nuisance mode k1",
+  "alternative_H1": "WCT active-domain log-winding comb terms",
+  "important_limitation": "This compares WCT combs against a smooth SM/QFT-like empirical null, not against a full Standard Model/QFT amplitude calculation with official covariance, efficiencies, acceptance, backgrounds, and hadronic uncertainties.",
+  "active_intervals_q2": [
+    [
+      0.1,
+      8.0
+    ],
+    [
+      11.0,
+      12.5
+    ],
+    [
+      14.5,
+      19.0
+    ]
+  ],
+  "delta_ell_active": 4.780150335923678,
+  "n0": 15,
+  "k1_fixed": 7.61054,
+  "reference_k2": 19.5296,
+  "kde_bandwidth_scales": [
+    0.5,
+    0.75,
+    1.0,
+    1.25,
+    1.5
+  ],
+  "null_n": 5000,
+  "wct_models": [
+    {
+      "label": "WCT_Koide_sideband_Q_2over3",
+      "description": "spin-1/2 true sideband Koide comb",
+      "Qs": [
+        0.6666666666666666
+      ],
+      "n_values": [
+        10.0,
+        15.0,
+        20.0
+      ],
+      "k_values": [
+        13.14432573377522,
+        19.716488600662828,
+        26.28865146755044
+      ]
+    },
+    {
+      "label": "WCT_folded_Q_4over9",
+      "description": "spin-3/2 folded/subcentral trig comb",
+      "Qs": [
+        0.4444444444444444
+      ],
+      "n_values": [
+        6.666666666666666,
+        15.0,
+        13.333333333333332
+      ],
+      "k_values": [
+        8.762883822516812,
+        19.716488600662828,
+        17.525767645033625
+      ]
+    },
+    {
+      "label": "WCT_combined_Q_2over3_plus_4over9",
+      "description": "combined Koide sideband + folded trig branches",
+      "Qs": [
+        0.6666666666666666,
+        0.4444444444444444
+      ],
+      "n_values": [
+        10.0,
+        15.0,
+        20.0,
+        6.666666666666666,
+        13.333333333333332
+      ],
+      "k_values": [
+        13.14432573377522,
+        19.716488600662828,
+        26.28865146755044,
+        8.762883822516812,
+        17.525767645033625
+      ]
+    }
+  ],
+  "rollup": [
+    {
+      "model_label": "WCT_Koide_sideband_Q_2over3",
+      "min_p_bootstrap_H0": 0.0001999600079984003,
+      "median_p_bootstrap_H0": 0.0001999600079984003,
+      "max_deltaD": 390.99368012641344,
+      "mean_deltaD": 328.4383879956868,
+      "mean_delta_AIC_H1_minus_H0": -316.43838799568476,
+      "mean_delta_BIC_H1_minus_H0": -296.13141761894514,
+      "bound_active_count": 4,
+      "n_rows": 5
+    },
+    {
+      "model_label": "WCT_combined_Q_2over3_plus_4over9",
+      "min_p_bootstrap_H0": 0.0001999600079984003,
+      "median_p_bootstrap_H0": 0.0001999600079984003,
+      "max_deltaD": 771.2925242825868,
+      "mean_deltaD": 643.0590797891679,
+      "mean_delta_AIC_H1_minus_H0": -623.0590797891695,
+      "mean_delta_BIC_H1_minus_H0": -589.2141291612701,
+      "bound_active_count": 5,
+      "n_rows": 5
+    },
+    {
+      "model_label": "WCT_folded_Q_4over9",
+      "min_p_bootstrap_H0": 0.0001999600079984003,
+      "median_p_bootstrap_H0": 0.0001999600079984003,
+      "max_deltaD": 536.8493841814293,
+      "mean_deltaD": 424.0575606912631,
+      "mean_delta_AIC_H1_minus_H0": -412.0575606912695,
+      "mean_delta_BIC_H1_minus_H0": -391.75059031452986,
+      "bound_active_count": 5,
+      "n_rows": 5
+    }
+  ],
+  "files": {
+    "summary_csv": "outputs_wct_vs_smqft\\wct_vs_smqft_summary.csv",
+    "null_csv": "outputs_wct_vs_smqft\\wct_vs_smqft_null.csv",
+    "summary_json": "outputs_wct_vs_smqft\\wct_vs_smqft_summary.json"
+  },
+  "interpretation": {
+    "small_p_bootstrap_H0": "The smooth SM/QFT-like empirical null rarely generates a WCT-sized comb improvement.",
+    "negative_delta_AIC_or_BIC": "The WCT alternative is preferred even after parameter penalty.",
+    "bound_active": "If true, amplitudes hit imposed cap; repeat with amplitude-cap ladder."
+  }
+}

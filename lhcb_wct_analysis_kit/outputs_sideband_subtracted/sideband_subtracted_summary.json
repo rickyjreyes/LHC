@@ -1,0 +1,164 @@
+{
+  "script": "28_sideband_subtracted_residual_test.py",
+  "files": [
+    "data\\00382466_00000001_1.dvntuple.root",
+    "data\\00382466_00000002_1.dvntuple.root",
+    "data\\00382466_00000003_1.dvntuple.root",
+    "data\\00382467_00000001_1.dvntuple.root",
+    "data\\00382467_00000002_1.dvntuple.root",
+    "data\\00382467_00000003_1.dvntuple.root"
+  ],
+  "provenance": [
+    {
+      "file": "data\\00382466_00000001_1.dvntuple.root",
+      "tree": "B0_KstMuMu/DecayTree;1",
+      "q2_source": "derived_from_muon_four_vectors",
+      "B_mass_branch": "B0_M",
+      "Kst_mass_branch": "Kst_892_0_M",
+      "n_loaded_q2_range": 3353167
+    },
+    {
+      "file": "data\\00382466_00000002_1.dvntuple.root",
+      "tree": "B0_KstMuMu/DecayTree;1",
+      "q2_source": "derived_from_muon_four_vectors",
+      "B_mass_branch": "B0_M",
+      "Kst_mass_branch": "Kst_892_0_M",
+      "n_loaded_q2_range": 3350433
+    },
+    {
+      "file": "data\\00382466_00000003_1.dvntuple.root",
+      "tree": "B0_KstMuMu/DecayTree;1",
+      "q2_source": "derived_from_muon_four_vectors",
+      "B_mass_branch": "B0_M",
+      "Kst_mass_branch": "Kst_892_0_M",
+      "n_loaded_q2_range": 2194256
+    },
+    {
+      "file": "data\\00382467_00000001_1.dvntuple.root",
+      "tree": "B0_KstMuMu/DecayTree;1",
+      "q2_source": "derived_from_muon_four_vectors",
+      "B_mass_branch": "B0_M",
+      "Kst_mass_branch": "Kst_892_0_M",
+      "n_loaded_q2_range": 3353228
+    },
+    {
+      "file": "data\\00382467_00000002_1.dvntuple.root",
+      "tree": "B0_KstMuMu/DecayTree;1",
+      "q2_source": "derived_from_muon_four_vectors",
+      "B_mass_branch": "B0_M",
+      "Kst_mass_branch": "Kst_892_0_M",
+      "n_loaded_q2_range": 3344384
+    },
+    {
+      "file": "data\\00382467_00000003_1.dvntuple.root",
+      "tree": "B0_KstMuMu/DecayTree;1",
+      "q2_source": "derived_from_muon_four_vectors",
+      "B_mass_branch": "B0_M",
+      "Kst_mass_branch": "Kst_892_0_M",
+      "n_loaded_q2_range": 1815786
+    }
+  ],
+  "active_intervals": [
+    [
+      0.1,
+      8.0
+    ],
+    [
+      11.0,
+      12.5
+    ],
+    [
+      14.5,
+      19.0
+    ]
+  ],
+  "delta_ell_active": 4.780150335923678,
+  "windows": {
+    "B_SIGNAL": [
+      5230.0,
+      5330.0
+    ],
+    "B_LOW_SB": [
+      5000.0,
+      5180.0
+    ],
+    "B_HIGH_SB": [
+      5380.0,
+      5600.0
+    ],
+    "KST_SIGNAL": [
+      795.9,
+      995.9
+    ]
+  },
+  "counts": {
+    "signal_active": 15863,
+    "B_low_active": 29533,
+    "B_high_active": 26244,
+    "hist_signal_sum": 15630.0,
+    "hist_side_sum": 54850.0,
+    "alpha": 0.28495897903372835
+  },
+  "scan_config": {
+    "K1_FIXED": 7.61054,
+    "K_REF": 19.5296,
+    "K_SCAN_MIN": 6.0,
+    "K_SCAN_MAX": 32.0,
+    "N_K_SCAN": 1301,
+    "N_BINS": 240,
+    "n_null": 1000,
+    "seed": 271828,
+    "k_targets": {
+      "n10": 13.14432573377522,
+      "n15": 19.716488600662828,
+      "n20": 26.28865146755044
+    }
+  },
+  "outputs": {
+    "bins_csv": "outputs_sideband_subtracted\\sideband_subtracted_bins.csv",
+    "scan_csv": "outputs_sideband_subtracted\\sideband_subtracted_scan.csv",
+    "wells_csv": "outputs_sideband_subtracted\\sideband_subtracted_wells.csv",
+    "triplets_csv": "outputs_sideband_subtracted\\sideband_subtracted_triplets.csv",
+    "integer_csv": "outputs_sideband_subtracted\\sideband_subtracted_integer_scan.csv",
+    "comb_csv": "outputs_sideband_subtracted\\sideband_subtracted_comb_tests.csv"
+  },
+  "verdict": {
+    "sideband_subtracted_survival": {
+      "best_scan_delta_chi2": 5.303549331940928,
+      "best_scan_k": 8.780000000000001,
+      "best_scan_n": 6.679688390131117,
+      "p_best_scanmax": 0.8161838161838162,
+      "kref_delta_chi2": 0.4468052357436818,
+      "p_kref_fixed": 0.8221778221778222,
+      "n15_delta_chi2": 1.2124631626656992,
+      "p_n15_fixed": 0.5754245754245755,
+      "comb_101520_delta_chi2": 4.141641179068927,
+      "p_comb_101520": 0.6853146853146853,
+      "best_triplet": {
+        "k1": 12.379999999999999,
+        "k2": 18.6,
+        "k3": 24.76,
+        "n1": 9.41851278699581,
+        "n2": 14.150592717134256,
+        "n3": 18.837025573991625,
+        "delta1": 1.7597404412268816,
+        "delta2": 1.930543746314811,
+        "delta3": 2.735348159986188,
+        "Q_low": 0.6655913978494623,
+        "Q_high": 0.6655913978494624,
+        "Q_mean": 0.6655913978494623,
+        "koide_error": 0.0015206597444871505,
+        "integer_error_10_15_20": 1.553103224715684,
+        "score": 1.5017100278040256
+      }
+    },
+    "interpretation_flags": {
+      "best_scan_survives_scanmax_0p05": false,
+      "kref_survives_fixed_0p05": false,
+      "n15_survives_fixed_0p05": false,
+      "comb_101520_survives_0p05": false,
+      "strong_survival_requires_sideband_subtracted_n15_or_comb": false
+    },
+    "caution": "This is a sideband-subtracted WLS residual test. It preserves the same q2 active support and k-to-n mapping as the main analysis, but it is not a full official background model."
+  }
+}

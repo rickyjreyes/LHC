@@ -1,0 +1,142 @@
+{
+  "test": "two_mode_kde_baseline_polar_exact_local_scan",
+  "mode": "mask",
+  "model_base": "B exp(C + a1 cos(k1 ln q2) + b1 sin(k1 ln q2))",
+  "model_two": "B exp(C + mode1 + a2 cos(k2 ln q2) + b2 sin(k2 ln q2))",
+  "k1_fixed": 7.61054,
+  "reference_k2": 19.5296,
+  "reference_tol": 0.75,
+  "k2_scan": [
+    18.0,
+    24.0
+  ],
+  "n_k2": 601,
+  "A1_MAX": 0.1,
+  "A2_MAX": 0.1,
+  "eta_clip": 0.2,
+  "null_n": 5000,
+  "seed": 12345,
+  "gpu": {
+    "cupy_available": true,
+    "use_cupy": true,
+    "using_gpu": true,
+    "null_batch": 512,
+    "gpu_used_for_null_only": true,
+    "real_scan": "exact_cpu_polar_LBFGSB"
+  },
+  "data": {
+    "data_glob": "data/*.root",
+    "tree": "B0_KstMuMu/DecayTree",
+    "q2_bins": 60,
+    "baseline_mode": "kde",
+    "kde_bw_method": "scott",
+    "vetoes": {
+      "JPSI": [
+        8.0,
+        11.0
+      ],
+      "PSI2S": [
+        12.5,
+        14.5
+      ]
+    },
+    "n_fit_bins": 43,
+    "n_events_after_mass_cuts_before_charmonium_handling": 298801
+  },
+  "base": {
+    "k1": 7.61054,
+    "D_base": 1255.9044965985288,
+    "C": -0.020043908938921464,
+    "a1": 0.017662757561205233,
+    "b1": 0.0909940165744556,
+    "A1": 0.09269241639432114,
+    "phi1": -1.3790715536719877,
+    "success": true,
+    "message": "CONVERGENCE: RELATIVE REDUCTION OF F <= FACTR*EPSMCH",
+    "n_iter": 15,
+    "optimizer": "polar_LBFGSB",
+    "amplitude1_bound_active": false
+  },
+  "best_two": {
+    "k1": 7.61054,
+    "k2": 23.08,
+    "D_two": 1105.0006364713965,
+    "C": -0.022740628029649622,
+    "a1": 0.0006332089661801344,
+    "b1": 0.07052806889898973,
+    "A1": 0.07053091135250908,
+    "phi1": -1.5618184551007037,
+    "a2": 0.09782236445059028,
+    "b2": 0.02075536107360923,
+    "A2": 0.1,
+    "phi2": -0.2090734446691578,
+    "success": true,
+    "message": "CONVERGENCE: RELATIVE REDUCTION OF F <= FACTR*EPSMCH",
+    "n_iter": 23,
+    "optimizer": "polar_LBFGSB",
+    "amplitude1_bound_active": false,
+    "amplitude2_bound_active": true,
+    "deltaD_add": 150.90386012713225,
+    "p_scan_max_null": 0.0001999600079984003,
+    "z_scan_max_null": 3.540136575008421,
+    "near_reference_k2": false,
+    "delta_from_reference_k2": 3.5504,
+    "edge_limited": false
+  },
+  "reference_two": {
+    "k1": 7.61054,
+    "k2": 19.5296,
+    "D_two": 1185.9015298837744,
+    "C": -0.03284640253409216,
+    "a1": -0.004078651536212696,
+    "b1": 0.07577562095792086,
+    "A1": 0.07588530905196568,
+    "phi1": -1.6245698157686566,
+    "a2": -0.08501382451242895,
+    "b2": -0.0526559554254781,
+    "A2": 0.1,
+    "phi2": 2.5870441091305403,
+    "success": true,
+    "message": "CONVERGENCE: RELATIVE REDUCTION OF F <= FACTR*EPSMCH",
+    "n_iter": 16,
+    "optimizer": "polar_LBFGSB",
+    "amplitude1_bound_active": false,
+    "amplitude2_bound_active": true,
+    "deltaD_add": 70.0029667147544,
+    "p_vs_local_scan_max_null": 0.0001999600079984003,
+    "z_vs_local_scan_max_null": 3.540136575008421,
+    "p_vs_fixed_reference_null": 0.0001999600079984003,
+    "z_vs_fixed_reference_null": 3.540136575008421
+  },
+  "null": {
+    "best_deltaD_mean": 4.9126482820845165,
+    "best_deltaD_p95": 10.096367151910854,
+    "best_deltaD_p99": 13.530909146908371,
+    "reference_deltaD_mean": 2.0128161515761493,
+    "reference_deltaD_p95": 6.03414156096296,
+    "reference_deltaD_p99": 9.052583189978714
+  },
+  "diagnostics": {
+    "real_scan_min_deltaD": 1.480225809043759,
+    "real_scan_median_deltaD": 83.94788424439434,
+    "real_scan_max_deltaD": 150.90386012713225,
+    "scan_success_fraction": 1.0,
+    "scan_A1_bound_fraction": 0.0,
+    "scan_A2_bound_fraction": 0.5773710482529119,
+    "null_best_p99": 13.530909146908371,
+    "null_best_max": 21.79321271821539,
+    "wall_ratio_vs_null_p99": 0.10939588707400127,
+    "wall_ratio_vs_null_max": 0.06792141334015173,
+    "baseline_mismatch_wall": false
+  },
+  "files": {
+    "scan_csv": "outputs_logcos_poisson_twomode_kde_polar\\two_mode_scan_mask.csv",
+    "null_csv": "outputs_logcos_poisson_twomode_kde_polar\\two_mode_null_mask.csv",
+    "scan_png": "outputs_logcos_poisson_twomode_kde_polar\\two_mode_scan_mask.png",
+    "fit_png": "outputs_logcos_poisson_twomode_kde_polar\\two_mode_fit_mask.png"
+  },
+  "verdict": {
+    "label": "REFERENCE_K_SURVIVES_AFTER_LOW_K",
+    "reason": "Adding k2=19.5296 after base k1=7.61054 beats the local scan-max parametric null over the configured local k2 window with p=0.00020."
+  }
+}

@@ -1,0 +1,326 @@
+{
+  "script": "29_charm_tail_subtraction_control.py",
+  "files": [
+    "data\\00382466_00000001_1.dvntuple.root",
+    "data\\00382466_00000002_1.dvntuple.root",
+    "data\\00382466_00000003_1.dvntuple.root",
+    "data\\00382467_00000001_1.dvntuple.root",
+    "data\\00382467_00000002_1.dvntuple.root",
+    "data\\00382467_00000003_1.dvntuple.root"
+  ],
+  "provenance": [
+    {
+      "file": "data\\00382466_00000001_1.dvntuple.root",
+      "tree": "B0_KstMuMu/DecayTree;1",
+      "q2_source": "derived_from_muon_four_vectors",
+      "B_mass_branch": "B0_M",
+      "Kst_mass_branch": "Kst_892_0_M",
+      "n_loaded_q2_range": 3353167
+    },
+    {
+      "file": "data\\00382466_00000002_1.dvntuple.root",
+      "tree": "B0_KstMuMu/DecayTree;1",
+      "q2_source": "derived_from_muon_four_vectors",
+      "B_mass_branch": "B0_M",
+      "Kst_mass_branch": "Kst_892_0_M",
+      "n_loaded_q2_range": 3350433
+    },
+    {
+      "file": "data\\00382466_00000003_1.dvntuple.root",
+      "tree": "B0_KstMuMu/DecayTree;1",
+      "q2_source": "derived_from_muon_four_vectors",
+      "B_mass_branch": "B0_M",
+      "Kst_mass_branch": "Kst_892_0_M",
+      "n_loaded_q2_range": 2194256
+    },
+    {
+      "file": "data\\00382467_00000001_1.dvntuple.root",
+      "tree": "B0_KstMuMu/DecayTree;1",
+      "q2_source": "derived_from_muon_four_vectors",
+      "B_mass_branch": "B0_M",
+      "Kst_mass_branch": "Kst_892_0_M",
+      "n_loaded_q2_range": 3353228
+    },
+    {
+      "file": "data\\00382467_00000002_1.dvntuple.root",
+      "tree": "B0_KstMuMu/DecayTree;1",
+      "q2_source": "derived_from_muon_four_vectors",
+      "B_mass_branch": "B0_M",
+      "Kst_mass_branch": "Kst_892_0_M",
+      "n_loaded_q2_range": 3344384
+    },
+    {
+      "file": "data\\00382467_00000003_1.dvntuple.root",
+      "tree": "B0_KstMuMu/DecayTree;1",
+      "q2_source": "derived_from_muon_four_vectors",
+      "B_mass_branch": "B0_M",
+      "Kst_mass_branch": "Kst_892_0_M",
+      "n_loaded_q2_range": 1815786
+    }
+  ],
+  "config": {
+    "ACTIVE_INTERVALS": [
+      [
+        0.1,
+        8.0
+      ],
+      [
+        11.0,
+        12.5
+      ],
+      [
+        14.5,
+        19.0
+      ]
+    ],
+    "CHARM_WINDOWS": {
+      "Jpsi": [
+        8.0,
+        11.0
+      ],
+      "psi2S": [
+        12.5,
+        14.5
+      ]
+    },
+    "DELTA_ELL_ACTIVE": 4.780150335923678,
+    "Q2_JPSI": 9.590789610000002,
+    "Q2_PSI2S": 13.587311093409001,
+    "GAMMA_JPSI_Q2_DEFAULT": 0.2,
+    "GAMMA_PSI2S_Q2_DEFAULT": 0.3,
+    "fit_widths": false,
+    "subtract_full_model": false,
+    "N_BINS": 260,
+    "K_SCAN_MIN": 6.0,
+    "K_SCAN_MAX": 32.0,
+    "N_K_SCAN": 1301,
+    "n_null": 500,
+    "seed": 314159,
+    "k_targets": {
+      "k_ref": 19.5296,
+      "n10": 13.14432573377522,
+      "n15": 19.716488600662828,
+      "n20": 26.28865146755044
+    }
+  },
+  "fit_params_csv": "outputs_charm_tail_control\\charm_tail_fit_params.csv",
+  "region_results": [
+    {
+      "region": "signal_B_signal_Kst",
+      "event_count_region": 298801,
+      "hist_count_sum_active": 15582.0,
+      "active_charm_subtract_sum": 132611.3093522108,
+      "active_corrected_sum": -117029.30935221081,
+      "fit": {
+        "success": true,
+        "message": "`ftol` termination condition is satisfied.",
+        "chi2": 18342218.476295006,
+        "ndof": 254,
+        "gamma_jpsi": 0.2,
+        "gamma_psi2S": 0.3,
+        "params": [
+          3.1014060698903688e-18,
+          109.74938228936053,
+          -10366.671711614152,
+          -3974.401070639248,
+          227879.49902536135,
+          113673.28655627277
+        ]
+      },
+      "scan": {
+        "best_k": 7.640000000000001,
+        "best_n": 5.81239399779063,
+        "best_delta_chi2": 1359.5233745912847,
+        "p_best_scanmax": 0.001996007984031936,
+        "kref_delta_chi2": 62.46196969931043,
+        "p_kref_fixed": 0.001996007984031936,
+        "n15_delta_chi2": 51.87385181058198,
+        "p_n15_fixed": 0.001996007984031936
+      },
+      "comb": {
+        "comb_101520_delta_chi2": 298.17443979567906,
+        "p_comb_101520": 0.001996007984031936,
+        "folded_449_delta_chi2": 398.47938006975164,
+        "p_folded_449": 0.001996007984031936
+      },
+      "best_triplet": {
+        "region": "signal_B_signal_Kst",
+        "k1": 7.640000000000001,
+        "k2": 11.719999999999999,
+        "k3": 15.64,
+        "n1": 5.81239399779063,
+        "n2": 8.916394980903949,
+        "n3": 11.89867043526773,
+        "delta1": 1359.5233745912847,
+        "delta2": 108.52013922915648,
+        "delta3": 217.47971310491994,
+        "Q_low": 0.6518771331058022,
+        "Q_high": 0.6672354948805462,
+        "Q_mean": 0.6595563139931742,
+        "koide_error": 0.01480046852247728,
+        "integer_error_10_15_20": 10.962565154858408,
+        "score": 136.67927587149092
+      },
+      "interpretation_flags": {
+        "best_scan_survives_0p05": true,
+        "kref_survives_0p05": true,
+        "n15_survives_0p05": true,
+        "comb_101520_survives_0p05": true,
+        "folded_449_survives_0p05": true
+      },
+      "outputs": {
+        "bins_csv": "outputs_charm_tail_control\\charm_tail_bins_signal_B_signal_Kst.csv",
+        "scan_csv": "outputs_charm_tail_control\\charm_corrected_scan_signal_B_signal_Kst.csv",
+        "wells_csv": "outputs_charm_tail_control\\charm_corrected_wells_signal_B_signal_Kst.csv",
+        "triplets_csv": "outputs_charm_tail_control\\charm_corrected_triplets_signal_B_signal_Kst.csv",
+        "integer_csv": "outputs_charm_tail_control\\charm_corrected_integer_scan_signal_B_signal_Kst.csv",
+        "comb_csv": "outputs_charm_tail_control\\charm_corrected_comb_tests_signal_B_signal_Kst.csv"
+      }
+    },
+    {
+      "region": "B_low_sideband_Kst_signal",
+      "event_count_region": 92595,
+      "hist_count_sum_active": 29019.0,
+      "active_charm_subtract_sum": 4570.896203306976,
+      "active_corrected_sum": 24448.10379669303,
+      "fit": {
+        "success": true,
+        "message": "`ftol` termination condition is satisfied.",
+        "chi2": 140908.52043459073,
+        "ndof": 254,
+        "gamma_jpsi": 0.2,
+        "gamma_psi2S": 0.3,
+        "params": [
+          11.42051282651603,
+          269.2258804370025,
+          -0.9259283178549463,
+          -39.68352861182743,
+          11340.29412567916,
+          1961.086423768569
+        ]
+      },
+      "scan": {
+        "best_k": 8.06,
+        "best_n": 6.1319235107581775,
+        "best_delta_chi2": 536.36302752763,
+        "p_best_scanmax": 0.001996007984031936,
+        "kref_delta_chi2": 70.85994101528013,
+        "p_kref_fixed": 0.001996007984031936,
+        "n15_delta_chi2": 54.29698812111019,
+        "p_n15_fixed": 0.001996007984031936
+      },
+      "comb": {
+        "comb_101520_delta_chi2": 100.68071695387698,
+        "p_comb_101520": 0.001996007984031936,
+        "folded_449_delta_chi2": 251.59087890168666,
+        "p_folded_449": 0.001996007984031936
+      },
+      "best_triplet": {
+        "region": "B_low_sideband_Kst_signal",
+        "k1": 13.2,
+        "k2": 19.5,
+        "k3": 25.740000000000002,
+        "n1": 10.042356121837212,
+        "n2": 14.835298816350429,
+        "n3": 19.582594437582568,
+        "delta1": 49.88606138875548,
+        "delta2": 71.06570061439015,
+        "delta3": 44.53959067177857,
+        "Q_low": 0.6769230769230768,
+        "Q_high": 0.66,
+        "Q_mean": 0.6684615384615384,
+        "koide_error": 0.012232677376283587,
+        "integer_error_10_15_20": 0.4507193411533073,
+        "score": 38.8889036644191
+      },
+      "interpretation_flags": {
+        "best_scan_survives_0p05": true,
+        "kref_survives_0p05": true,
+        "n15_survives_0p05": true,
+        "comb_101520_survives_0p05": true,
+        "folded_449_survives_0p05": true
+      },
+      "outputs": {
+        "bins_csv": "outputs_charm_tail_control\\charm_tail_bins_B_low_sideband_Kst_signal.csv",
+        "scan_csv": "outputs_charm_tail_control\\charm_corrected_scan_B_low_sideband_Kst_signal.csv",
+        "wells_csv": "outputs_charm_tail_control\\charm_corrected_wells_B_low_sideband_Kst_signal.csv",
+        "triplets_csv": "outputs_charm_tail_control\\charm_corrected_triplets_B_low_sideband_Kst_signal.csv",
+        "integer_csv": "outputs_charm_tail_control\\charm_corrected_integer_scan_B_low_sideband_Kst_signal.csv",
+        "comb_csv": "outputs_charm_tail_control\\charm_corrected_comb_tests_B_low_sideband_Kst_signal.csv"
+      }
+    },
+    {
+      "region": "B_high_sideband_Kst_signal",
+      "event_count_region": 48834,
+      "hist_count_sum_active": 25807.0,
+      "active_charm_subtract_sum": 1442.4122851805944,
+      "active_corrected_sum": 24364.5877148194,
+      "fit": {
+        "success": true,
+        "message": "`ftol` termination condition is satisfied.",
+        "chi2": 4563.10541551961,
+        "ndof": 254,
+        "gamma_jpsi": 0.2,
+        "gamma_psi2S": 0.3,
+        "params": [
+          49.668768047112074,
+          58.1114919878898,
+          30.62794221640465,
+          5.796034871314139,
+          3503.536689953664,
+          660.990311457397
+        ]
+      },
+      "scan": {
+        "best_k": 7.72,
+        "best_n": 5.873256762165401,
+        "best_delta_chi2": 830.1202133497918,
+        "p_best_scanmax": 0.001996007984031936,
+        "kref_delta_chi2": 12.971522474395897,
+        "p_kref_fixed": 0.001996007984031936,
+        "n15_delta_chi2": 4.184484836885531,
+        "p_n15_fixed": 0.1377245508982036
+      },
+      "comb": {
+        "comb_101520_delta_chi2": 212.54229391508488,
+        "p_comb_101520": 0.001996007984031936,
+        "folded_449_delta_chi2": 112.40052540469333,
+        "p_folded_449": 0.001996007984031936
+      },
+      "best_triplet": {
+        "region": "B_high_sideband_Kst_signal",
+        "k1": 7.72,
+        "k2": 11.68,
+        "k3": 15.58,
+        "n1": 5.873256762165401,
+        "n2": 8.885963598716565,
+        "n3": 11.85302336198665,
+        "delta1": 830.1202133497918,
+        "delta2": 66.79364555425127,
+        "delta3": 89.86455472516536,
+        "Q_low": 0.660958904109589,
+        "Q_high": 0.6669520547945206,
+        "Q_mean": 0.6639554794520548,
+        "koide_error": 0.005714892806649757,
+        "integer_error_10_15_20": 10.99020833321952,
+        "score": 84.54762354023062
+      },
+      "interpretation_flags": {
+        "best_scan_survives_0p05": true,
+        "kref_survives_0p05": true,
+        "n15_survives_0p05": false,
+        "comb_101520_survives_0p05": true,
+        "folded_449_survives_0p05": true
+      },
+      "outputs": {
+        "bins_csv": "outputs_charm_tail_control\\charm_tail_bins_B_high_sideband_Kst_signal.csv",
+        "scan_csv": "outputs_charm_tail_control\\charm_corrected_scan_B_high_sideband_Kst_signal.csv",
+        "wells_csv": "outputs_charm_tail_control\\charm_corrected_wells_B_high_sideband_Kst_signal.csv",
+        "triplets_csv": "outputs_charm_tail_control\\charm_corrected_triplets_B_high_sideband_Kst_signal.csv",
+        "integer_csv": "outputs_charm_tail_control\\charm_corrected_integer_scan_B_high_sideband_Kst_signal.csv",
+        "comb_csv": "outputs_charm_tail_control\\charm_corrected_comb_tests_B_high_sideband_Kst_signal.csv"
+      }
+    }
+  ],
+  "interpretation": "If k_ref/n15/comb p-values improve after charm-tail subtraction, charm leakage may have been hiding a sharper structure. If they weaken or remain insignificant, the structure is likely charm/background/candidate-spectrum coupled rather than clean signal-only."
+}

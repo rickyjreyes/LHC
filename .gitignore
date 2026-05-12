@@ -1,0 +1,82 @@
+# ============================================================
+# Data directories (large ROOT files, never commit)
+# ============================================================
+/lhcb_wct_analysis_kit/data/
+/lhcb_wct_analysis_kit/data_control/
+/lhcb_wct_analysis_kit/data_test/
+/archive/lhcb_wct_analysis_kit_production/data/
+/lhcb_wct_hadronic_mimicry_kit/data/
+
+# ============================================================
+# Heavy derived outputs (keep summary JSONs, ignore bulk)
+# ============================================================
+/lhcb_wct_analysis_kit/outputs_angles/angles.parquet
+/lhcb_wct_analysis_kit/outputs_angles/angles.csv
+
+# ============================================================
+# Archive (kept locally for provenance, not published)
+# ============================================================
+/lhcb_wct_analysis_kit/archive/
+
+# ============================================================
+# Python
+# ============================================================
+__pycache__/
+*.py[cod]
+*$py.class
+*.so
+.Python
+*.egg
+*.egg-info/
+build/
+dist/
+.pytest_cache/
+.mypy_cache/
+.ruff_cache/
+.coverage
+htmlcov/
+
+# Virtual environments
+venv/
+.venv/
+env/
+.env
+
+# ============================================================
+# Jupyter / notebooks
+# ============================================================
+.ipynb_checkpoints/
+*.ipynb_checkpoints
+
+# ============================================================
+# IDE / editor
+# ============================================================
+.vscode/
+.idea/
+*.swp
+*.swo
+*~
+
+# ============================================================
+# OS
+# ============================================================
+.DS_Store
+Thumbs.db
+desktop.ini
+
+# ============================================================
+# Backups, patches, scratch
+# ============================================================
+*.bak
+*.bak_*
+*.orig
+*.tmp
+*~
+patch_*.py
+
+# ============================================================
+# Large generated artifacts (uncomment if needed)
+# ============================================================
+# *.parquet
+# *.root
+# *.h5
