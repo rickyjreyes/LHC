@@ -1,0 +1,115 @@
+{
+  "test": "cross_region_scaling_phase_coherence",
+  "input_wells_csv": "outputs_wct_well_first_koide/well_first_wells.csv",
+  "region_A": "B_low_sideband_Kst_signal",
+  "region_B": "signal_B_signal_Kst",
+  "top_wells_A": 12,
+  "top_wells_B": 11,
+  "n_null": 250000,
+  "pair_mode": "koide",
+  "observed_A": {
+    "n": [
+      9.814120755431825,
+      14.56141637666396,
+      19.01961386711593
+    ],
+    "k": [
+      12.9,
+      19.14,
+      25.0
+    ],
+    "deltaD": [
+      321.3318623102191,
+      393.9859458806013,
+      399.3611829218071
+    ],
+    "phi": [
+      -0.7853981633974483,
+      -2.356194490192345,
+      0.7853981633974483
+    ],
+    "Q_low": 0.6739811912225707,
+    "Q_high": 0.6530825496342736,
+    "Q_mean": 0.6635318704284221,
+    "koide_error": 0.015428237262522073,
+    "mean_deltaD": 371.5596637042092
+  },
+  "observed_B": {
+    "n": [
+      12.142121492766814,
+      17.634985977589896,
+      23.508242739755296
+    ],
+    "k": [
+      15.96,
+      23.18,
+      30.9
+    ],
+    "deltaD": [
+      256.3461134299205,
+      132.57647192975423,
+      52.15752713982101
+    ],
+    "phi": [
+      -0.7853981633974483,
+      -0.8663076566445153,
+      -0.5118200919325424
+    ],
+    "Q_low": 0.6885245901639344,
+    "Q_high": 0.6665228645383952,
+    "Q_mean": 0.6775237273511647,
+    "koide_error": 0.021858396525466055,
+    "mean_deltaD": 147.02670416649858
+  },
+  "observed_map": {
+    "scale_a": 1.2282873602374818,
+    "scale_rmse": 0.17511381200126633,
+    "affine_a": 1.2338725242071469,
+    "affine_b": -0.08624476387852935,
+    "affine_rmse": 0.17376528581646725,
+    "phase_coherence": 0.45047503938467987,
+    "mean_phase_offset": 0.025100783456635856,
+    "delta_phi": [
+      0.0,
+      1.4898868335478301,
+      -1.2972182553299907
+    ],
+    "scale_yhat": [
+      12.054560475741235,
+      17.88560368261141,
+      23.361551309576026
+    ],
+    "affine_yhat": [
+      12.023129185499888,
+      17.88068681682712,
+      23.381534207785055
+    ]
+  },
+  "null_results": {
+    "p_scale_rmse": 0.00585997656009376,
+    "p_affine_rmse": 0.1421554313782745,
+    "p_phase_coherence": 0.45298618805524776,
+    "p_affine_and_phase": 0.06791572833708664,
+    "null_scale_rmse_mean": 2.5255583326557063,
+    "null_scale_rmse_05": 0.5644019532720019,
+    "null_scale_rmse_01": 0.23604548548448734,
+    "null_affine_rmse_mean": 0.9732156334703886,
+    "null_affine_rmse_05": 0.05761459052066619,
+    "null_affine_rmse_01": 0.012402804640741796,
+    "null_phase_C_mean": 0.5323908053919301,
+    "null_phase_C_95": 0.9924629746670254,
+    "null_phase_C_99": 0.999846410665116
+  },
+  "files": {
+    "pair_table_csv": "outputs_wct_cross_region_scaling\\cross_region_pair_table.csv",
+    "top_pairs_csv": "outputs_wct_cross_region_scaling\\cross_region_top_pairs.csv",
+    "summary_json": "outputs_wct_cross_region_scaling\\cross_region_scaling_summary.json"
+  },
+  "interpretation": {
+    "small_p_scale_rmse": "Pure dilation between regions is unusually good.",
+    "small_p_affine_rmse": "Affine spectral map between regions is unusually good.",
+    "high_phase_C": "Paired triplets have coherent phase offsets.",
+    "small_p_affine_and_phase": "Frequency scaling and phase coherence jointly support a shared spectral skeleton.",
+    "warning": "If pair_mode searches all pairs, p-values must be interpreted as alignment-search p-values, not fixed-hypothesis p-values."
+  }
+}

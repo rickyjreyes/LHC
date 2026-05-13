@@ -1,0 +1,57 @@
+{
+  "control_mode": "jpsi_peak",
+  "control_test_type": "jpsi_peak_reconstruction_sanity_check",
+  "integer_targets_valid_in_scan": false,
+  "package_reproduction_verdict_is_valid": false,
+  "pre_registered_target": {
+    "a_observed_from_rare_decay": 1.22828743138222,
+    "a_geom_sqrt_3_over_2": 1.224744871391589,
+    "koide_Q": 0.6666666666666666,
+    "n_targets": [
+      10,
+      15,
+      20
+    ]
+  },
+  "criteria": {
+    "c1_n15_present": {},
+    "c2_c3_best_triplet_geometry": {
+      "signal_Bplus_jpsiK_control": {
+        "available": false,
+        "passes_koide_error": false,
+        "passes_integer_10_15_20": false
+      },
+      "B_low_sideband_jpsiK_control": {
+        "available": false,
+        "passes_koide_error": false,
+        "passes_integer_10_15_20": false
+      },
+      "B_high_sideband_jpsiK_control": {
+        "available": false,
+        "passes_koide_error": false,
+        "passes_integer_10_15_20": false
+      }
+    },
+    "c4_Blow_to_signal_scale": {
+      "available": false,
+      "control_mode": "jpsi_peak",
+      "signal_region": "signal_Bplus_jpsiK_control",
+      "b_low_region": "B_low_sideband_jpsiK_control",
+      "passes_a_1p2283": false,
+      "passes_sqrt_3_over_2": false
+    }
+  },
+  "overall": {
+    "control_mode": "jpsi_peak",
+    "control_test_type": "jpsi_peak_reconstruction_sanity_check",
+    "integer_targets_valid_in_scan": false,
+    "package_reproduction_verdict_is_valid": false,
+    "n15_pass_count": 0,
+    "koide_pass_count": 0,
+    "integer_10_15_20_pass_count": 0,
+    "scale_pass": false,
+    "reproduced_score_out_of_4": 0,
+    "control_reproduces_rare_decay_package": false,
+    "interpretation": "This mode is a reconstruction / peak-shape sanity check, not a valid active-domain package verdict. The rare-decay integer targets do not lie in the scanned k range, so n=15, (10,15,20), and scale-package pass/fail should be read as not applicable."
+  }
+}

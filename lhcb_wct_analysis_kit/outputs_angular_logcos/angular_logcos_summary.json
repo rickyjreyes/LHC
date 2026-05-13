@@ -1,0 +1,340 @@
+{
+  "test": "angular_logcos_scan",
+  "input": "outputs_angles\\angles.parquet",
+  "gpu": {
+    "cupy_available": true,
+    "use_cupy": true,
+    "using_gpu": true,
+    "null_batch": 512
+  },
+  "q2_range": [
+    0.1,
+    19.0
+  ],
+  "vetoes": {
+    "JPSI": [
+      8.68,
+      10.09
+    ],
+    "PSI2S": [
+      12.86,
+      14.18
+    ]
+  },
+  "n_q2_bins": 48,
+  "min_events_per_bin": 50,
+  "k_scan": [
+    0.05,
+    5.0
+  ],
+  "n_k": 2000,
+  "k_edge_tol": 0.05,
+  "null_n": 5000,
+  "seed": 12345,
+  "reference_k": 19.53,
+  "reference_tol": 0.5,
+  "n_moment_bins": 43,
+  "moments": {
+    "moment_cosThetaL": {
+      "moment": "moment_cosThetaL",
+      "n_bins": 43,
+      "best": {
+        "k": 0.792871435717859,
+        "delta_chi2": 0.05479422270548059,
+        "chi2_null": 0.09650001338531598,
+        "chi2_cos": 0.041705790679835396,
+        "C": 0.0024201052319254707,
+        "a": -0.06306785371839294,
+        "b": 0.0015801530837976918,
+        "A": 0.06308764583032755,
+        "phi": -3.116543084411115,
+        "period": 7.924595368340952,
+        "p_shuffle": 0.0013997200559888023,
+        "z_shuffle_one_sided": 2.988943371038746,
+        "null_delta_chi2_mean": 0.014283760348148173,
+        "null_delta_chi2_p95": 0.02972298697031796,
+        "null_delta_chi2_p99": 0.04159555003379298,
+        "near_reference_k": false,
+        "delta_from_reference_k": -18.73712856428214,
+        "edge_limited": false,
+        "distance_from_k_min": 0.742871435717859,
+        "distance_from_k_max": 4.207128564282141
+      },
+      "files": {
+        "scan_csv": "outputs_angular_logcos\\angular_logcos_scan_moment_cosThetaL.csv",
+        "null_csv": "outputs_angular_logcos\\angular_logcos_null_moment_cosThetaL.csv",
+        "scan_png": "outputs_angular_logcos\\angular_logcos_scan_moment_cosThetaL.png",
+        "fit_png": "outputs_angular_logcos\\angular_logcos_fit_moment_cosThetaL.png"
+      }
+    },
+    "moment_cosThetaK": {
+      "moment": "moment_cosThetaK",
+      "n_bins": 43,
+      "best": {
+        "k": 0.9463981990995499,
+        "delta_chi2": 0.0029335424433556342,
+        "chi2_null": 0.028470915258793382,
+        "chi2_cos": 0.025537372815437748,
+        "C": -0.011095797386165045,
+        "a": 0.0025487352912939,
+        "b": 0.020551017287447668,
+        "A": 0.020708461148382318,
+        "phi": -1.4474064611679562,
+        "period": 6.639050362899802,
+        "p_shuffle": 0.5832833433313337,
+        "z_shuffle_one_sided": -0.21030028439306753,
+        "null_delta_chi2_mean": 0.0037477440831096246,
+        "null_delta_chi2_p95": 0.007794098863652412,
+        "null_delta_chi2_p99": 0.010145281472485904,
+        "near_reference_k": false,
+        "delta_from_reference_k": -18.58360180090045,
+        "edge_limited": false,
+        "distance_from_k_min": 0.8963981990995499,
+        "distance_from_k_max": 4.05360180090045
+      },
+      "files": {
+        "scan_csv": "outputs_angular_logcos\\angular_logcos_scan_moment_cosThetaK.csv",
+        "null_csv": "outputs_angular_logcos\\angular_logcos_null_moment_cosThetaK.csv",
+        "scan_png": "outputs_angular_logcos\\angular_logcos_scan_moment_cosThetaK.png",
+        "fit_png": "outputs_angular_logcos\\angular_logcos_fit_moment_cosThetaK.png"
+      }
+    },
+    "moment_cosPhi": {
+      "moment": "moment_cosPhi",
+      "n_bins": 43,
+      "best": {
+        "k": 2.635192596298149,
+        "delta_chi2": 0.00635403018736673,
+        "chi2_null": 0.05495932002694312,
+        "chi2_cos": 0.04860528983957639,
+        "C": -0.0030614092327362753,
+        "a": -0.008267392424792706,
+        "b": 0.018286218138493293,
+        "A": 0.020068272255330824,
+        "phi": -1.995404014064672,
+        "period": 2.3843362781172215,
+        "p_shuffle": 0.5846830633873226,
+        "z_shuffle_one_sided": -0.21388867332462433,
+        "null_delta_chi2_mean": 0.008367996115151181,
+        "null_delta_chi2_p95": 0.017918762558773026,
+        "null_delta_chi2_p99": 0.024978458610087535,
+        "near_reference_k": false,
+        "delta_from_reference_k": -16.89480740370185,
+        "edge_limited": false,
+        "distance_from_k_min": 2.5851925962981492,
+        "distance_from_k_max": 2.364807403701851
+      },
+      "files": {
+        "scan_csv": "outputs_angular_logcos\\angular_logcos_scan_moment_cosPhi.csv",
+        "null_csv": "outputs_angular_logcos\\angular_logcos_null_moment_cosPhi.csv",
+        "scan_png": "outputs_angular_logcos\\angular_logcos_scan_moment_cosPhi.png",
+        "fit_png": "outputs_angular_logcos\\angular_logcos_fit_moment_cosPhi.png"
+      }
+    },
+    "moment_sinPhi": {
+      "moment": "moment_sinPhi",
+      "n_bins": 43,
+      "best": {
+        "k": 3.6504502251125563,
+        "delta_chi2": 0.003807547539556401,
+        "chi2_null": 0.03639308358493235,
+        "chi2_cos": 0.03258553604537595,
+        "C": 0.00034981080182533214,
+        "a": 0.005930456702409475,
+        "b": 0.012522649763540363,
+        "A": 0.013855940018614796,
+        "phi": -1.1285085100694703,
+        "period": 1.7212083221832872,
+        "p_shuffle": 0.5718856228754249,
+        "z_shuffle_one_sided": -0.18117686358134538,
+        "null_delta_chi2_mean": 0.0047048202166673735,
+        "null_delta_chi2_p95": 0.009647293608123476,
+        "null_delta_chi2_p99": 0.012538573159364996,
+        "near_reference_k": false,
+        "delta_from_reference_k": -15.879549774887444,
+        "edge_limited": false,
+        "distance_from_k_min": 3.6004502251125565,
+        "distance_from_k_max": 1.3495497748874437
+      },
+      "files": {
+        "scan_csv": "outputs_angular_logcos\\angular_logcos_scan_moment_sinPhi.csv",
+        "null_csv": "outputs_angular_logcos\\angular_logcos_null_moment_sinPhi.csv",
+        "scan_png": "outputs_angular_logcos\\angular_logcos_scan_moment_sinPhi.png",
+        "fit_png": "outputs_angular_logcos\\angular_logcos_fit_moment_sinPhi.png"
+      }
+    },
+    "moment_cos2Phi": {
+      "moment": "moment_cos2Phi",
+      "n_bins": 43,
+      "best": {
+        "k": 2.9397698849424714,
+        "delta_chi2": 0.0065847866457682536,
+        "chi2_null": 0.0541937185479115,
+        "chi2_cos": 0.04760893190214325,
+        "C": -0.00027931005912544245,
+        "a": 0.01949515095221061,
+        "b": 0.0036095002199088514,
+        "A": 0.019826482352828006,
+        "phi": -0.18307546047078085,
+        "period": 2.1373051473729694,
+        "p_shuffle": 0.5692861427714457,
+        "z_shuffle_one_sided": -0.1745570309202548,
+        "null_delta_chi2_mean": 0.008197948205723336,
+        "null_delta_chi2_p95": 0.017401645354127842,
+        "null_delta_chi2_p99": 0.023509121215044535,
+        "near_reference_k": false,
+        "delta_from_reference_k": -16.59023011505753,
+        "edge_limited": false,
+        "distance_from_k_min": 2.8897698849424716,
+        "distance_from_k_max": 2.0602301150575286
+      },
+      "files": {
+        "scan_csv": "outputs_angular_logcos\\angular_logcos_scan_moment_cos2Phi.csv",
+        "null_csv": "outputs_angular_logcos\\angular_logcos_null_moment_cos2Phi.csv",
+        "scan_png": "outputs_angular_logcos\\angular_logcos_scan_moment_cos2Phi.png",
+        "fit_png": "outputs_angular_logcos\\angular_logcos_fit_moment_cos2Phi.png"
+      }
+    },
+    "moment_sin2Phi": {
+      "moment": "moment_sin2Phi",
+      "n_bins": 43,
+      "best": {
+        "k": 3.0487243621810904,
+        "delta_chi2": 0.0022865844482509584,
+        "chi2_null": 0.04263109023995433,
+        "chi2_cos": 0.04034450579170337,
+        "C": -0.004463493558060493,
+        "a": -0.0005417976149789108,
+        "b": 0.010723055811923982,
+        "A": 0.010736734634013896,
+        "phi": -1.6212798152946757,
+        "period": 2.0609227207029392,
+        "p_shuffle": 0.8990201959608078,
+        "z_shuffle_one_sided": -1.2759884328596096,
+        "null_delta_chi2_mean": 0.0058718309691029695,
+        "null_delta_chi2_p95": 0.012036082692425353,
+        "null_delta_chi2_p99": 0.01587651649755975,
+        "near_reference_k": false,
+        "delta_from_reference_k": -16.48127563781891,
+        "edge_limited": false,
+        "distance_from_k_min": 2.9987243621810906,
+        "distance_from_k_max": 1.9512756378189096
+      },
+      "files": {
+        "scan_csv": "outputs_angular_logcos\\angular_logcos_scan_moment_sin2Phi.csv",
+        "null_csv": "outputs_angular_logcos\\angular_logcos_null_moment_sin2Phi.csv",
+        "scan_png": "outputs_angular_logcos\\angular_logcos_scan_moment_sin2Phi.png",
+        "fit_png": "outputs_angular_logcos\\angular_logcos_fit_moment_sin2Phi.png"
+      }
+    },
+    "moment_m5_proxy": {
+      "moment": "moment_m5_proxy",
+      "n_bins": 43,
+      "best": {
+        "k": 0.05,
+        "delta_chi2": 0.004134254985387749,
+        "chi2_null": 0.01857724628588854,
+        "chi2_cos": 0.014442991300500791,
+        "C": 0.8907397880424242,
+        "a": -0.8717975906960191,
+        "b": -0.26597562576466416,
+        "A": 0.9114680864650657,
+        "phi": 2.8454738564453073,
+        "period": 125.66370614359172,
+        "p_shuffle": 0.15776844631073786,
+        "z_shuffle_one_sided": 1.0036716782546904,
+        "null_delta_chi2_mean": 0.0026626876446865827,
+        "null_delta_chi2_p95": 0.005876028607049188,
+        "null_delta_chi2_p99": 0.008158344732093776,
+        "near_reference_k": false,
+        "delta_from_reference_k": -19.48,
+        "edge_limited": true,
+        "distance_from_k_min": 0.0,
+        "distance_from_k_max": 4.95
+      },
+      "files": {
+        "scan_csv": "outputs_angular_logcos\\angular_logcos_scan_moment_m5_proxy.csv",
+        "null_csv": "outputs_angular_logcos\\angular_logcos_null_moment_m5_proxy.csv",
+        "scan_png": "outputs_angular_logcos\\angular_logcos_scan_moment_m5_proxy.png",
+        "fit_png": "outputs_angular_logcos\\angular_logcos_fit_moment_m5_proxy.png"
+      }
+    },
+    "moment_cosThetaL2": {
+      "moment": "moment_cosThetaL2",
+      "n_bins": 43,
+      "best": {
+        "k": 1.1643071535767886,
+        "delta_chi2": 0.3626094509520862,
+        "chi2_null": 0.3918427547595168,
+        "chi2_cos": 0.02923330380743061,
+        "C": -0.06536005537073315,
+        "a": -0.10873482983697332,
+        "b": 0.03233902413121638,
+        "A": 0.11344194859678203,
+        "phi": -2.852512020195049,
+        "period": 5.396501505532661,
+        "p_shuffle": 0.0001999600079984003,
+        "z_shuffle_one_sided": 3.540136575008421,
+        "null_delta_chi2_mean": 0.04736234142009059,
+        "null_delta_chi2_p95": 0.10087233853396994,
+        "null_delta_chi2_p99": 0.13404828012646325,
+        "near_reference_k": false,
+        "delta_from_reference_k": -18.36569284642321,
+        "edge_limited": false,
+        "distance_from_k_min": 1.1143071535767886,
+        "distance_from_k_max": 3.8356928464232114
+      },
+      "files": {
+        "scan_csv": "outputs_angular_logcos\\angular_logcos_scan_moment_cosThetaL2.csv",
+        "null_csv": "outputs_angular_logcos\\angular_logcos_null_moment_cosThetaL2.csv",
+        "scan_png": "outputs_angular_logcos\\angular_logcos_scan_moment_cosThetaL2.png",
+        "fit_png": "outputs_angular_logcos\\angular_logcos_fit_moment_cosThetaL2.png"
+      }
+    },
+    "moment_cosThetaK2": {
+      "moment": "moment_cosThetaK2",
+      "n_bins": 43,
+      "best": {
+        "k": 0.05,
+        "delta_chi2": 0.020271005608171955,
+        "chi2_null": 0.03204779534800304,
+        "chi2_cos": 0.011776789739831085,
+        "C": -10.355191894337509,
+        "a": 10.387641515248106,
+        "b": 0.2600416447530378,
+        "A": 10.390895914516314,
+        "phi": -0.025028524816063248,
+        "period": 125.66370614359172,
+        "p_shuffle": 0.0001999600079984003,
+        "z_shuffle_one_sided": 3.540136575008421,
+        "null_delta_chi2_mean": 0.003964541668870196,
+        "null_delta_chi2_p95": 0.008016675575608052,
+        "null_delta_chi2_p99": 0.01072172523947144,
+        "near_reference_k": false,
+        "delta_from_reference_k": -19.48,
+        "edge_limited": true,
+        "distance_from_k_min": 0.0,
+        "distance_from_k_max": 4.95
+      },
+      "files": {
+        "scan_csv": "outputs_angular_logcos\\angular_logcos_scan_moment_cosThetaK2.csv",
+        "null_csv": "outputs_angular_logcos\\angular_logcos_null_moment_cosThetaK2.csv",
+        "scan_png": "outputs_angular_logcos\\angular_logcos_scan_moment_cosThetaK2.png",
+        "fit_png": "outputs_angular_logcos\\angular_logcos_fit_moment_cosThetaK2.png"
+      }
+    }
+  },
+  "verdict": {
+    "label": "ANGULAR_LOGCOS_PRESENT_DIFFERENT_K",
+    "reason": "At least one angular moment passes p<=0.05, but not near the yield reference k=19.53. Some significant moments are edge-limited, so rerun with a wider k range if needed.",
+    "passed_p_le_0_05": [
+      "moment_cosThetaL",
+      "moment_cosThetaL2",
+      "moment_cosThetaK2"
+    ],
+    "passed_and_near_yield_k": [],
+    "passed_but_edge_limited": [
+      "moment_cosThetaK2"
+    ]
+  }
+}

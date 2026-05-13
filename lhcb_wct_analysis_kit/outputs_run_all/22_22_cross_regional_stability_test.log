@@ -1,0 +1,90 @@
+COMMAND: C:\Users\Ricky.Reyes.CST\AppData\Local\anaconda3\envs\cupy-env\python.exe C:\Users\Ricky.Reyes.CST\Desktop\RESEARCH\LHC\lhcb_wct_analysis_kit\22_cross_regional_stability_test.py
+START: Mon May 11 11:46:34 2026
+
+====================================================================================================
+CROSS-REGION SCALING STABILITY TEST
+====================================================================================================
+[input] outputs_wct_well_first_koide\well_first_wells.csv
+[top_wells_grid] [6, 8, 10, 12, 15, 18]
+[pair_directions]
+    B_low_sideband_Kst_signal  ->  signal_B_signal_Kst
+    B_high_sideband_Kst_signal  ->  signal_B_signal_Kst
+    B_low_sideband_Kst_signal  ->  B_high_sideband_Kst_signal
+====================================================================================================
+[wells] signal_B_signal_Kst: 11 rows
+[wells] B_low_sideband_Kst_signal: 16 rows
+[wells] B_high_sideband_Kst_signal: 9 rows
+
+----------------------------------------------------------------------------------------------------
+[top_wells = 6]
+----------------------------------------------------------------------------------------------------
+                  B_low_sideband ->        signal_B | a=1.2247  rmse=1.7612  p_scale=0.5275  | p_aff=0.8825  C=0.348  p_phase=0.540  p_aff∧φ=0.4775
+                 B_high_sideband ->        signal_B | a=0.7593  rmse=0.6457  p_scale=0.1225  | p_aff=0.1025  C=0.346  p_phase=0.550  p_aff∧φ=0.0575
+                  B_low_sideband -> B_high_sideband | a=1.6174  rmse=1.6585  p_scale=0.3650  | p_aff=0.5100  C=0.758  p_phase=0.230  p_aff∧φ=0.0825
+
+----------------------------------------------------------------------------------------------------
+[top_wells = 8]
+----------------------------------------------------------------------------------------------------
+                  B_low_sideband ->        signal_B | a=1.0034  rmse=0.4401  p_scale=0.0306  | p_aff=0.1607  C=0.339  p_phase=0.572  p_aff∧φ=0.0985
+                 B_high_sideband ->        signal_B | a=0.6186  rmse=0.6337  p_scale=0.0973  | p_aff=0.1971  C=0.286  p_phase=0.948  p_aff∧φ=0.1932
+                  B_low_sideband -> B_high_sideband | a=1.6201  rmse=0.5495  p_scale=0.0338  | p_aff=0.2717  C=0.308  p_phase=0.892  p_aff∧φ=0.2487
+
+----------------------------------------------------------------------------------------------------
+[top_wells = 10]
+----------------------------------------------------------------------------------------------------
+                  B_low_sideband ->        signal_B | a=1.0034  rmse=0.4401  p_scale=0.0326  | p_aff=0.1330  C=0.339  p_phase=0.632  p_aff∧φ=0.0862
+                 B_high_sideband ->        signal_B | a=0.6186  rmse=0.6337  p_scale=0.0577  | p_aff=0.1880  C=0.286  p_phase=0.926  p_aff∧φ=0.1769
+                  B_low_sideband -> B_high_sideband | a=1.6201  rmse=0.5495  p_scale=0.0331  | p_aff=0.2443  C=0.308  p_phase=0.894  p_aff∧φ=0.2234
+
+----------------------------------------------------------------------------------------------------
+[top_wells = 12]
+----------------------------------------------------------------------------------------------------
+                  B_low_sideband ->        signal_B | a=1.2283  rmse=0.1751  p_scale=0.0055  | p_aff=0.1423  C=0.450  p_phase=0.453  p_aff∧φ=0.0685
+                 B_high_sideband ->        signal_B | a=0.9900  rmse=0.6461  p_scale=0.0551  | p_aff=0.3674  C=0.260  p_phase=0.948  p_aff∧φ=0.3531
+                  B_low_sideband -> B_high_sideband | a=1.2395  rmse=0.5098  p_scale=0.0328  | p_aff=0.1955  C=0.750  p_phase=0.235  p_aff∧φ=0.0459
+
+----------------------------------------------------------------------------------------------------
+[top_wells = 15]
+----------------------------------------------------------------------------------------------------
+                  B_low_sideband ->        signal_B | a=1.2283  rmse=0.1751  p_scale=0.0052  | p_aff=0.1430  C=0.450  p_phase=0.447  p_aff∧φ=0.0663
+                 B_high_sideband ->        signal_B | a=0.9900  rmse=0.6461  p_scale=0.0551  | p_aff=0.3674  C=0.260  p_phase=0.948  p_aff∧φ=0.3531
+                  B_low_sideband -> B_high_sideband | a=1.2395  rmse=0.5098  p_scale=0.0333  | p_aff=0.1983  C=0.750  p_phase=0.233  p_aff∧φ=0.0472
+
+----------------------------------------------------------------------------------------------------
+[top_wells = 18]
+----------------------------------------------------------------------------------------------------
+                  B_low_sideband ->        signal_B | a=1.2283  rmse=0.1751  p_scale=0.0049  | p_aff=0.1420  C=0.450  p_phase=0.465  p_aff∧φ=0.0675
+                 B_high_sideband ->        signal_B | a=0.9900  rmse=0.6461  p_scale=0.0551  | p_aff=0.3674  C=0.260  p_phase=0.948  p_aff∧φ=0.3531
+                  B_low_sideband -> B_high_sideband | a=1.2395  rmse=0.5098  p_scale=0.0333  | p_aff=0.1990  C=0.750  p_phase=0.232  p_aff∧φ=0.0482
+
+====================================================================================================
+STABILITY VERDICT
+====================================================================================================
+{
+  "label": "BLOW_SIGNAL_SCALE_COUPLING_UNSTABLE",
+  "reason": "B_low->signal scale factor varies with top_wells beyond the 5% relative-range threshold; the original p=0.0059 result depends on triplet selection."
+}
+
+Per-pair stability summary:
+  B_low_sideband->signal_B
+      scale_a:   median=1.2265  range=[1.0034, 1.2283]  rel_range=0.1834
+      p_scale:   median=0.0181  range=[0.0049, 0.5275]
+      pass p<=.05: 5/6    pass p<=.01: 3/6
+  B_high_sideband->signal_B
+      scale_a:   median=0.8747  range=[0.6186, 0.9900]  rel_range=0.4247
+      p_scale:   median=0.0564  range=[0.0551, 0.1225]
+      pass p<=.05: 0/6    pass p<=.01: 0/6
+  B_low_sideband->B_high_sideband
+      scale_a:   median=1.4284  range=[1.2395, 1.6201]  rel_range=0.2665
+      p_scale:   median=0.0333  range=[0.0328, 0.3650]
+      pass p<=.05: 5/6    pass p<=.01: 0/6
+
+Saved:
+  outputs_wct_cross_region_stability\stability_table.csv
+  outputs_wct_cross_region_stability\stability_summary.json
+  outputs_wct_cross_region_stability\scale_a_vs_top_wells.png
+  outputs_wct_cross_region_stability\p_scale_vs_top_wells.png
+
+END: Mon May 11 11:46:37 2026
+RETURN_CODE: 0
+SECONDS: 2.48

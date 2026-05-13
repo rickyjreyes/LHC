@@ -1,0 +1,73 @@
+COMMAND: C:\Users\Ricky.Reyes.CST\AppData\Local\anaconda3\envs\cupy-env\python.exe C:\Users\Ricky.Reyes.CST\Desktop\RESEARCH\LHC\lhcb_wct_analysis_kit\20_koide_proof.py
+START: Mon May 11 11:45:55 2026
+
+====================================================================================================
+WELL-FIRST KOIDE GEOMETRY PROOF TEST
+====================================================================================================
+[input] wells_csv=outputs_wct_well_first_koide/well_first_wells.csv
+[config] top wells per region=12
+[config] null draws=250000
+[config] n range from k scan: [4.564707, 24.345106]
+====================================================================================================
+
+----------------------------------------------------------------------------------------------------
+[region] B_high_sideband_Kst_signal
+  best Koide triplet n=(12.4921, 18.6088, 22.9757)
+  Q_low=0.671300, Q_high=0.617334, Q_mean=0.644317
+  koide_error=0.049549, integer_error=5.299867
+  [uniform null]
+    p_koide_error       = 0.65722537
+    p_integer_error     = 0.99267603
+    p_joint_same_triplet= 0.51132195
+  [empirical well-location null]
+    p_koide_error       = 0.62318551
+    p_integer_error     = 0.99280403
+    p_joint_same_triplet= 0.47323011
+
+----------------------------------------------------------------------------------------------------
+[region] B_low_sideband_Kst_signal
+  best Koide triplet n=(9.8141, 14.5614, 19.0196)
+  Q_low=0.673981, Q_high=0.653083, Q_mean=0.663532
+  koide_error=0.015428, integer_error=1.089983
+  [uniform null]
+    p_koide_error       = 0.30721877
+    p_integer_error     = 0.29794281
+    p_joint_same_triplet= 0.048947804
+  [empirical well-location null]
+    p_koide_error       = 0.21787113
+    p_integer_error     = 0.30145079
+    p_joint_same_triplet= 0.073859705
+
+----------------------------------------------------------------------------------------------------
+[region] signal_B_signal_Kst
+  best Koide triplet n=(12.1421, 17.6350, 23.5082)
+  Q_low=0.688525, Q_high=0.666523, Q_mean=0.677524
+  koide_error=0.021858, integer_error=4.882582
+  [uniform null]
+    p_koide_error       = 0.40317039
+    p_integer_error     = 0.99686401
+    p_joint_same_triplet= 0.27344691
+  [empirical well-location null]
+    p_koide_error       = 0.32856669
+    p_integer_error     = 0.99698801
+    p_joint_same_triplet= 0.21928312
+
+====================================================================================================
+GLOBAL ORDER BY RAW-WELL KOIDE ERROR
+====================================================================================================
+                    region  best_koide_error  best_koide_integer_error  uniform_p_joint_same_triplet  empirical_p_joint_same_triplet  best_koide_Q_mean  best_koide_n1  best_koide_n2  best_koide_n3
+ B_low_sideband_Kst_signal          0.015428                  1.089983                      0.048948                        0.073860           0.663532       9.814121      14.561416      19.019614
+       signal_B_signal_Kst          0.021858                  4.882582                      0.273447                        0.219283           0.677524      12.142121      17.634986      23.508243
+B_high_sideband_Kst_signal          0.049549                  5.299867                      0.511322                        0.473230           0.644317      12.492082      18.608790      22.975694
+
+Saved:
+  outputs_wct_well_proof\koide_geometry_proof_by_region.csv
+  outputs_wct_well_proof\koide_geometry_proof_global.csv
+  outputs_wct_well_proof\koide_geometry_proof_summary.json
+  B_high_sideband_Kst_signal: outputs_wct_well_proof\triplets_B_high_sideband_Kst_signal.csv
+  B_low_sideband_Kst_signal: outputs_wct_well_proof\triplets_B_low_sideband_Kst_signal.csv
+  signal_B_signal_Kst: outputs_wct_well_proof\triplets_signal_B_signal_Kst.csv
+
+END: Mon May 11 11:46:10 2026
+RETURN_CODE: 0
+SECONDS: 14.26

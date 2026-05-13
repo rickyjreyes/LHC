@@ -1,0 +1,19 @@
+{
+  "signal": {
+    "label": "signal",
+    "n": 0,
+    "peak": null,
+    "error": "No ROOT files found for pattern: data_signal/*.root"
+  },
+  "control": {
+    "label": "control_JpsiKst",
+    "n": 0,
+    "peak": null,
+    "error": "No ROOT files found for pattern: data_control/*.root"
+  },
+  "verdict": {
+    "status": "missing_data",
+    "note": "signal_error=No ROOT files found for pattern: data_signal/*.root, control_error=No ROOT files found for pattern: data_control/*.root"
+  },
+  "delta_k_match_threshold": 1.0
+}

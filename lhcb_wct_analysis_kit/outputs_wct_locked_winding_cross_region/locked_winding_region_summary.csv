@@ -1,0 +1,4 @@
+region,N_events,D_base,best_locked_branch,best_deltaD,best_p
+B_low_sideband_Kst_signal,29000,4049.998314317293,folded_trig_Q_4over9,1088.4689278297228,0.0003332222592469177
+signal_B_signal_Kst,15630,1936.8238633170417,folded_trig_Q_4over9,457.44165295999755,0.0003332222592469177
+B_high_sideband_Kst_signal,25850,2612.339799783642,scaled_Blow_to_signal,535.0492670543617,0.0003332222592469177
