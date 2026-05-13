@@ -80,3 +80,6 @@ patch_*.py
 # *.parquet
 # *.root
 # *.h5
+# Python cache
+__pycache__/
+*.pyc
