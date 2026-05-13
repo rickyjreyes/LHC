@@ -212,32 +212,6 @@ python 10_unbinned_likelihood_skeleton.py --root data/job0.root --tree DecayTree
 
 Treat this as scaffolding, not a paper-grade likelihood implementation.
 
----
-
-## Interpretation
-
-Fail condition:
-
-- WCT repeatedly fits charm-only pseudo-data with significant improvement over the charm-tail null, especially if the best k repeatedly lands near the pre-specified target region.
-
-Pass condition:
-
-- WCT has poor or non-significant improvement over the charm-tail null on fake charm-only data, while the main analysis retains its reported behavior on real candidate spectra.
-
-The main null-test statistic is WCT versus the charm model, not WCT versus a constant model:
-
-```text
-false_positive_rate_vs_charm
-false_positive_rate_vs_charm_and_k
-wct_preferred_over_charm_by_aic_rate
-wct_preferred_over_charm_by_bic_rate
-```
-
-Why: charm-only fake data is intentionally non-constant, so WCT beating a constant null is not evidence of a false discovery. The relevant question is whether WCT beats the charm-tail null.
-
-Passing these tests does **not** prove WCT or new physics. It only reduces the specific failure mode that the WCT/log-periodic ansatz is trivially fitting charm-tail pseudo-data.
-
----
 
 ## Scanner note
 

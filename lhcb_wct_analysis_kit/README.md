@@ -198,20 +198,3 @@ python run_all.py --controls --only 27 --control-mode jpsi_peak --continue-on-er
 
 For stronger null statistics on stages 28 and 29, increase `--n-null` after the smoke/rebuild sequence is working.
 
----
-
-## Interpretation guardrails
-
-This is a candidate-spectrum diagnostic pipeline, not an official LHCb measurement.
-
-A defensible interpretation is:
-
-> The open-data candidate spectrum contains structured log-domain residual behavior that survives several stress tests, including repaired baselines, active-domain winding tests, sideband controls, charm-trimmed controls, cross-region diagnostics, and veto-window covariance checks.
-
-Do **not** overstate the current result as:
-
-> A confirmed signal-specific rare-decay discovery or a Standard Model exclusion.
-
-Paper-grade wording should remain close to:
-
-> Structured candidate-spectrum log-domain behavior with scale-coupled signal and sideband projections, not a signal-specific rare-decay discovery.
