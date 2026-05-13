@@ -7,8 +7,7 @@ The main runner is:
 ```bash
 python run_all.py
 ```
-
-The default runner is focused on the non-angular paper-grade pipeline. Angular stages are opt-in because they require separate validation before being treated as final analysis results.
+The default runner is focused on the non-angular yield-side pipeline.
 
 ---
 
@@ -64,7 +63,7 @@ Run a reduced smoke/diagnostic pass:
 python run_all.py --fast --continue-on-error
 ```
 
-Run the default non-angular paper-grade pipeline:
+Run the default non-angular yield-side pipeline:
 
 ```bash
 python run_all.py --continue-on-error
@@ -92,7 +91,7 @@ python run_all.py --only 28,29 --n-null 500 --continue-on-error
 |---:|---|---|
 | `00` | `00_inspect_root.py` | Inspect the first ROOT file and tree layout. |
 | `01` | `01_check_branches.py` | Check q2, four-vector, and angular branch readiness. |
-| `03` | `03_bootstrap_scan.py` | Legacy/bootstrap diagnostic on yield-side log-FFT peaks. |
+| `03` | `03_bootstrap_scan.py` | Bootstrap diagnostic on yield-side log-FFT peaks. |
 | `04` | `04_angle_branch_report.py` | Search for direct angular branch candidates. |
 
 ### Yield-side repaired log-cos / winding pipeline
@@ -114,7 +113,7 @@ python run_all.py --only 28,29 --n-null 500 --continue-on-error
 | `10` | `10_compute_angles.py` | Compute derived q2, K* mass, cosThetaL, cosThetaK, and phi from four-vectors. |
 | `11` | `11_angular_logcos_scan.py` | Angular moment / P5-proxy log-cos scan. |
 
-Run angular stages only after confirming the local implementations are the intended final versions:
+Run angular stages:
 
 ```bash
 python run_all.py --angular --continue-on-error
@@ -139,13 +138,13 @@ python run_all.py --only 10,11 --continue-on-error
 | `25` | `25_veto_window_covariance_test.py` | Main veto-window covariance / active-domain invariance test. |
 | `26` | `26_veto_covariance.py` | Optional alternate/report-style veto covariance implementation. |
 
-Stage `26` overlaps with `25`, so it is skipped by default. Use `--full` or `--only 26` to run it.
+Stage `26` overlaps with `25`, so it is skipped by default.
 
 ### Controls
 
 | Key | Script | Purpose |
 |---:|---|---|
-| `05` | `05_control_compare.py` | Legacy signal/control FFT comparison; kept for provenance. |
+| `05` | `05_control_compare.py` | Signal/control FFT comparison. |
 | `27` | `27_control_channel_blind_test.py` | Blind control-channel / reconstruction-control test. |
 
 Control stages are skipped unless `--controls` is passed or `data_control/` contains ROOT files.

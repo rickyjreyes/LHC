@@ -1,8 +1,8 @@
 # LHCb WCT Hadronic Mimicry Test Kit
 
-This directory contains stress tests for a specific failure mode: a WCT/log-periodic ansatz might falsely identify structured charm-tail pseudo-data as a target log-periodic signal.
+This directory contains synthetic-injection and pseudo-experiment tests for evaluating whether charm-tail structure can mimic the target WCT/log-periodic pattern.
 
-The tests here are **synthetic-injection and pseudo-experiment checks**. They are meant to support the main analysis by testing whether charm-only Breit-Wigner-like residuals can mimic the target WCT pattern.
+The kit generates charm-only Breit-Wigner-like residuals, scans them with bounded WCT/log-periodic models, runs Monte Carlo pseudo-experiments, and reports false-positive rates against charm-tail models.
 
 Run commands from this directory unless you pass explicit paths:
 
@@ -33,9 +33,9 @@ pip install numpy pandas scipy matplotlib uproot awkward
 | `07_inject_charm_mimicry.py` | Generate synthetic charm-only residuals in linear q2 using J/psi and psi(2S) Breit-Wigner-like tails. |
 | `08_scan_wct_on_injections.py` | Fit constant, charm-tail, and bounded WCT/log-periodic models; run Monte Carlo pseudo-experiments; report false-positive rates. |
 | `09_locked_k_cross_channel.py` | Test a fixed k value across independent CSV channels without floating k. |
-| `10_unbinned_likelihood_skeleton.py` | Experimental skeleton for future ntuple-level unbinned likelihood work. |
+| `10_unbinned_likelihood_skeleton.py` | Starting point for future ntuple-level unbinned likelihood extensions. |
 | `11_global_pvalue_look_elsewhere.py` | Convert local scan improvements into global look-elsewhere p-values using pseudo-experiments. |
-| `12_run_strong_mimicry_test.py` | Main strong mimicry test: generate charm-only data, scan WCT-vs-charm, run MC injections, and write PASS/FAIL report. |
+| `12_run_strong_mimicry_test.py` | Generate charm-only data, scan WCT-vs-charm, run MC injections, and write a summary report. |
 | `13_sweep_mimicry_strength.py` | Robustness sweep over charm-tail strength and noise. |
 | `run_demo.py` | Small demo: one fake charm dataset plus a short MC scan. |
 
@@ -120,7 +120,8 @@ strong_mimicry_results/mc_false_positive_summary.json
 strong_mimicry_results/scan_stats.json
 ```
 
-Default pass criteria:
+
+Strong-test thresholds:
 
 ```text
 false_positive_rate_vs_charm <= 0.01
@@ -128,7 +129,7 @@ false_positive_rate_vs_charm_and_k <= 0.002
 wct_preferred_over_charm_by_bic_rate <= 0.05
 ```
 
-These thresholds can be changed intentionally with:
+Change thresholds with:
 
 ```bash
 python 12_run_strong_mimicry_test.py \
@@ -201,16 +202,14 @@ python 11_global_pvalue_look_elsewhere.py \
 
 ---
 
-## Optional unbinned skeleton
+## Optional unbinned likelihood extension
 
-The unbinned likelihood script is a skeleton for future ntuple-level work. It can load either CSV or ROOT inputs:
+The unbinned likelihood script provides a starting point for future ntuple-level likelihood extensions. It can load either CSV or ROOT inputs:
 
 ```bash
 python 10_unbinned_likelihood_skeleton.py --csv fake_charm.csv
 python 10_unbinned_likelihood_skeleton.py --root data/job0.root --tree DecayTree
 ```
-
-Treat this as scaffolding, not a paper-grade likelihood implementation.
 
 
 ## Scanner note

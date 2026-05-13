@@ -661,15 +661,7 @@ May 9, 2026
 
 ## License
 
-Add the repository license here.
-
-Suggested options:
-
-```text
-MIT
-Apache-2.0
-CC-BY-4.0 for text/figures plus MIT for code
-```
+Creative Commons Attribution 4.0 International (CC BY 4.0).
 
 ---
 
