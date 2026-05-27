@@ -18,6 +18,22 @@
 # ============================================================
 /lhcb_wct_analysis_kit/archive/
 
+# Zipped data archives, never commit
+/lhcb_wct_analysis_kit/data.zip
+/lhcb_wct_analysis_kit/data_control.zip
+/lhcb_wct_analysis_kit/data_test.zip
+/lhcb_wct_analysis_kit/outputs.zip
+
+
+# ============================================================
+# Heavy analysis outputs / packaged outputs
+# ============================================================
+/lhcb_wct_analysis_kit/outputs.zip
+/lhcb_wct_analysis_kit/outputs_global_null_look_elsewhere/
+/lhcb_wct_analysis_kit/outputs_global_null_look_elsewhere_50000/
+/lhcb_wct_analysis_kit/outputs_milestone2_sideband/
+/lhcb_wct_analysis_kit/outputs_milestone3_lambda_trajectory/
+
 # ============================================================
 # Python
 # ============================================================
