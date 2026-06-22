@@ -1,0 +1,4 @@
+"hypothesis","description","rss_k_space","aic","cv_k","cv_n","preferred","interpretation"
+"H_k_fixed_k","k constant across veto schemes",32.0262,12.0487690914724,0.130928999595001,NA,FALSE,"raw-frequency artifact / fixed detector frequency"
+"H_n_fixed_n","n constant; k=2*pi*n/Delta_ell_A",19.9896880293327,9.22074243695563,NA,0.105929878048974,TRUE,"active-domain winding covariance (WCT-supporting)"
+"H_neither","neither k nor n stable",NA,NA,0.130928999595001,0.105929878048974,NA,"weakens WCT-specific interpretation"

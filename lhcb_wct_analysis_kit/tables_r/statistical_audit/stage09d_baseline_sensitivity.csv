@@ -1,0 +1,3 @@
+"null_level","description","available","p_best","p_reference","null_best_mean","null_best_p99","scan_A2_bound_fraction","note"
+"parity_conditional","baseline held fixed; refit nuisance; committed null",TRUE,0.0001999600079984,0.0001999600079984,4.91264828208452,13.5309091469084,0.577371048252912,"replayable"
+"full_pipeline_kde_reestimated","regenerate->rebin->retrain KDE->refit->rescan (event-level)",FALSE,NA,NA,NA,NA,NA,"UNAVAILABLE_NO_EVENT_DATA"

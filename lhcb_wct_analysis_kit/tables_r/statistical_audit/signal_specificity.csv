@@ -1,0 +1,2 @@
+"statistic","signal_effect","low_sb_effect","high_sb_effect","weighted_sideband_effect","observed","boot_mean","boot_sd","boot_q025","boot_q975","signal_specific","note"
+"signal_effect_minus_weighted_sideband_effect_at_kref",10.6648372976124,196.172707534795,66.7014799073004,135.154818124207,-124.489980826595,-147.819043838765,67.7779486578651,-305.272857972137,-35.2342826571141,FALSE,"overlapping/normalisation-linked samples; bootstrap does not assume independence"

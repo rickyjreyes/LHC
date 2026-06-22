@@ -1,0 +1,216 @@
+---
+title: "LHCb / WCT Statistical Audit"
+subtitle: "Robustness, look-elsewhere, controls, calibration and injection-recovery for the log-periodic yield-side analysis"
+date: today
+format:
+  html:
+    toc: true
+    toc-depth: 2
+    code-fold: true
+    df-print: paged
+    embed-resources: true
+execute:
+  echo: false
+  warning: false
+  message: false
+---
+
+```{r setup}
+kit <- local({
+  d <- getwd(); while (!file.exists(file.path(d, "R", "lhcb_domain.R")) && dirname(d) != d) d <- dirname(d); d
+})
+TBL <- file.path(kit, "tables_r", "statistical_audit")
+FIG <- file.path(kit, "figures_r", "statistical_audit")
+rd  <- function(f) { p <- file.path(TBL, f); if (file.exists(p)) utils::read.csv(p, check.names = FALSE) else NULL }
+figp <- function(f) file.path(FIG, f)
+show <- function(df, n = 50) { if (is.null(df)) cat("_table unavailable_\n") else knitr::kable(utils::head(df, n)) }
+```
+
+> **Interpretation boundary.** The same LHCb open data analysed in R and Python
+> is a **cross-language computational reproduction**, not independent
+> experimental replication. The smooth/KDE baseline is **not** a full Standard
+> Model amplitude analysis (no official acceptance, efficiency, detector
+> response, form factors, hadronic uncertainties or covariance). Nothing here
+> claims new physics, SM failure, WCT proof, or LHCb endorsement.
+
+# 1. Executive summary
+
+The audit wraps the canonical Python pipeline and its R reproduction with
+explicit statistical controls. The headline conclusions:
+
+- Stage 09d's best **local** peak is `k2 = 23.08`; **`19.5296` is a surviving
+  reference location, not the best local peak**.
+- **Amplitude bounds are active** in the key 09d/12/13 fits (A2 sits on its 0.10
+  cap on a majority of scan points).
+- Stage 12's integer winding **switches branch with bandwidth** (n=10 at low
+  bandwidth, n=20 at high bandwidth): not a stable unique winding.
+- In the committed stage-13 family at bandwidth scale 1, **Q=4/9 outscores
+  Q=2/3** (ΔD 457 vs 373); the parity bounds are coefficient-wise, so radial
+  amplitudes exceed 0.1.
+- The **sideband-subtracted control (stage 28) retains none** of the claimed
+  structures (best Δχ² ≈ 5.3, p ≈ 0.82; reference mode, n15 and the 10/15/20
+  comb all fail).
+- The **charm-trimmed B sidebands (stage 29) carry stronger structure than the
+  signal window** (low-SB ≈ 956, high-SB ≈ 1045 vs signal ≈ 353).
+- Net: the controls **materially weaken** any signal-specific or new-physics
+  reading of the log-periodic structure.
+
+# 2. Scope and interpretation boundaries
+
+See the boundary note above and `R/audit/AUDIT_NOTE.md`. Parity outputs are never
+overwritten; corrected-audit outputs live under `outputs_statistical_audit_r/`.
+
+# 3. Data files, branches and event flow
+
+```{r flow}
+show(rd("event_flow.csv"))
+show(rd("branch_provenance.csv"))
+```
+
+![Event / dataset accounting](`r figp("fig01_event_flow.png")`)
+
+# 4. q2 reconstruction and selections
+
+![q2 selection windows and vetoes](`r figp("fig02_q2_selection_windows.png")`)
+
+# 5. Canonical Python/R parity
+
+```{r parity}
+show(rd("python_r_parity.csv"))
+```
+
+The R WLS engine reproduces the committed stage-28 Δχ² control values to ~1e-13.
+
+# 6. Stage 09d two-mode scan
+
+```{r s09}
+show(rd("stage09d_peak_uncertainty.csv"))
+```
+
+![Stage 09d local scan](`r figp("fig03_stage09d_scan.png")`)
+![Stage 09d boundary activity](`r figp("fig06_stage09d_boundary_activity.png")`)
+
+# 7. Frequency and amplitude uncertainty
+
+```{r peaks}
+show(rd("peak_region_stability.csv"))
+show(rd("effect_sizes.csv"))
+```
+
+# 8. KDE and bandwidth sensitivity
+
+Full-pipeline KDE re-estimation is a full-mode (event-level) audit; see
+`stage09d_baseline_sensitivity.csv`.
+
+```{r baseline}
+show(rd("stage09d_baseline_sensitivity.csv"))
+```
+
+# 9. Integer active-domain winding
+
+```{r s12}
+show(rd("integer_winding_stability.csv"))
+```
+
+![Integer winding heatmap](`r figp("fig07_integer_winding_heatmap.png")`)
+![Selection probability](`r figp("fig08_integer_selection_probability.png")`)
+
+# 10. Koide / trig comb models
+
+```{r s13}
+show(rd("comb_bound_comparison.csv"))
+```
+
+![Comb model comparison](`r figp("fig09_comb_model_comparison.png")`)
+![Comb bound audit](`r figp("fig11_comb_bound_audit.png")`)
+
+# 11. Smooth-null model comparison
+
+```{r s16}
+show(rd("model_comparison.csv"))
+```
+
+![Model comparison](`r figp("fig12_model_comparison.png")`)
+
+# 12. Veto covariance and active-domain invariance
+
+```{r s25}
+show(rd("veto_invariance_models.csv"))
+```
+
+![Fixed-k vs fixed-n](`r figp("fig15_fixed_k_vs_fixed_n.png")`)
+
+# 13. Sideband-subtracted control
+
+```{r s28}
+show(rd("sideband_audit.csv"))
+```
+
+![Sideband spectrum](`r figp("fig16_sideband_spectrum.png")`)
+![Sideband scan](`r figp("fig17_sideband_scan.png")`)
+![Alpha uncertainty](`r figp("fig18_sideband_alpha_uncertainty.png")`)
+
+# 14. Charm-trimmed signal and sidebands
+
+```{r s29}
+show(rd("charm_region_results.csv"))
+show(rd("signal_specificity.csv"))
+```
+
+![Charm region scans](`r figp("fig19_charm_region_scans.png")`)
+![Signal vs sideband effects](`r figp("fig20_signal_sideband_effects.png")`)
+
+# 15-16. Holdout and blocked-q2 validation
+
+```{r hold}
+show(rd("holdout_results.csv"))
+show(rd("blocked_q2_results.csv"))
+```
+
+# 17. Multiple-testing hierarchy
+
+```{r mt}
+show(rd("significance_hierarchy.csv"))
+show(rd("multiple_testing.csv"))
+show(rd("family_max_null.csv"))
+```
+
+![Significance hierarchy](`r figp("fig28_significance_hierarchy.png")`)
+
+# 18. Synthetic-null calibration
+
+```{r calib}
+show(rd("null_calibration.csv"))
+```
+
+# 19. Injection-recovery power
+
+```{r inj}
+show(rd("injection_recovery.csv"), 20)
+```
+
+# 22. Claim-status matrix
+
+```{r claims}
+show(rd("final_claim_matrix.csv"))
+```
+
+![Evidence dashboard](`r figp("fig30_evidence_dashboard.png")`)
+
+# 23. Limitations
+
+- Replay mode summarises committed scan/null tables; event-level full-pipeline
+  nulls, KDE re-estimation, holdout, 09d injection and KDE calibration require
+  the OAuth-gated ROOT ntuples (full mode).
+- Empirical p-values are floored at 1/(B+1); no claim is made below Monte-Carlo
+  resolution.
+- AIC/BIC at a selected frequency/comb do not pay for the model search; the
+  family correction does.
+
+# 24. Reproducibility information
+
+```{r repro}
+mf <- file.path(kit, "outputs_statistical_audit_r", "run_manifest.json")
+if (file.exists(mf)) cat(readLines(mf), sep = "\n")
+sessionInfo()
+```

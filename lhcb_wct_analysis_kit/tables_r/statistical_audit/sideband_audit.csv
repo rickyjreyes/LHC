@@ -1,0 +1,5 @@
+"target","k","parity_delta_chi2","committed_delta_chi2","committed_p","survives_0p05","variance_convention"
+"reference_k",19.5296,0.446805235743625,0.446805235743682,0.822177822177822,FALSE,"parity_fixed_alpha"
+"n15",19.7164886006628,1.21246316266576,1.2124631626657,0.575424575424575,FALSE,"parity_fixed_alpha"
+"comb_10_15_20",NA,4.14164117906893,4.14164117906893,0.685314685314685,FALSE,"parity_fixed_alpha"
+"best_scan",8.78,5.30354933194093,5.30354933194093,0.816183816183816,FALSE,"parity_fixed_alpha"

@@ -1,0 +1,7 @@
+"region","center_k2","rel_tol","k2_lo","k2_hi","null_scanmax_selection_freq","event_bootstrap_selection_freq","event_bootstrap_status","note"
+"reference",19.5296,0.01,19.334304,19.724896,0.0592,NA,"UNAVAILABLE_NO_EVENT_DATA","regions predefined before bootstrap; null selection = where scan-max lands under committed null; multimodal distribution not summarised by one CI"
+"reference",19.5296,0.02,19.139008,19.920192,0.1174,NA,"UNAVAILABLE_NO_EVENT_DATA","regions predefined before bootstrap; null selection = where scan-max lands under committed null; multimodal distribution not summarised by one CI"
+"reference",19.5296,0.05,18.55312,20.50608,0.278,NA,"UNAVAILABLE_NO_EVENT_DATA","regions predefined before bootstrap; null selection = where scan-max lands under committed null; multimodal distribution not summarised by one CI"
+"best",23.08,0.01,22.8492,23.3108,0.0598,NA,"UNAVAILABLE_NO_EVENT_DATA","regions predefined before bootstrap; null selection = where scan-max lands under committed null; multimodal distribution not summarised by one CI"
+"best",23.08,0.02,22.6184,23.5416,0.121,NA,"UNAVAILABLE_NO_EVENT_DATA","regions predefined before bootstrap; null selection = where scan-max lands under committed null; multimodal distribution not summarised by one CI"
+"best",23.08,0.05,21.926,24.234,0.3648,NA,"UNAVAILABLE_NO_EVENT_DATA","regions predefined before bootstrap; null selection = where scan-max lands under committed null; multimodal distribution not summarised by one CI"
