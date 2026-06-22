@@ -1,0 +1,63 @@
+{
+  "stage": "29",
+  "timestamp_utc": "2026-06-22 18:40:44 UTC",
+  "r_version": "R version 4.3.3 (2024-02-29)",
+  "platform": "x86_64-pc-linux-gnu",
+  "os": "Linux",
+  "git_commit": "5b7bb95b37d1434066bb572581f1190788070047",
+  "seed": 314159,
+  "rng_kind": "Mersenne-Twister,Inversion,Rejection",
+  "package_versions": {
+    "base": "4.3.3",
+    "jsonlite": "2.0.0",
+    "digest": "0.6.39",
+    "optparse": "1.8.2",
+    "data.table": null,
+    "arrow": null
+  },
+  "config": {
+    "CHARM_WINDOWS": {
+      "Jpsi": [8, 11],
+      "psi2S": [12.5, 14.5]
+    },
+    "B_SIGNAL": [5230, 5330],
+    "B_LOW_SB": [5000, 5180],
+    "B_HIGH_SB": [5380, 5600],
+    "KST_SIGNAL": [795.89999999999998, 995.89999999999998],
+    "N_BINS": 240,
+    "K_SCAN_MIN": 6,
+    "K_SCAN_MAX": 32,
+    "N_K_SCAN": 1301,
+    "INTEGER_N_MIN": 10,
+    "INTEGER_N_MAX": 22,
+    "SEED": 314159
+  },
+  "inputs": [
+    {
+      "committed_dir": "outputs_charm_trimmed_control",
+      "mode": "replay_committed_bins"
+    }
+  ],
+  "outputs": [
+    "outputs_charm_trimmed_control_r/charm_trimmed_comb_B_high_sideband_Kst_signal.csv",
+    "outputs_charm_trimmed_control_r/charm_trimmed_comb_B_low_sideband_Kst_signal.csv",
+    "outputs_charm_trimmed_control_r/charm_trimmed_comb_signal_B_signal_Kst.csv",
+    "outputs_charm_trimmed_control_r/charm_trimmed_integer_B_high_sideband_Kst_signal.csv",
+    "outputs_charm_trimmed_control_r/charm_trimmed_integer_B_low_sideband_Kst_signal.csv",
+    "outputs_charm_trimmed_control_r/charm_trimmed_integer_signal_B_signal_Kst.csv",
+    "outputs_charm_trimmed_control_r/charm_trimmed_scan_B_high_sideband_Kst_signal.csv",
+    "outputs_charm_trimmed_control_r/charm_trimmed_scan_B_low_sideband_Kst_signal.csv",
+    "outputs_charm_trimmed_control_r/charm_trimmed_scan_signal_B_signal_Kst.csv",
+    "outputs_charm_trimmed_control_r/charm_trimmed_sideband_scan_sideband_subtracted_charm_trimmed.csv",
+    "outputs_charm_trimmed_control_r/charm_trimmed_summary.json",
+    "outputs_charm_trimmed_control_r/charm_trimmed_triplets_B_high_sideband_Kst_signal.csv",
+    "outputs_charm_trimmed_control_r/charm_trimmed_triplets_B_low_sideband_Kst_signal.csv",
+    "outputs_charm_trimmed_control_r/charm_trimmed_triplets_signal_B_signal_Kst.csv",
+    "outputs_charm_trimmed_control_r/charm_trimmed_wells_B_high_sideband_Kst_signal.csv",
+    "outputs_charm_trimmed_control_r/charm_trimmed_wells_B_low_sideband_Kst_signal.csv",
+    "outputs_charm_trimmed_control_r/charm_trimmed_wells_signal_B_signal_Kst.csv",
+    "outputs_charm_trimmed_control_r/run_manifest.json"
+  ],
+  "warnings": [],
+  "extra": []
+}

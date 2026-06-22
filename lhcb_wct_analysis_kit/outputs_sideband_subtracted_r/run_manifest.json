@@ -1,0 +1,58 @@
+{
+  "stage": "28",
+  "timestamp_utc": "2026-06-22 18:40:42 UTC",
+  "r_version": "R version 4.3.3 (2024-02-29)",
+  "platform": "x86_64-pc-linux-gnu",
+  "os": "Linux",
+  "git_commit": "5b7bb95b37d1434066bb572581f1190788070047",
+  "seed": 271828,
+  "rng_kind": "Mersenne-Twister,Inversion,Rejection",
+  "package_versions": {
+    "base": "4.3.3",
+    "jsonlite": "2.0.0",
+    "digest": "0.6.39",
+    "optparse": "1.8.2",
+    "data.table": null,
+    "arrow": null
+  },
+  "config": {
+    "B_SIGNAL": [5230, 5330],
+    "B_LOW_SB": [5000, 5180],
+    "B_HIGH_SB": [5380, 5600],
+    "KST_SIGNAL": [795.89999999999998, 995.89999999999998],
+    "N_BINS": 240,
+    "K_SCAN_MIN": 6,
+    "K_SCAN_MAX": 32,
+    "N_K_SCAN": 1301,
+    "INTEGER_N_MIN": 10,
+    "INTEGER_N_MAX": 22,
+    "MIN_PEAK_PROMINENCE": 0.5,
+    "MIN_PEAK_DISTANCE_K": 0.75,
+    "MAX_WELLS": 12,
+    "K1_FIXED": 7.6105400000000003,
+    "K_REF": 19.529599999999999,
+    "DEFAULT_N_NULL": 500,
+    "SEED": 271828
+  },
+  "inputs": [
+    {
+      "bins_csv": "outputs_sideband_subtracted/sideband_subtracted_bins.csv",
+      "file_sha256": "2ed909dbf20864783ad7c1f7ff3c6b9fd28e8ca50583a5a8a073bb7a9d719e2d",
+      "mode": "replay_committed_bins"
+    }
+  ],
+  "outputs": [
+    "outputs_sideband_subtracted_r/run_manifest.json",
+    "outputs_sideband_subtracted_r/sideband_subtracted_bins.csv",
+    "outputs_sideband_subtracted_r/sideband_subtracted_comb_tests.csv",
+    "outputs_sideband_subtracted_r/sideband_subtracted_integer_scan.csv",
+    "outputs_sideband_subtracted_r/sideband_subtracted_scan.csv",
+    "outputs_sideband_subtracted_r/sideband_subtracted_summary.json",
+    "outputs_sideband_subtracted_r/sideband_subtracted_triplets.csv",
+    "outputs_sideband_subtracted_r/sideband_subtracted_wells.csv"
+  ],
+  "warnings": [
+    "Replayed committed per-bin inputs; raw-ntuple event selection not re-derived in this run."
+  ],
+  "extra": []
+}

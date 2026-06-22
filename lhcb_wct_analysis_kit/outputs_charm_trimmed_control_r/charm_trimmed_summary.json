@@ -1,0 +1,153 @@
+{
+  "script": "charm_trimmed_control.R (stage 29 R reproduction)",
+  "purpose": "Remove charm windows before any spectral test; no charm fitting or subtraction.",
+  "config": {
+    "CHARM_WINDOWS_REMOVED": {
+      "Jpsi": [8, 11],
+      "psi2S": [12.5, 14.5]
+    },
+    "ACTIVE_INTERVALS": [
+      [0.10000000000000001, 8],
+      [11, 12.5],
+      [14.5, 19]
+    ],
+    "DELTA_ELL_ACTIVE": 4.7801503359236781,
+    "N_BINS": 240,
+    "K_SCAN_MIN": 6,
+    "K_SCAN_MAX": 32,
+    "N_K_SCAN": 1301,
+    "n_null": 0,
+    "seed": 314159
+  },
+  "region_results": [
+    {
+      "region": "signal_B_signal_Kst",
+      "count_sum": 15630,
+      "scan": {
+        "best_k": 7.7599999999999998,
+        "best_n": 5.9036881443527864,
+        "best_delta_chi2": 352.8910426902803,
+        "kref_delta_chi2": 10.664837297612394,
+        "n15_delta_chi2": 6.5247886164161173
+      },
+      "comb": {
+        "comb_101520_delta_chi2": 75.797875983695121,
+        "folded_449_delta_chi2": 61.315129908776726
+      },
+      "best_triplet": {
+        "k1": 10.4,
+        "k2": 15.640000000000001,
+        "k3": 20.740000000000002,
+        "n1": 7.9121593687202285,
+        "n2": 11.89867043526773,
+        "n3": 15.778671664159379,
+        "delta1": 17.801570889761933,
+        "delta2": 79.321014646617186,
+        "delta3": 20.034826271747079,
+        "Q_low": 0.6649616368286444,
+        "Q_high": 0.66304347826086951,
+        "Q_mean": 0.66400255754475701,
+        "koide_error": 0.0040043252830469171,
+        "integer_error_10_15_20": 5.6388772366204343,
+        "score": 15.559822942867424
+      }
+    },
+    {
+      "region": "B_low_sideband_Kst_signal",
+      "count_sum": 29000,
+      "scan": {
+        "best_k": 8.0600000000000005,
+        "best_n": 6.1319235107581775,
+        "best_delta_chi2": 956.24047035716649,
+        "kref_delta_chi2": 196.17270753479534,
+        "n15_delta_chi2": 161.36147601706034
+      },
+      "comb": {
+        "comb_101520_delta_chi2": 226.23542170888686,
+        "folded_449_delta_chi2": 510.71457340266352
+      },
+      "best_triplet": {
+        "k1": 9.8200000000000003,
+        "k2": 14.42,
+        "k3": 19.52,
+        "n1": 7.4709043270031392,
+        "n2": 10.97051327855247,
+        "n3": 14.850514507444121,
+        "delta1": 176.62899328432832,
+        "delta2": 160.14326592941143,
+        "delta3": 196.07037223783846,
+        "Q_low": 0.68099861303744802,
+        "Q_high": 0.67683772538141473,
+        "Q_mean": 0.67891816920943138,
+        "koide_error": 0.017574274441746016,
+        "integer_error_10_15_20": 7.0107267098024062,
+        "score": 55.642877848098777
+      }
+    },
+    {
+      "region": "B_high_sideband_Kst_signal",
+      "count_sum": 25850,
+      "scan": {
+        "best_k": 7.7400000000000002,
+        "best_n": 5.8884724532590935,
+        "best_delta_chi2": 1044.7837903605396,
+        "kref_delta_chi2": 66.701479907300381,
+        "n15_delta_chi2": 42.746817572013242
+      },
+      "comb": {
+        "comb_101520_delta_chi2": 378.88915651604111,
+        "folded_449_delta_chi2": 232.00573949802492
+      },
+      "best_triplet": {
+        "k1": 7.7400000000000002,
+        "k2": 11.620000000000001,
+        "k3": 15.56,
+        "n1": 5.8884724532590935,
+        "n2": 8.8403165254354867,
+        "n3": 11.837807670892957,
+        "delta1": 1044.7837903605396,
+        "delta2": 150.05756086775727,
+        "delta3": 196.6625492988278,
+        "Q_low": 0.66609294320137691,
+        "Q_high": 0.66953528399311524,
+        "Q_mean": 0.66781411359724607,
+        "koide_error": 0.0029254271449183629,
+        "integer_error_10_15_20": 11.021240533250616,
+        "score": 121.15481223816322
+      }
+    }
+  ],
+  "sideband_subtracted_result": {
+    "region": "sideband_subtracted_charm_trimmed",
+    "count_sum": -3.4816594052244909e-13,
+    "scan": {
+      "best_k": 13.120000000000001,
+      "best_n": 9.981493357462444,
+      "best_delta_chi2": 1100.8473284053362,
+      "kref_delta_chi2": 280.12869473565297,
+      "n15_delta_chi2": 307.01520592259112
+    },
+    "comb": {
+      "comb_101520_delta_chi2": 1501.9765952132075,
+      "folded_449_delta_chi2": 901.10625138983232
+    },
+    "best_triplet": {
+      "k1": 15.44,
+      "k2": 23.120000000000001,
+      "k3": 31.080000000000002,
+      "n1": 11.746513524330801,
+      "n2": 17.589338904308818,
+      "n3": 23.645183959598533,
+      "delta1": 537.9973398787406,
+      "delta2": 73.732723971708765,
+      "delta3": 251.0656957849933,
+      "Q_low": 0.66782006920415216,
+      "Q_high": 0.67214532871972321,
+      "Q_mean": 0.66998269896193774,
+      "koide_error": 0.0055987565856250813,
+      "integer_error_10_15_20": 4.8002449470159361,
+      "score": 122.90379522406775
+    }
+  },
+  "interpretation": "Charm regions are cut before testing; no fitted charm yield is subtracted. Strong structure appearing in the B sidebands weakens a signal-specific or new-physics interpretation and is reported regardless of whether it weakens the main result."
+}

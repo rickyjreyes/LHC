@@ -1,0 +1,55 @@
+{
+  "selected_stages": ["28", "29"],
+  "n_null": 0,
+  "seed": 12345,
+  "data_present": false,
+  "dry_run": false,
+  "results": [
+    {
+      "stage": "28",
+      "script": "sideband_subtracted.R",
+      "output": "outputs_sideband_subtracted_r",
+      "replay": true,
+      "runtime_sec": 0.96244072914123535,
+      "exit_status": 0,
+      "status": "OK",
+      "log": "outputs_run_all_r/28_sideband_subtracted.log"
+    },
+    {
+      "stage": "29",
+      "script": "charm_trimmed_control.R",
+      "output": "outputs_charm_trimmed_control_r",
+      "replay": true,
+      "runtime_sec": 2.2789113521575928,
+      "exit_status": 0,
+      "status": "OK",
+      "log": "outputs_run_all_r/29_charm_trimmed_control.log"
+    }
+  ],
+  "manifest": {
+    "stage": "run_all",
+    "timestamp_utc": "2026-06-22 18:36:57 UTC",
+    "r_version": "R version 4.3.3 (2024-02-29)",
+    "platform": "x86_64-pc-linux-gnu",
+    "os": "Linux",
+    "git_commit": "5b7bb95b37d1434066bb572581f1190788070047",
+    "seed": 12345,
+    "rng_kind": "Mersenne-Twister,Inversion,Rejection",
+    "package_versions": {
+      "base": "4.3.3",
+      "jsonlite": "2.0.0",
+      "digest": "0.6.39",
+      "optparse": "1.8.2",
+      "data.table": null,
+      "arrow": null
+    },
+    "config": {
+      "only": ["28", "29"],
+      "skip": []
+    },
+    "inputs": [],
+    "outputs": [],
+    "warnings": [],
+    "extra": []
+  }
+}
