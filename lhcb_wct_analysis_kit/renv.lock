@@ -1,0 +1,29 @@
+{
+  "R": {
+    "Version": "4.3.3",
+    "Repositories": [
+      { "Name": "CRAN", "URL": "https://cloud.r-project.org" }
+    ]
+  },
+  "Platform": "x86_64-pc-linux-gnu",
+  "OS": "Ubuntu 24.04.4 LTS",
+  "Packages": {
+    "jsonlite": { "Package": "jsonlite", "Version": "2.0.0", "Source": "Repository", "Repository": "CRAN" },
+    "digest":   { "Package": "digest",   "Version": "0.6.39", "Source": "Repository", "Repository": "CRAN" },
+    "optparse": { "Package": "optparse", "Version": "1.8.2",  "Source": "Repository", "Repository": "CRAN" },
+    "testthat": { "Package": "testthat", "Version": "3.3.2",  "Source": "Repository", "Repository": "CRAN" }
+  },
+  "OptionalPackages": {
+    "_comment": "Used only for ROOT intake and parquet caching; not required for stages 28/29 replay parity, the shared engines, or the test suite.",
+    "reticulate": { "Package": "reticulate", "Version": ">=1.34", "Source": "Repository", "Repository": "CRAN", "SystemRequirements": "Python with uproot, numpy" },
+    "arrow":      { "Package": "arrow",      "Version": ">=14.0", "Source": "Repository", "Repository": "CRAN" },
+    "data.table": { "Package": "data.table", "Version": ">=1.15", "Source": "Repository", "Repository": "CRAN" },
+    "ggplot2":    { "Package": "ggplot2",    "Version": ">=3.5",  "Source": "Repository", "Repository": "CRAN" }
+  },
+  "InstallationInstructions": {
+    "core": "install.packages(c('jsonlite','digest','optparse','testthat'))",
+    "root_io": "install.packages('reticulate'); reticulate::py_install(c('uproot','numpy','awkward'))",
+    "parquet_cache": "install.packages('arrow')",
+    "system_deps_ubuntu": "apt-get install -y r-base-core build-essential libuv1-dev"
+  }
+}

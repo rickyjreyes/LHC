@@ -11,6 +11,33 @@ The default runner is focused on the non-angular yield-side pipeline.
 
 ---
 
+## R computational reproduction
+
+An independent **R** reproduction of the yield-side workflow lives under `R/`,
+with outputs written to directories ending in `_r` (never overwriting the
+Python outputs). All physics selections, q2 reconstruction, fits, scans,
+bootstraps and verdicts run in R; the Python scripts are never called from R.
+
+```bash
+Rscript tests/testthat.R                 # unit + parity test suite
+Rscript R/run_all.R --only 28,29         # controls, replayable without ntuples
+Rscript R/compare_python_r.R             # Python-vs-R parity report
+```
+
+The sideband-subtracted (stage 28) and charm-trimmed (stage 29) controls are
+reproduced to machine precision directly from the committed per-bin inputs. The
+Poisson stages (09d, 12, 13, 16, 25) are implemented and their fit engines are
+validated against fixtures, but need the OAuth-gated LHCb open-data ntuples in
+`data/` to run end-to-end. See `R/README.md`, `R/METHODOLOGY_PARITY.md` and
+`R/KNOWN_DIFFERENCES.md`.
+
+> The R port on the same data is a **computational reproduction, not
+> independent experimental corroboration**. The smooth empirical baseline is
+> **not** a full Standard Model amplitude analysis. Sideband and charm controls
+> are reported even when they weaken the main interpretation.
+
+---
+
 ## Input data
 
 Place the main LHCb ROOT files in:

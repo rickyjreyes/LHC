@@ -1,10 +1,10 @@
 {
   "stage": "28",
-  "timestamp_utc": "2026-06-22 18:21:04 UTC",
+  "timestamp_utc": "2026-06-22 18:40:42 UTC",
   "r_version": "R version 4.3.3 (2024-02-29)",
   "platform": "x86_64-pc-linux-gnu",
   "os": "Linux",
-  "git_commit": "1eff6dc12e6252ea7615373880aaade956dbb63d",
+  "git_commit": "5b7bb95b37d1434066bb572581f1190788070047",
   "seed": 271828,
   "rng_kind": "Mersenne-Twister,Inversion,Rejection",
   "package_versions": {
@@ -42,6 +42,7 @@
     }
   ],
   "outputs": [
+    "outputs_sideband_subtracted_r/run_manifest.json",
     "outputs_sideband_subtracted_r/sideband_subtracted_bins.csv",
     "outputs_sideband_subtracted_r/sideband_subtracted_comb_tests.csv",
     "outputs_sideband_subtracted_r/sideband_subtracted_integer_scan.csv",

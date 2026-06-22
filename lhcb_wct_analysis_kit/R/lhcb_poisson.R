@@ -140,6 +140,57 @@ fit_two_bounded <- function(N, B, ell, k1, k2, a1_max = A1_MAX, a2_max = A2_MAX,
        amplitude2_bound_active = abs(r2 - a2_max) <= 1e-5)
 }
 
+# -----------------------------------------------------------------------------
+# Coefficient-bounded Poisson fit (stage 13 canonical parity)
+#
+# lambda = B exp(X beta), intercept free, every cos/sin coefficient in
+# [-A_MAX, A_MAX]. Single start (beta0 = 0), L-BFGS-B, eta clipped to [-20,20].
+# This constrains each coefficient independently -- it is NOT a radial-amplitude
+# cap, so sqrt(a^2+b^2) can exceed A_MAX even when |a|,|b| <= A_MAX.
+# -----------------------------------------------------------------------------
+
+#' Design matrix: intercept, fixed k1 cos/sin, then cos/sin for each comb k.
+comb_basis_matrix <- function(ell, ks, k1 = 7.61054) {
+  cols <- list(rep(1.0, length(ell)), cos(k1 * ell), sin(k1 * ell))
+  for (k in ks) { cols[[length(cols)+1]] <- cos(k*ell); cols[[length(cols)+1]] <- sin(k*ell) }
+  do.call(cbind, cols)
+}
+
+fit_coeffbound <- function(counts, baseline, X, a_max = 0.10) {
+  y <- as.numeric(counts); B <- pmax(as.numeric(baseline), 1e-12)
+  p <- ncol(X); beta0 <- rep(0.0, p)
+  lower <- c(-Inf, rep(-a_max, p - 1)); upper <- c(Inf, rep(a_max, p - 1))
+  nll <- function(beta) {
+    eta <- pmin(pmax(as.numeric(X %*% beta), -20), 20)
+    lam <- B * exp(eta)
+    sum(lam - y * log(pmax(lam, 1e-12)))
+  }
+  res <- stats::optim(beta0, nll, method = "L-BFGS-B", lower = lower, upper = upper,
+                      control = list(maxit = 2000, factr = 1e2, pgtol = 1e-8))
+  beta <- res$par
+  eta <- pmin(pmax(as.numeric(X %*% beta), -20), 20)
+  lam <- B * exp(eta)
+  list(success = (res$convergence == 0), dev = poisson_deviance(y, lam),
+       nll = res$value, beta = beta,
+       coefficient_bound_active = any(abs(beta[-1]) >= a_max - 1e-5))
+}
+
+#' Radial amplitudes from a fitted coefficient-bounded beta (pairs after intercept).
+comb_radial_amplitudes <- function(beta) {
+  pairs <- (length(beta) - 1L) / 2L
+  vapply(seq_len(pairs), function(j) sqrt(beta[2*j]^2 + beta[2*j+1]^2), numeric(1))
+}
+
+#' SciPy-compatible KDE baseline built from histogram centers repeated by counts
+#' (stage 13 kde_baseline): density normalized to total counts.
+kde_baseline_from_hist <- function(ell_centers, counts, bandwidth_scale = 1.0) {
+  repeated <- rep(ell_centers, pmax(as.integer(counts), 0L))
+  if (length(repeated) < 100) stop("Too few repeated points for KDE baseline.")
+  kde <- gaussian_kde(repeated, "scott", bandwidth_scale)
+  dens <- pmax(kde$evaluate(ell_centers), 1e-12)
+  pmax(dens / sum(dens) * sum(counts), 1e-9)
+}
+
 #' Empirical p-value (1 + #{null >= real}) / (1 + N).
 p_value <- function(real, null_vals) {
   (1 + sum(null_vals >= real)) / (1 + length(null_vals))

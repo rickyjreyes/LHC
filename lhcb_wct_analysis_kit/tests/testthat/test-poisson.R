@@ -69,6 +69,30 @@ test_that("empirical p-value uses the (1+count)/(1+N) convention", {
   expect_equal(p_value(2, c(1,2,3,4)), (1+3)/(1+4))
 })
 
+test_that("coefficient-bounded fit keeps each coefficient within [-A_MAX,A_MAX]", {
+  ref <- fromJSON(file.path(FIX, "poisson_reference.json"))
+  ell <- ref$ell; B <- ref$B; N <- ref$N
+  X <- comb_basis_matrix(ell, k_from_n(c(10,15,20)), 7.61054)
+  fit <- fit_coeffbound(N, B, X, a_max = 0.10)
+  expect_true(all(abs(fit$beta[-1]) <= 0.10 + 1e-8))
+  expect_type(fit$coefficient_bound_active, "logical")
+})
+
+test_that("radial amplitude can exceed the per-coefficient bound", {
+  beta <- c(0.0, 0.09, 0.09)          # both coeffs <= 0.1
+  amp <- comb_radial_amplitudes(beta)
+  expect_true(all(abs(beta[-1]) <= 0.1))
+  expect_gt(amp[1], 0.1)
+})
+
+test_that("KDE-from-histogram baseline normalizes to the total count", {
+  centers <- seq(log(0.1), log(19), length.out = 240)
+  set.seed(7); counts <- rpois(240, 50)
+  B <- kde_baseline_from_hist(centers, counts, bandwidth_scale = 1.0)
+  expect_equal(sum(B), sum(counts), tolerance = 1e-6)
+  expect_true(all(B >= 1e-9))
+})
+
 test_that("deterministic reruns with the same seed are identical", {
   RNGkind("L'Ecuyer-CMRG"); set.seed(42); a <- rnorm(20)
   RNGkind("L'Ecuyer-CMRG"); set.seed(42); b <- rnorm(20)
