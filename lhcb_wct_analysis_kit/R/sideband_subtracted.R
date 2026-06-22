@@ -16,14 +16,21 @@
 # outputs_sideband_subtracted/).
 # =============================================================================
 
-.here <- function() {
-  a <- commandArgs(FALSE); m <- grep("^--file=", a, value = TRUE)
-  if (length(m)) dirname(normalizePath(sub("^--file=", "", m[1]))) else getwd()
+if (!exists(".lhcb_resolve_rdir", mode = "function")) {
+  .lhcb_resolve_rdir <- function() {
+    a <- commandArgs(FALSE); m <- grep("^--file=", a, value = TRUE)
+    cands <- c(if (length(m)) dirname(normalizePath(sub("^--file=", "", m[1]), mustWork = FALSE)),
+               Sys.getenv("LHCB_R_DIR", ""), file.path(getwd(), "R"), getwd())
+    for (d in cands) if (nzchar(d) && file.exists(file.path(d, "lhcb_domain.R"))) return(d)
+    cands[1]
+  }
 }
-RDIR <- .here()
-source(file.path(RDIR, "lhcb_domain.R"))
-source(file.path(RDIR, "lhcb_wls.R"))
-source(file.path(RDIR, "lhcb_io.R"))
+if (!exists("SB_RDIR")) SB_RDIR <- .lhcb_resolve_rdir()
+if (!exists("scan_one_mode", mode = "function")) {
+  source(file.path(SB_RDIR, "lhcb_domain.R"))
+  source(file.path(SB_RDIR, "lhcb_wls.R"))
+  source(file.path(SB_RDIR, "lhcb_io.R"))
+}
 
 # ---- stage-28 specific config (matches 28_sideband.py) ----------------------
 SB_CFG <- list(
@@ -220,19 +227,21 @@ run_stage28 <- function(opt) {
 `%||%` <- function(a, b) if (is.null(a)) b else a
 
 # ---- CLI --------------------------------------------------------------------
-if (sys.nframe() == 0L || identical(environment(), globalenv())) {
-  if (!interactive() && length(grep("--file=", commandArgs(FALSE)))) {
-    suppressMessages(library(optparse))
-    op <- OptionParser()
-    op <- add_option(op, "--bins", default = NULL, help = "committed bins CSV to replay")
-    op <- add_option(op, "--input-format", dest = "input_format", default = "root")
-    op <- add_option(op, "--input", default = NULL, help = "csv/parquet path")
-    op <- add_option(op, "--data-dir", dest = "data_dir", default = "data")
-    op <- add_option(op, "--n-null", dest = "n_null", type = "integer", default = 0L)
-    op <- add_option(op, "--seed", type = "integer", default = SB_CFG$SEED)
-    op <- add_option(op, "--outdir", default = "outputs_sideband_subtracted_r")
-    opt <- parse_args(op)
-    run_stage28(opt)
-    cat("[stage 28] done ->", opt$outdir, "\n")
-  }
+.lhcb_is_main <- function(script) {
+  m <- grep("^--file=", commandArgs(FALSE), value = TRUE)
+  length(m) && basename(sub("^--file=", "", m[1])) == script
+}
+if (.lhcb_is_main("sideband_subtracted.R")) {
+  suppressMessages(library(optparse))
+  op <- OptionParser()
+  op <- add_option(op, "--bins", default = NULL, help = "committed bins CSV to replay")
+  op <- add_option(op, "--input-format", dest = "input_format", default = "root")
+  op <- add_option(op, "--input", default = NULL, help = "csv/parquet path")
+  op <- add_option(op, "--data-dir", dest = "data_dir", default = "data")
+  op <- add_option(op, "--n-null", dest = "n_null", type = "integer", default = 0L)
+  op <- add_option(op, "--seed", type = "integer", default = SB_CFG$SEED)
+  op <- add_option(op, "--outdir", default = "outputs_sideband_subtracted_r")
+  opt <- parse_args(op)
+  run_stage28(opt)
+  cat("[stage 28] done ->", opt$outdir, "\n")
 }
