@@ -1,0 +1,63 @@
+{
+  "script": "sideband_subtracted.R (stage 28 R reproduction)",
+  "active_intervals": [
+    [0.10000000000000001, 8],
+    [11, 12.5],
+    [14.5, 19]
+  ],
+  "delta_ell_active": 4.7801503359236781,
+  "windows": {
+    "B_SIGNAL": [5230, 5330],
+    "B_LOW_SB": [5000, 5180],
+    "B_HIGH_SB": [5380, 5600],
+    "KST_SIGNAL": [795.89999999999998, 995.89999999999998]
+  },
+  "counts": {
+    "alpha": 0.28495897903372835,
+    "hist_signal_sum": 15630,
+    "hist_side_sum": 54850
+  },
+  "scan_config": {
+    "K1_FIXED": 7.6105400000000003,
+    "K_REF": 19.529599999999999,
+    "K_SCAN_MIN": 6,
+    "K_SCAN_MAX": 32,
+    "N_K_SCAN": 1301,
+    "N_BINS": 240,
+    "n_null": 0,
+    "seed": 271828,
+    "k_targets": {
+      "n10": 13.14432573377522,
+      "n15": 19.716488600662828,
+      "n20": 26.288651467550441
+    }
+  },
+  "verdict": {
+    "sideband_subtracted_survival": {
+      "best_scan_delta_chi2": 5.3035493319409284,
+      "best_scan_k": 8.7800000000000011,
+      "best_scan_n": 6.6796883901311173,
+      "kref_delta_chi2": 0.44680523574362496,
+      "n15_delta_chi2": 1.2124631626656992,
+      "comb_101520_delta_chi2": 4.1416411790689267,
+      "best_triplet": {
+        "k1": 12.379999999999999,
+        "k2": 18.600000000000001,
+        "k3": 24.760000000000002,
+        "n1": 9.4185127869958105,
+        "n2": 14.150592717134256,
+        "n3": 18.837025573991625,
+        "delta1": 1.7597404412268247,
+        "delta2": 1.9305437463147541,
+        "delta3": 2.735348159986188,
+        "Q_low": 0.66559139784946231,
+        "Q_high": 0.66559139784946242,
+        "Q_mean": 0.66559139784946231,
+        "koide_error": 0.0015206597444871505,
+        "integer_error_10_15_20": 1.553103224715684,
+        "score": 1.5017100278039992
+      }
+    },
+    "caution": "Sideband-subtracted WLS residual test. Preserves the active support and k-to-n mapping but is not a full official background model. Controls are reported even when they weaken the main interpretation."
+  }
+}
