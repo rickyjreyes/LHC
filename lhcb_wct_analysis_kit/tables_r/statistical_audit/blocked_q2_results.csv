@@ -1,0 +1,3 @@
+"block_scheme","train_block","test_block","available","fixed_model_pred_logL","delta_pred_logscore","status","note"
+"contiguous_halves","low_q2","high_q2",FALSE,NA,NA,"UNAVAILABLE_NO_EVENT_DATA","do not randomly scatter neighbouring q2 events as the only validation"
+"alternating_blocks","even_blocks","odd_blocks",FALSE,NA,NA,"UNAVAILABLE_NO_EVENT_DATA","do not randomly scatter neighbouring q2 events as the only validation"

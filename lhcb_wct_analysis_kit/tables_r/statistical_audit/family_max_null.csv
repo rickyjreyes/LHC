@@ -1,0 +1,7 @@
+"quantity","value","note"
+"n_tests_in_family",9,"complete declared registry family"
+"min_p_input",0.0001999600079984,"smallest raw stage-global p"
+"min_p_bonferroni",0.0017996400719856,"Bonferroni family-wise"
+"min_p_holm",0.0017996400719856,"Holm family-wise"
+"min_p_BH_fdr",0.000899820035992801,"BH FDR"
+"mc_resolution_floor",0.0001999600079984,"no claim below 1/(B+1)"

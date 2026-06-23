@@ -1,0 +1,4 @@
+"region","parity_delta_chi2_kref","corrected_delta_chi2_kref","variance_parity","variance_corrected","delta","note"
+"signal_B_signal_Kst",10.6648372976124,10.6648372976124,"stage29_preserved","poisson_floor1",0,"corrected variance audit kept separate; sideband structure remains visible"
+"B_low_sideband_Kst_signal",196.172707534795,196.172707534795,"stage29_preserved","poisson_floor1",0,"corrected variance audit kept separate; sideband structure remains visible"
+"B_high_sideband_Kst_signal",66.7014799073004,66.7014799073004,"stage29_preserved","poisson_floor1",0,"corrected variance audit kept separate; sideband structure remains visible"
