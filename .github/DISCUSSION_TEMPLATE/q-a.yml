@@ -1,0 +1,72 @@
+title: "[Question] "
+body:
+  - type: markdown
+    attributes:
+      value: |
+        Ask a focused question about the LHCb open-data pipeline, event selection, q² reconstruction, logarithmic-domain analysis, null models, controls, or interpretation.
+  - type: dropdown
+    id: topic
+    attributes:
+      label: Topic
+      options:
+        - ROOT input or branch validation
+        - Event selection or candidate reconstruction
+        - q² or angular reconstruction
+        - Charm vetoes or active-domain definition
+        - Baseline or residual model
+        - Log-cos scan or integer winding
+        - Koide-like comb or sideband geometry
+        - Look-elsewhere correction or null simulation
+        - Sideband, charm-tail, veto-covariance, or blind control
+        - WCT versus smooth baseline comparison
+        - Reproduction environment
+        - Interpretation
+        - Other
+    validations:
+      required: true
+  - type: input
+    id: reference
+    attributes:
+      label: Exact reference
+      description: Stage key, script, function, input file, output artifact, figure, table, commit, or analysis window.
+      placeholder: stage 25, 25_veto_window_covariance_test.py, commit abc1234
+    validations:
+      required: true
+  - type: textarea
+    id: question
+    attributes:
+      label: Question
+      description: State the exact data, statistical, implementation, or interpretive question.
+    validations:
+      required: true
+  - type: textarea
+    id: dataset
+    attributes:
+      label: Dataset and selection
+      description: Identify data release or file provenance, decay channel, tree, branches, event cuts, vetoes, q² range, sideband definition, and retained event count.
+    validations:
+      required: false
+  - type: textarea
+    id: command
+    attributes:
+      label: Environment and exact command
+      description: Include OS, Python and package versions, CPU/GPU path, commit SHA, stage keys, seeds, null count, and command.
+      render: shell
+    validations:
+      required: false
+  - type: textarea
+    id: observed
+    attributes:
+      label: Observed and expected result
+      description: Include the relevant statistic, fitted k or winding, likelihood change, p-value, control result, traceback, or artifact path.
+    validations:
+      required: true
+  - type: checkboxes
+    id: scope
+    attributes:
+      label: Scope check
+      options:
+        - label: I have distinguished exploratory pattern finding from a preregistered or blinded test.
+          required: true
+        - label: I have identified the tested scan range, selection choices, and look-elsewhere correction relevant to the question.
+          required: true
