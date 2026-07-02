@@ -1,0 +1,73 @@
+title: "[Reproduction or Analysis Result] "
+body:
+  - type: markdown
+    attributes:
+      value: |
+        Share an exact reproduction, failed reproduction, independent implementation, robustness study, control-channel result, or preregistered extension. Negative and null findings are welcome.
+  - type: dropdown
+    id: result_type
+    attributes:
+      label: Result type
+      options:
+        - Exact pipeline reproduction
+        - Failed or incomplete reproduction
+        - Independent implementation
+        - Alternate baseline or residual model
+        - Sideband or charm-tail control
+        - Veto-covariance or active-domain test
+        - Blind control or holdout result
+        - Injected-signal recovery benchmark
+        - Angular or cross-region extension
+        - Preregistered confirmatory analysis
+    validations:
+      required: true
+  - type: textarea
+    id: provenance
+    attributes:
+      label: Data provenance and selection
+      description: Identify release, files, checksums, tree, branches, channel, cuts, vetoes, q² interval, sidebands, and retained event counts.
+    validations:
+      required: true
+  - type: textarea
+    id: environment
+    attributes:
+      label: Environment and exact command
+      description: Include repository commit, OS, Python and package versions, CPU/GPU path, stage keys, config, seeds, null count, and command.
+      render: shell
+    validations:
+      required: true
+  - type: textarea
+    id: model
+    attributes:
+      label: Model and trial structure
+      description: State baseline, residual model, scan ranges, nuisance parameters, tested windows, alternate selections, and full multiplicity accounting.
+    validations:
+      required: true
+  - type: textarea
+    id: results
+    attributes:
+      label: Quantitative results
+      description: Report fitted k, active-domain winding, amplitudes, likelihood or deviance changes, corrected and uncorrected p-values, confidence intervals, control results, and stability metrics.
+    validations:
+      required: true
+  - type: textarea
+    id: artifacts
+    attributes:
+      label: Auditable artifacts
+      description: Link code, frozen configs, manifests, logs, event-count tables, seeds, null distributions, covariance outputs, plots, and archived releases.
+    validations:
+      required: true
+  - type: textarea
+    id: comparison
+    attributes:
+      label: Comparison with repository results
+      description: State what agrees, what differs, the numerical tolerance, and whether the analysis was blinded, preregistered, or exploratory.
+    validations:
+      required: true
+  - type: textarea
+    id: interpretation
+    attributes:
+      label: Narrow interpretation and limitations
+      description: Separate a reproducible residual pattern from evidence for a specific WCT mechanism, new particle physics, or a failure of the Standard Model.
+    validations:
+      required: true
