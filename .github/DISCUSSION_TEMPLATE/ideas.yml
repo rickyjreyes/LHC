@@ -1,0 +1,74 @@
+title: "[Analysis Proposal] "
+body:
+  - type: markdown
+    attributes:
+      value: |
+        Propose a preregistered analysis, robustness test, control, alternate baseline, or independent reproduction. Define the data selection and decision rule before looking at the target result.
+  - type: dropdown
+    id: area
+    attributes:
+      label: Area
+      options:
+        - Independent open-data reproduction
+        - Event selection or reconstruction
+        - Baseline or residual model
+        - Charm-veto or active-domain robustness
+        - Sideband or control-channel test
+        - Look-elsewhere or null-model audit
+        - Integer winding or comb geometry
+        - Angular observable analysis
+        - Cross-period or cross-detector validation
+        - Blinding or preregistration
+        - Machine-readable outputs or provenance
+        - Other
+    validations:
+      required: true
+  - type: textarea
+    id: question
+    attributes:
+      label: Scientific or methodological question
+      description: State the exact hypothesis, artifact risk, or unresolved result the proposal addresses.
+    validations:
+      required: true
+  - type: textarea
+    id: data
+    attributes:
+      label: Frozen dataset and selection
+      description: Specify release, files, channel, branches, cuts, vetoes, q² domain, binning or unbinned method, and exclusion rules.
+    validations:
+      required: true
+  - type: textarea
+    id: method
+    attributes:
+      label: Proposed method
+      description: Define the baseline, residual family, scan range, nuisance treatment, optimization, test statistic, and uncertainty procedure.
+    validations:
+      required: true
+  - type: textarea
+    id: multiplicity
+    attributes:
+      label: Multiplicity and look-elsewhere accounting
+      description: List all scanned frequencies, modes, windows, cuts, channels, baselines, stages, and model variants that enter the trial factor.
+    validations:
+      required: true
+  - type: textarea
+    id: controls
+    attributes:
+      label: Required controls
+      description: Include sidebands, charm tails, veto covariance, blind controls, smooth pseudo-data, injected-signal recovery, alternate baselines, and holdouts as applicable.
+    validations:
+      required: true
+  - type: textarea
+    id: decision
+    attributes:
+      label: Preregistered decision rule
+      description: Define what counts as support, failure, instability, artifact, or inconclusive evidence before the target data are evaluated.
+    validations:
+      required: true
+  - type: textarea
+    id: outputs
+    attributes:
+      label: Auditable deliverables
+      description: List manifests, frozen configs, seeds, logs, event counts, machine-readable tables, covariance objects, plots, and archived releases.
+    validations:
+      required: true
