@@ -1,0 +1,13 @@
+.git
+.github
+__pycache__/
+*.py[cod]
+.pytest_cache/
+.venv/
+venv/
+.env
+*.root
+data/
+data_control/
+outputs*/
+archive/
