@@ -14,8 +14,10 @@ RUN python -m pip install --upgrade pip \
 
 COPY . .
 
-RUN mkdir -p /app/data /app/data_control /app/outputs
+WORKDIR /app/lhcb_wct_analysis_kit
 
-VOLUME ["/app/data", "/app/data_control", "/app/outputs"]
+RUN mkdir -p data data_control outputs
+
+VOLUME ["/app/lhcb_wct_analysis_kit/data", "/app/lhcb_wct_analysis_kit/data_control", "/app/lhcb_wct_analysis_kit/outputs"]
 
 CMD ["python", "run_all.py", "--dry-run"]
