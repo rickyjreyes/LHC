@@ -1,0 +1,8 @@
+uproot>=5.0,<6
+awkward>=2.0,<3
+numpy>=1.24,<3
+pandas>=2.0,<3
+scipy>=1.10,<2
+matplotlib>=3.7,<4
+pyarrow>=14,<22
+pytest>=7,<9
