@@ -5,4 +5,7 @@ pandas>=2.0,<3
 scipy>=1.10,<2
 matplotlib>=3.7,<4
 pyarrow>=14,<22
+fsspec[http]>=2024.2
+requests>=2.31,<3
+aiohttp>=3.9,<4
 pytest>=7,<9
